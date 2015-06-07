@@ -77,25 +77,68 @@ ruleGrammar returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+(	otherlv_0='language' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getGrammarAccess().getLanguageKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getGrammarAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getGrammarRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2=':' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getGrammarAccess().getColonKeyword_2());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getGrammarRule());
+	        }
+        }
+	otherlv_3=RULE_ID
+	{
+		newLeafNode(otherlv_3, grammarAccess.getGrammarAccess().getRootBlockCrossReference_3_0()); 
+	}
+
+)
+)	otherlv_4=';' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getGrammarAccess().getSemicolonKeyword_4());
+    }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGrammarAccess().getElementsElementParserRuleCall_0()); 
+	        newCompositeNode(grammarAccess.getGrammarAccess().getElementsElementParserRuleCall_5_0()); 
 	    }
-		lv_elements_0_0=ruleElement		{
+		lv_elements_5_0=ruleElement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGrammarRule());
 	        }
        		add(
        			$current, 
        			"elements",
-        		lv_elements_0_0, 
+        		lv_elements_5_0, 
         		"Element");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)*
+)*)
 ;
 
 
@@ -185,16 +228,16 @@ ruleBlock returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getBlockAccess().getColumnColumnParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getBlockAccess().getColumnsColumnParserRuleCall_3_0()); 
 	    }
-		lv_column_3_0=ruleColumn		{
+		lv_columns_3_0=ruleColumn		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getBlockRule());
 	        }
        		add(
        			$current, 
-       			"column",
-        		lv_column_3_0, 
+       			"columns",
+        		lv_columns_3_0, 
         		"Column");
 	        afterParserOrEnumRuleCall();
 	    }

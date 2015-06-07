@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.impl.BlockImpl#getColumn <em>Column</em>}</li>
+ *   <li>{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.impl.BlockImpl#getColumns <em>Columns</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,14 +34,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class BlockImpl extends ElementImpl implements Block
 {
   /**
-   * The cached value of the '{@link #getColumn() <em>Column</em>}' containment reference list.
+   * The cached value of the '{@link #getColumns() <em>Columns</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getColumn()
+   * @see #getColumns()
    * @generated
    * @ordered
    */
-  protected EList<Column> column;
+  protected EList<Column> columns;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,13 +69,13 @@ public class BlockImpl extends ElementImpl implements Block
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Column> getColumn()
+  public EList<Column> getColumns()
   {
-    if (column == null)
+    if (columns == null)
     {
-      column = new EObjectContainmentEList<Column>(Column.class, this, SpreadsheetGrammarLanguagePackage.BLOCK__COLUMN);
+      columns = new EObjectContainmentEList<Column>(Column.class, this, SpreadsheetGrammarLanguagePackage.BLOCK__COLUMNS);
     }
-    return column;
+    return columns;
   }
 
   /**
@@ -88,8 +88,8 @@ public class BlockImpl extends ElementImpl implements Block
   {
     switch (featureID)
     {
-      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMN:
-        return ((InternalEList<?>)getColumn()).basicRemove(otherEnd, msgs);
+      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMNS:
+        return ((InternalEList<?>)getColumns()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -104,8 +104,8 @@ public class BlockImpl extends ElementImpl implements Block
   {
     switch (featureID)
     {
-      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMN:
-        return getColumn();
+      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMNS:
+        return getColumns();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -121,9 +121,9 @@ public class BlockImpl extends ElementImpl implements Block
   {
     switch (featureID)
     {
-      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMN:
-        getColumn().clear();
-        getColumn().addAll((Collection<? extends Column>)newValue);
+      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMNS:
+        getColumns().clear();
+        getColumns().addAll((Collection<? extends Column>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,8 +139,8 @@ public class BlockImpl extends ElementImpl implements Block
   {
     switch (featureID)
     {
-      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMN:
-        getColumn().clear();
+      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMNS:
+        getColumns().clear();
         return;
     }
     super.eUnset(featureID);
@@ -156,8 +156,8 @@ public class BlockImpl extends ElementImpl implements Block
   {
     switch (featureID)
     {
-      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMN:
-        return column != null && !column.isEmpty();
+      case SpreadsheetGrammarLanguagePackage.BLOCK__COLUMNS:
+        return columns != null && !columns.isEmpty();
     }
     return super.eIsSet(featureID);
   }

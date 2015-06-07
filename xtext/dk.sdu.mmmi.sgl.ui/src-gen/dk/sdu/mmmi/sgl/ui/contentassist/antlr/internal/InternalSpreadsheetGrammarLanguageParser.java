@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'block'", "'{'", "'}'", "';'", "'='", "'?='", "'column'", "':'", "'token'", "'rule'", "'|'", "'*'", "'IDENTIFIER'", "'STRING'", "'INTEGER'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'language'", "':'", "';'", "'block'", "'{'", "'}'", "'='", "'?='", "'column'", "'token'", "'rule'", "'|'", "'*'", "'IDENTIFIER'", "'STRING'", "'INTEGER'"
     };
     public static final int RULE_STRING=5;
     public static final int RULE_SL_COMMENT=8;
@@ -39,6 +39,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__26=26;
     public static final int RULE_INT=6;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
@@ -116,49 +117,31 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "ruleGrammar"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:69:1: ruleGrammar : ( ( rule__Grammar__ElementsAssignment )* ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:69:1: ruleGrammar : ( ( rule__Grammar__Group__0 ) ) ;
     public final void ruleGrammar() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:73:2: ( ( ( rule__Grammar__ElementsAssignment )* ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:74:1: ( ( rule__Grammar__ElementsAssignment )* )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:73:2: ( ( ( rule__Grammar__Group__0 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:74:1: ( ( rule__Grammar__Group__0 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:74:1: ( ( rule__Grammar__ElementsAssignment )* )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:75:1: ( rule__Grammar__ElementsAssignment )*
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:74:1: ( ( rule__Grammar__Group__0 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:75:1: ( rule__Grammar__Group__0 )
             {
-             before(grammarAccess.getGrammarAccess().getElementsAssignment()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:76:1: ( rule__Grammar__ElementsAssignment )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+             before(grammarAccess.getGrammarAccess().getGroup()); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:76:1: ( rule__Grammar__Group__0 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:76:2: rule__Grammar__Group__0
+            {
+            pushFollow(FOLLOW_rule__Grammar__Group__0_in_ruleGrammar94);
+            rule__Grammar__Group__0();
 
-                if ( (LA1_0==11||LA1_0==20) ) {
-                    alt1=1;
-                }
+            state._fsp--;
 
 
-                switch (alt1) {
-            	case 1 :
-            	    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:76:2: rule__Grammar__ElementsAssignment
-            	    {
-            	    pushFollow(FOLLOW_rule__Grammar__ElementsAssignment_in_ruleGrammar94);
-            	    rule__Grammar__ElementsAssignment();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop1;
-                }
-            } while (true);
-
-             after(grammarAccess.getGrammarAccess().getElementsAssignment()); 
+             after(grammarAccess.getGrammarAccess().getGroup()); 
 
             }
 
@@ -188,13 +171,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:90:1: ruleElement EOF
             {
              before(grammarAccess.getElementRule()); 
-            pushFollow(FOLLOW_ruleElement_in_entryRuleElement122);
+            pushFollow(FOLLOW_ruleElement_in_entryRuleElement121);
             ruleElement();
 
             state._fsp--;
 
              after(grammarAccess.getElementRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleElement129); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleElement128); 
 
             }
 
@@ -227,7 +210,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:104:1: ( rule__Element__Alternatives )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:104:2: rule__Element__Alternatives
             {
-            pushFollow(FOLLOW_rule__Element__Alternatives_in_ruleElement155);
+            pushFollow(FOLLOW_rule__Element__Alternatives_in_ruleElement154);
             rule__Element__Alternatives();
 
             state._fsp--;
@@ -265,13 +248,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:118:1: ruleBlock EOF
             {
              before(grammarAccess.getBlockRule()); 
-            pushFollow(FOLLOW_ruleBlock_in_entryRuleBlock182);
+            pushFollow(FOLLOW_ruleBlock_in_entryRuleBlock181);
             ruleBlock();
 
             state._fsp--;
 
              after(grammarAccess.getBlockRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBlock189); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBlock188); 
 
             }
 
@@ -304,7 +287,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:132:1: ( rule__Block__Group__0 )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:132:2: rule__Block__Group__0
             {
-            pushFollow(FOLLOW_rule__Block__Group__0_in_ruleBlock215);
+            pushFollow(FOLLOW_rule__Block__Group__0_in_ruleBlock214);
             rule__Block__Group__0();
 
             state._fsp--;
@@ -342,13 +325,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:146:1: ruleColumn EOF
             {
              before(grammarAccess.getColumnRule()); 
-            pushFollow(FOLLOW_ruleColumn_in_entryRuleColumn242);
+            pushFollow(FOLLOW_ruleColumn_in_entryRuleColumn241);
             ruleColumn();
 
             state._fsp--;
 
              after(grammarAccess.getColumnRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleColumn249); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleColumn248); 
 
             }
 
@@ -381,7 +364,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:160:1: ( rule__Column__Group__0 )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:160:2: rule__Column__Group__0
             {
-            pushFollow(FOLLOW_rule__Column__Group__0_in_ruleColumn275);
+            pushFollow(FOLLOW_rule__Column__Group__0_in_ruleColumn274);
             rule__Column__Group__0();
 
             state._fsp--;
@@ -419,13 +402,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:174:1: ruleColumnDefinition EOF
             {
              before(grammarAccess.getColumnDefinitionRule()); 
-            pushFollow(FOLLOW_ruleColumnDefinition_in_entryRuleColumnDefinition302);
+            pushFollow(FOLLOW_ruleColumnDefinition_in_entryRuleColumnDefinition301);
             ruleColumnDefinition();
 
             state._fsp--;
 
              after(grammarAccess.getColumnDefinitionRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleColumnDefinition309); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleColumnDefinition308); 
 
             }
 
@@ -458,7 +441,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:188:1: ( rule__ColumnDefinition__Alternatives )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:188:2: rule__ColumnDefinition__Alternatives
             {
-            pushFollow(FOLLOW_rule__ColumnDefinition__Alternatives_in_ruleColumnDefinition335);
+            pushFollow(FOLLOW_rule__ColumnDefinition__Alternatives_in_ruleColumnDefinition334);
             rule__ColumnDefinition__Alternatives();
 
             state._fsp--;
@@ -496,13 +479,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:202:1: ruleMandatoryColumn EOF
             {
              before(grammarAccess.getMandatoryColumnRule()); 
-            pushFollow(FOLLOW_ruleMandatoryColumn_in_entryRuleMandatoryColumn362);
+            pushFollow(FOLLOW_ruleMandatoryColumn_in_entryRuleMandatoryColumn361);
             ruleMandatoryColumn();
 
             state._fsp--;
 
              after(grammarAccess.getMandatoryColumnRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMandatoryColumn369); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMandatoryColumn368); 
 
             }
 
@@ -535,7 +518,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:216:1: ( rule__MandatoryColumn__Group__0 )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:216:2: rule__MandatoryColumn__Group__0
             {
-            pushFollow(FOLLOW_rule__MandatoryColumn__Group__0_in_ruleMandatoryColumn395);
+            pushFollow(FOLLOW_rule__MandatoryColumn__Group__0_in_ruleMandatoryColumn394);
             rule__MandatoryColumn__Group__0();
 
             state._fsp--;
@@ -573,13 +556,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:230:1: ruleOptionalColumn EOF
             {
              before(grammarAccess.getOptionalColumnRule()); 
-            pushFollow(FOLLOW_ruleOptionalColumn_in_entryRuleOptionalColumn422);
+            pushFollow(FOLLOW_ruleOptionalColumn_in_entryRuleOptionalColumn421);
             ruleOptionalColumn();
 
             state._fsp--;
 
              after(grammarAccess.getOptionalColumnRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOptionalColumn429); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOptionalColumn428); 
 
             }
 
@@ -612,7 +595,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:244:1: ( rule__OptionalColumn__Group__0 )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:244:2: rule__OptionalColumn__Group__0
             {
-            pushFollow(FOLLOW_rule__OptionalColumn__Group__0_in_ruleOptionalColumn455);
+            pushFollow(FOLLOW_rule__OptionalColumn__Group__0_in_ruleOptionalColumn454);
             rule__OptionalColumn__Group__0();
 
             state._fsp--;
@@ -650,13 +633,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:258:1: ruleColumnSpec EOF
             {
              before(grammarAccess.getColumnSpecRule()); 
-            pushFollow(FOLLOW_ruleColumnSpec_in_entryRuleColumnSpec482);
+            pushFollow(FOLLOW_ruleColumnSpec_in_entryRuleColumnSpec481);
             ruleColumnSpec();
 
             state._fsp--;
 
              after(grammarAccess.getColumnSpecRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleColumnSpec489); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleColumnSpec488); 
 
             }
 
@@ -689,7 +672,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:272:1: ( rule__ColumnSpec__Alternatives )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:272:2: rule__ColumnSpec__Alternatives
             {
-            pushFollow(FOLLOW_rule__ColumnSpec__Alternatives_in_ruleColumnSpec515);
+            pushFollow(FOLLOW_rule__ColumnSpec__Alternatives_in_ruleColumnSpec514);
             rule__ColumnSpec__Alternatives();
 
             state._fsp--;
@@ -727,13 +710,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:286:1: ruleRowSpec EOF
             {
              before(grammarAccess.getRowSpecRule()); 
-            pushFollow(FOLLOW_ruleRowSpec_in_entryRuleRowSpec542);
+            pushFollow(FOLLOW_ruleRowSpec_in_entryRuleRowSpec541);
             ruleRowSpec();
 
             state._fsp--;
 
              after(grammarAccess.getRowSpecRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRowSpec549); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRowSpec548); 
 
             }
 
@@ -766,7 +749,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:300:1: ( rule__RowSpec__Group__0 )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:300:2: rule__RowSpec__Group__0
             {
-            pushFollow(FOLLOW_rule__RowSpec__Group__0_in_ruleRowSpec575);
+            pushFollow(FOLLOW_rule__RowSpec__Group__0_in_ruleRowSpec574);
             rule__RowSpec__Group__0();
 
             state._fsp--;
@@ -804,13 +787,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:314:1: ruleBlockSpec EOF
             {
              before(grammarAccess.getBlockSpecRule()); 
-            pushFollow(FOLLOW_ruleBlockSpec_in_entryRuleBlockSpec602);
+            pushFollow(FOLLOW_ruleBlockSpec_in_entryRuleBlockSpec601);
             ruleBlockSpec();
 
             state._fsp--;
 
              after(grammarAccess.getBlockSpecRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBlockSpec609); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBlockSpec608); 
 
             }
 
@@ -843,7 +826,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:328:1: ( rule__BlockSpec__Group__0 )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:328:2: rule__BlockSpec__Group__0
             {
-            pushFollow(FOLLOW_rule__BlockSpec__Group__0_in_ruleBlockSpec635);
+            pushFollow(FOLLOW_rule__BlockSpec__Group__0_in_ruleBlockSpec634);
             rule__BlockSpec__Group__0();
 
             state._fsp--;
@@ -881,13 +864,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:342:1: ruleSyntax EOF
             {
              before(grammarAccess.getSyntaxRule()); 
-            pushFollow(FOLLOW_ruleSyntax_in_entryRuleSyntax662);
+            pushFollow(FOLLOW_ruleSyntax_in_entryRuleSyntax661);
             ruleSyntax();
 
             state._fsp--;
 
              after(grammarAccess.getSyntaxRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSyntax669); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSyntax668); 
 
             }
 
@@ -920,7 +903,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:356:1: ( rule__Syntax__Alternatives )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:356:2: rule__Syntax__Alternatives
             {
-            pushFollow(FOLLOW_rule__Syntax__Alternatives_in_ruleSyntax695);
+            pushFollow(FOLLOW_rule__Syntax__Alternatives_in_ruleSyntax694);
             rule__Syntax__Alternatives();
 
             state._fsp--;
@@ -958,13 +941,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:370:1: ruleRule EOF
             {
              before(grammarAccess.getRuleRule()); 
-            pushFollow(FOLLOW_ruleRule_in_entryRuleRule722);
+            pushFollow(FOLLOW_ruleRule_in_entryRuleRule721);
             ruleRule();
 
             state._fsp--;
 
              after(grammarAccess.getRuleRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRule729); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRule728); 
 
             }
 
@@ -997,7 +980,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:384:1: ( rule__Rule__Group__0 )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:384:2: rule__Rule__Group__0
             {
-            pushFollow(FOLLOW_rule__Rule__Group__0_in_ruleRule755);
+            pushFollow(FOLLOW_rule__Rule__Group__0_in_ruleRule754);
             rule__Rule__Group__0();
 
             state._fsp--;
@@ -1035,13 +1018,13 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:398:1: ruleSyntaxSeq EOF
             {
              before(grammarAccess.getSyntaxSeqRule()); 
-            pushFollow(FOLLOW_ruleSyntaxSeq_in_entryRuleSyntaxSeq782);
+            pushFollow(FOLLOW_ruleSyntaxSeq_in_entryRuleSyntaxSeq781);
             ruleSyntaxSeq();
 
             state._fsp--;
 
              after(grammarAccess.getSyntaxSeqRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSyntaxSeq789); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSyntaxSeq788); 
 
             }
 
@@ -1077,7 +1060,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:413:1: ( rule__SyntaxSeq__PartsAssignment )
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:413:2: rule__SyntaxSeq__PartsAssignment
             {
-            pushFollow(FOLLOW_rule__SyntaxSeq__PartsAssignment_in_ruleSyntaxSeq817);
+            pushFollow(FOLLOW_rule__SyntaxSeq__PartsAssignment_in_ruleSyntaxSeq816);
             rule__SyntaxSeq__PartsAssignment();
 
             state._fsp--;
@@ -1094,21 +1077,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             {
              before(grammarAccess.getSyntaxSeqAccess().getPartsAssignment()); 
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:418:1: ( rule__SyntaxSeq__PartsAssignment )*
-            loop2:
+            loop1:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt1=2;
+                int LA1_0 = input.LA(1);
 
-                if ( ((LA2_0>=19 && LA2_0<=20)||(LA2_0>=23 && LA2_0<=25)) ) {
-                    alt2=1;
+                if ( ((LA1_0>=20 && LA1_0<=21)||(LA1_0>=24 && LA1_0<=26)) ) {
+                    alt1=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt1) {
             	case 1 :
             	    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:418:2: rule__SyntaxSeq__PartsAssignment
             	    {
-            	    pushFollow(FOLLOW_rule__SyntaxSeq__PartsAssignment_in_ruleSyntaxSeq829);
+            	    pushFollow(FOLLOW_rule__SyntaxSeq__PartsAssignment_in_ruleSyntaxSeq828);
             	    rule__SyntaxSeq__PartsAssignment();
 
             	    state._fsp--;
@@ -1118,7 +1101,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop1;
                 }
             } while (true);
 
@@ -1155,22 +1138,22 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             
         try {
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:435:1: ( ( ruleBlock ) | ( ruleRule ) )
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+            int alt2=2;
+            int LA2_0 = input.LA(1);
 
-            if ( (LA3_0==11) ) {
-                alt3=1;
+            if ( (LA2_0==14) ) {
+                alt2=1;
             }
-            else if ( (LA3_0==20) ) {
-                alt3=2;
+            else if ( (LA2_0==21) ) {
+                alt2=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
+                    new NoViableAltException("", 2, 0, input);
 
                 throw nvae;
             }
-            switch (alt3) {
+            switch (alt2) {
                 case 1 :
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:436:1: ( ruleBlock )
                     {
@@ -1178,7 +1161,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:437:1: ruleBlock
                     {
                      before(grammarAccess.getElementAccess().getBlockParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleBlock_in_rule__Element__Alternatives868);
+                    pushFollow(FOLLOW_ruleBlock_in_rule__Element__Alternatives867);
                     ruleBlock();
 
                     state._fsp--;
@@ -1197,7 +1180,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:443:1: ruleRule
                     {
                      before(grammarAccess.getElementAccess().getRuleParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleRule_in_rule__Element__Alternatives885);
+                    pushFollow(FOLLOW_ruleRule_in_rule__Element__Alternatives884);
                     ruleRule();
 
                     state._fsp--;
@@ -1234,22 +1217,22 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             
         try {
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:457:1: ( ( ruleMandatoryColumn ) | ( ruleOptionalColumn ) )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA4_0==15) ) {
-                alt4=1;
+            if ( (LA3_0==17) ) {
+                alt3=1;
             }
-            else if ( (LA4_0==16) ) {
-                alt4=2;
+            else if ( (LA3_0==18) ) {
+                alt3=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt4) {
+            switch (alt3) {
                 case 1 :
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:458:1: ( ruleMandatoryColumn )
                     {
@@ -1257,7 +1240,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:459:1: ruleMandatoryColumn
                     {
                      before(grammarAccess.getColumnDefinitionAccess().getMandatoryColumnParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleMandatoryColumn_in_rule__ColumnDefinition__Alternatives917);
+                    pushFollow(FOLLOW_ruleMandatoryColumn_in_rule__ColumnDefinition__Alternatives916);
                     ruleMandatoryColumn();
 
                     state._fsp--;
@@ -1276,7 +1259,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:465:1: ruleOptionalColumn
                     {
                      before(grammarAccess.getColumnDefinitionAccess().getOptionalColumnParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleOptionalColumn_in_rule__ColumnDefinition__Alternatives934);
+                    pushFollow(FOLLOW_ruleOptionalColumn_in_rule__ColumnDefinition__Alternatives933);
                     ruleOptionalColumn();
 
                     state._fsp--;
@@ -1313,22 +1296,22 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             
         try {
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:479:1: ( ( ruleRowSpec ) | ( ruleBlockSpec ) )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
+            int alt4=2;
+            int LA4_0 = input.LA(1);
 
-            if ( (LA5_0==17) ) {
-                alt5=1;
+            if ( (LA4_0==19) ) {
+                alt4=1;
             }
-            else if ( (LA5_0==11) ) {
-                alt5=2;
+            else if ( (LA4_0==14) ) {
+                alt4=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
-            switch (alt5) {
+            switch (alt4) {
                 case 1 :
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:480:1: ( ruleRowSpec )
                     {
@@ -1336,7 +1319,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:481:1: ruleRowSpec
                     {
                      before(grammarAccess.getColumnSpecAccess().getRowSpecParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleRowSpec_in_rule__ColumnSpec__Alternatives966);
+                    pushFollow(FOLLOW_ruleRowSpec_in_rule__ColumnSpec__Alternatives965);
                     ruleRowSpec();
 
                     state._fsp--;
@@ -1355,7 +1338,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:487:1: ruleBlockSpec
                     {
                      before(grammarAccess.getColumnSpecAccess().getBlockSpecParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleBlockSpec_in_rule__ColumnSpec__Alternatives983);
+                    pushFollow(FOLLOW_ruleBlockSpec_in_rule__ColumnSpec__Alternatives982);
                     ruleBlockSpec();
 
                     state._fsp--;
@@ -1392,41 +1375,41 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
             
         try {
             // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:501:1: ( ( ( rule__Syntax__Is_idAssignment_0 ) ) | ( ( rule__Syntax__Is_stringAssignment_1 ) ) | ( ( rule__Syntax__Is_intAssignment_2 ) ) | ( ( rule__Syntax__Group_3__0 ) ) | ( ( rule__Syntax__Group_4__0 ) ) )
-            int alt6=5;
+            int alt5=5;
             switch ( input.LA(1) ) {
-            case 23:
-                {
-                alt6=1;
-                }
-                break;
             case 24:
                 {
-                alt6=2;
+                alt5=1;
                 }
                 break;
             case 25:
                 {
-                alt6=3;
+                alt5=2;
                 }
                 break;
-            case 19:
+            case 26:
                 {
-                alt6=4;
+                alt5=3;
                 }
                 break;
             case 20:
                 {
-                alt6=5;
+                alt5=4;
+                }
+                break;
+            case 21:
+                {
+                alt5=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt6) {
+            switch (alt5) {
                 case 1 :
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:502:1: ( ( rule__Syntax__Is_idAssignment_0 ) )
                     {
@@ -1437,7 +1420,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:504:1: ( rule__Syntax__Is_idAssignment_0 )
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:504:2: rule__Syntax__Is_idAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__Syntax__Is_idAssignment_0_in_rule__Syntax__Alternatives1015);
+                    pushFollow(FOLLOW_rule__Syntax__Is_idAssignment_0_in_rule__Syntax__Alternatives1014);
                     rule__Syntax__Is_idAssignment_0();
 
                     state._fsp--;
@@ -1462,7 +1445,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:510:1: ( rule__Syntax__Is_stringAssignment_1 )
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:510:2: rule__Syntax__Is_stringAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Syntax__Is_stringAssignment_1_in_rule__Syntax__Alternatives1033);
+                    pushFollow(FOLLOW_rule__Syntax__Is_stringAssignment_1_in_rule__Syntax__Alternatives1032);
                     rule__Syntax__Is_stringAssignment_1();
 
                     state._fsp--;
@@ -1487,7 +1470,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:516:1: ( rule__Syntax__Is_intAssignment_2 )
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:516:2: rule__Syntax__Is_intAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Syntax__Is_intAssignment_2_in_rule__Syntax__Alternatives1051);
+                    pushFollow(FOLLOW_rule__Syntax__Is_intAssignment_2_in_rule__Syntax__Alternatives1050);
                     rule__Syntax__Is_intAssignment_2();
 
                     state._fsp--;
@@ -1512,7 +1495,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:522:1: ( rule__Syntax__Group_3__0 )
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:522:2: rule__Syntax__Group_3__0
                     {
-                    pushFollow(FOLLOW_rule__Syntax__Group_3__0_in_rule__Syntax__Alternatives1069);
+                    pushFollow(FOLLOW_rule__Syntax__Group_3__0_in_rule__Syntax__Alternatives1068);
                     rule__Syntax__Group_3__0();
 
                     state._fsp--;
@@ -1537,7 +1520,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:528:1: ( rule__Syntax__Group_4__0 )
                     // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:528:2: rule__Syntax__Group_4__0
                     {
-                    pushFollow(FOLLOW_rule__Syntax__Group_4__0_in_rule__Syntax__Alternatives1087);
+                    pushFollow(FOLLOW_rule__Syntax__Group_4__0_in_rule__Syntax__Alternatives1086);
                     rule__Syntax__Group_4__0();
 
                     state._fsp--;
@@ -1569,22 +1552,515 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
     // $ANTLR end "rule__Syntax__Alternatives"
 
 
+    // $ANTLR start "rule__Grammar__Group__0"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:539:1: rule__Grammar__Group__0 : rule__Grammar__Group__0__Impl rule__Grammar__Group__1 ;
+    public final void rule__Grammar__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:543:1: ( rule__Grammar__Group__0__Impl rule__Grammar__Group__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:544:2: rule__Grammar__Group__0__Impl rule__Grammar__Group__1
+            {
+            pushFollow(FOLLOW_rule__Grammar__Group__0__Impl_in_rule__Grammar__Group__01117);
+            rule__Grammar__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Grammar__Group__1_in_rule__Grammar__Group__01120);
+            rule__Grammar__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__0"
+
+
+    // $ANTLR start "rule__Grammar__Group__0__Impl"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:551:1: rule__Grammar__Group__0__Impl : ( 'language' ) ;
+    public final void rule__Grammar__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:555:1: ( ( 'language' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:556:1: ( 'language' )
+            {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:556:1: ( 'language' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:557:1: 'language'
+            {
+             before(grammarAccess.getGrammarAccess().getLanguageKeyword_0()); 
+            match(input,11,FOLLOW_11_in_rule__Grammar__Group__0__Impl1148); 
+             after(grammarAccess.getGrammarAccess().getLanguageKeyword_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Grammar__Group__1"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:570:1: rule__Grammar__Group__1 : rule__Grammar__Group__1__Impl rule__Grammar__Group__2 ;
+    public final void rule__Grammar__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:574:1: ( rule__Grammar__Group__1__Impl rule__Grammar__Group__2 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:575:2: rule__Grammar__Group__1__Impl rule__Grammar__Group__2
+            {
+            pushFollow(FOLLOW_rule__Grammar__Group__1__Impl_in_rule__Grammar__Group__11179);
+            rule__Grammar__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Grammar__Group__2_in_rule__Grammar__Group__11182);
+            rule__Grammar__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__1"
+
+
+    // $ANTLR start "rule__Grammar__Group__1__Impl"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:582:1: rule__Grammar__Group__1__Impl : ( ( rule__Grammar__NameAssignment_1 ) ) ;
+    public final void rule__Grammar__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:586:1: ( ( ( rule__Grammar__NameAssignment_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:587:1: ( ( rule__Grammar__NameAssignment_1 ) )
+            {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:587:1: ( ( rule__Grammar__NameAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:588:1: ( rule__Grammar__NameAssignment_1 )
+            {
+             before(grammarAccess.getGrammarAccess().getNameAssignment_1()); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:589:1: ( rule__Grammar__NameAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:589:2: rule__Grammar__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__Grammar__NameAssignment_1_in_rule__Grammar__Group__1__Impl1209);
+            rule__Grammar__NameAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getGrammarAccess().getNameAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Grammar__Group__2"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:599:1: rule__Grammar__Group__2 : rule__Grammar__Group__2__Impl rule__Grammar__Group__3 ;
+    public final void rule__Grammar__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:603:1: ( rule__Grammar__Group__2__Impl rule__Grammar__Group__3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:604:2: rule__Grammar__Group__2__Impl rule__Grammar__Group__3
+            {
+            pushFollow(FOLLOW_rule__Grammar__Group__2__Impl_in_rule__Grammar__Group__21239);
+            rule__Grammar__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Grammar__Group__3_in_rule__Grammar__Group__21242);
+            rule__Grammar__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__2"
+
+
+    // $ANTLR start "rule__Grammar__Group__2__Impl"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:611:1: rule__Grammar__Group__2__Impl : ( ':' ) ;
+    public final void rule__Grammar__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:615:1: ( ( ':' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:616:1: ( ':' )
+            {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:616:1: ( ':' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:617:1: ':'
+            {
+             before(grammarAccess.getGrammarAccess().getColonKeyword_2()); 
+            match(input,12,FOLLOW_12_in_rule__Grammar__Group__2__Impl1270); 
+             after(grammarAccess.getGrammarAccess().getColonKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__2__Impl"
+
+
+    // $ANTLR start "rule__Grammar__Group__3"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:630:1: rule__Grammar__Group__3 : rule__Grammar__Group__3__Impl rule__Grammar__Group__4 ;
+    public final void rule__Grammar__Group__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:634:1: ( rule__Grammar__Group__3__Impl rule__Grammar__Group__4 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:635:2: rule__Grammar__Group__3__Impl rule__Grammar__Group__4
+            {
+            pushFollow(FOLLOW_rule__Grammar__Group__3__Impl_in_rule__Grammar__Group__31301);
+            rule__Grammar__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Grammar__Group__4_in_rule__Grammar__Group__31304);
+            rule__Grammar__Group__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__3"
+
+
+    // $ANTLR start "rule__Grammar__Group__3__Impl"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:642:1: rule__Grammar__Group__3__Impl : ( ( rule__Grammar__RootAssignment_3 ) ) ;
+    public final void rule__Grammar__Group__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:646:1: ( ( ( rule__Grammar__RootAssignment_3 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:647:1: ( ( rule__Grammar__RootAssignment_3 ) )
+            {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:647:1: ( ( rule__Grammar__RootAssignment_3 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:648:1: ( rule__Grammar__RootAssignment_3 )
+            {
+             before(grammarAccess.getGrammarAccess().getRootAssignment_3()); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:649:1: ( rule__Grammar__RootAssignment_3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:649:2: rule__Grammar__RootAssignment_3
+            {
+            pushFollow(FOLLOW_rule__Grammar__RootAssignment_3_in_rule__Grammar__Group__3__Impl1331);
+            rule__Grammar__RootAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getGrammarAccess().getRootAssignment_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__3__Impl"
+
+
+    // $ANTLR start "rule__Grammar__Group__4"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:659:1: rule__Grammar__Group__4 : rule__Grammar__Group__4__Impl rule__Grammar__Group__5 ;
+    public final void rule__Grammar__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:663:1: ( rule__Grammar__Group__4__Impl rule__Grammar__Group__5 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:664:2: rule__Grammar__Group__4__Impl rule__Grammar__Group__5
+            {
+            pushFollow(FOLLOW_rule__Grammar__Group__4__Impl_in_rule__Grammar__Group__41361);
+            rule__Grammar__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Grammar__Group__5_in_rule__Grammar__Group__41364);
+            rule__Grammar__Group__5();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__4"
+
+
+    // $ANTLR start "rule__Grammar__Group__4__Impl"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:671:1: rule__Grammar__Group__4__Impl : ( ';' ) ;
+    public final void rule__Grammar__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:675:1: ( ( ';' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:676:1: ( ';' )
+            {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:676:1: ( ';' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:677:1: ';'
+            {
+             before(grammarAccess.getGrammarAccess().getSemicolonKeyword_4()); 
+            match(input,13,FOLLOW_13_in_rule__Grammar__Group__4__Impl1392); 
+             after(grammarAccess.getGrammarAccess().getSemicolonKeyword_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__4__Impl"
+
+
+    // $ANTLR start "rule__Grammar__Group__5"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:690:1: rule__Grammar__Group__5 : rule__Grammar__Group__5__Impl ;
+    public final void rule__Grammar__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:694:1: ( rule__Grammar__Group__5__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:695:2: rule__Grammar__Group__5__Impl
+            {
+            pushFollow(FOLLOW_rule__Grammar__Group__5__Impl_in_rule__Grammar__Group__51423);
+            rule__Grammar__Group__5__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__5"
+
+
+    // $ANTLR start "rule__Grammar__Group__5__Impl"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:701:1: rule__Grammar__Group__5__Impl : ( ( rule__Grammar__ElementsAssignment_5 )* ) ;
+    public final void rule__Grammar__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:705:1: ( ( ( rule__Grammar__ElementsAssignment_5 )* ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:706:1: ( ( rule__Grammar__ElementsAssignment_5 )* )
+            {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:706:1: ( ( rule__Grammar__ElementsAssignment_5 )* )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:707:1: ( rule__Grammar__ElementsAssignment_5 )*
+            {
+             before(grammarAccess.getGrammarAccess().getElementsAssignment_5()); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:708:1: ( rule__Grammar__ElementsAssignment_5 )*
+            loop6:
+            do {
+                int alt6=2;
+                int LA6_0 = input.LA(1);
+
+                if ( (LA6_0==14||LA6_0==21) ) {
+                    alt6=1;
+                }
+
+
+                switch (alt6) {
+            	case 1 :
+            	    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:708:2: rule__Grammar__ElementsAssignment_5
+            	    {
+            	    pushFollow(FOLLOW_rule__Grammar__ElementsAssignment_5_in_rule__Grammar__Group__5__Impl1450);
+            	    rule__Grammar__ElementsAssignment_5();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop6;
+                }
+            } while (true);
+
+             after(grammarAccess.getGrammarAccess().getElementsAssignment_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__Group__5__Impl"
+
+
     // $ANTLR start "rule__Block__Group__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:539:1: rule__Block__Group__0 : rule__Block__Group__0__Impl rule__Block__Group__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:730:1: rule__Block__Group__0 : rule__Block__Group__0__Impl rule__Block__Group__1 ;
     public final void rule__Block__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:543:1: ( rule__Block__Group__0__Impl rule__Block__Group__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:544:2: rule__Block__Group__0__Impl rule__Block__Group__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:734:1: ( rule__Block__Group__0__Impl rule__Block__Group__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:735:2: rule__Block__Group__0__Impl rule__Block__Group__1
             {
-            pushFollow(FOLLOW_rule__Block__Group__0__Impl_in_rule__Block__Group__01118);
+            pushFollow(FOLLOW_rule__Block__Group__0__Impl_in_rule__Block__Group__01493);
             rule__Block__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Block__Group__1_in_rule__Block__Group__01121);
+            pushFollow(FOLLOW_rule__Block__Group__1_in_rule__Block__Group__01496);
             rule__Block__Group__1();
 
             state._fsp--;
@@ -1608,20 +2084,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:551:1: rule__Block__Group__0__Impl : ( 'block' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:742:1: rule__Block__Group__0__Impl : ( 'block' ) ;
     public final void rule__Block__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:555:1: ( ( 'block' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:556:1: ( 'block' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:746:1: ( ( 'block' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:747:1: ( 'block' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:556:1: ( 'block' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:557:1: 'block'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:747:1: ( 'block' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:748:1: 'block'
             {
              before(grammarAccess.getBlockAccess().getBlockKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__Block__Group__0__Impl1149); 
+            match(input,14,FOLLOW_14_in_rule__Block__Group__0__Impl1524); 
              after(grammarAccess.getBlockAccess().getBlockKeyword_0()); 
 
             }
@@ -1645,21 +2121,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:570:1: rule__Block__Group__1 : rule__Block__Group__1__Impl rule__Block__Group__2 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:761:1: rule__Block__Group__1 : rule__Block__Group__1__Impl rule__Block__Group__2 ;
     public final void rule__Block__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:574:1: ( rule__Block__Group__1__Impl rule__Block__Group__2 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:575:2: rule__Block__Group__1__Impl rule__Block__Group__2
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:765:1: ( rule__Block__Group__1__Impl rule__Block__Group__2 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:766:2: rule__Block__Group__1__Impl rule__Block__Group__2
             {
-            pushFollow(FOLLOW_rule__Block__Group__1__Impl_in_rule__Block__Group__11180);
+            pushFollow(FOLLOW_rule__Block__Group__1__Impl_in_rule__Block__Group__11555);
             rule__Block__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Block__Group__2_in_rule__Block__Group__11183);
+            pushFollow(FOLLOW_rule__Block__Group__2_in_rule__Block__Group__11558);
             rule__Block__Group__2();
 
             state._fsp--;
@@ -1683,23 +2159,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:582:1: rule__Block__Group__1__Impl : ( ( rule__Block__NameAssignment_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:773:1: rule__Block__Group__1__Impl : ( ( rule__Block__NameAssignment_1 ) ) ;
     public final void rule__Block__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:586:1: ( ( ( rule__Block__NameAssignment_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:587:1: ( ( rule__Block__NameAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:777:1: ( ( ( rule__Block__NameAssignment_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:778:1: ( ( rule__Block__NameAssignment_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:587:1: ( ( rule__Block__NameAssignment_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:588:1: ( rule__Block__NameAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:778:1: ( ( rule__Block__NameAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:779:1: ( rule__Block__NameAssignment_1 )
             {
              before(grammarAccess.getBlockAccess().getNameAssignment_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:589:1: ( rule__Block__NameAssignment_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:589:2: rule__Block__NameAssignment_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:780:1: ( rule__Block__NameAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:780:2: rule__Block__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Block__NameAssignment_1_in_rule__Block__Group__1__Impl1210);
+            pushFollow(FOLLOW_rule__Block__NameAssignment_1_in_rule__Block__Group__1__Impl1585);
             rule__Block__NameAssignment_1();
 
             state._fsp--;
@@ -1730,21 +2206,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__2"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:599:1: rule__Block__Group__2 : rule__Block__Group__2__Impl rule__Block__Group__3 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:790:1: rule__Block__Group__2 : rule__Block__Group__2__Impl rule__Block__Group__3 ;
     public final void rule__Block__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:603:1: ( rule__Block__Group__2__Impl rule__Block__Group__3 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:604:2: rule__Block__Group__2__Impl rule__Block__Group__3
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:794:1: ( rule__Block__Group__2__Impl rule__Block__Group__3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:795:2: rule__Block__Group__2__Impl rule__Block__Group__3
             {
-            pushFollow(FOLLOW_rule__Block__Group__2__Impl_in_rule__Block__Group__21240);
+            pushFollow(FOLLOW_rule__Block__Group__2__Impl_in_rule__Block__Group__21615);
             rule__Block__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Block__Group__3_in_rule__Block__Group__21243);
+            pushFollow(FOLLOW_rule__Block__Group__3_in_rule__Block__Group__21618);
             rule__Block__Group__3();
 
             state._fsp--;
@@ -1768,20 +2244,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__2__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:611:1: rule__Block__Group__2__Impl : ( '{' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:1: rule__Block__Group__2__Impl : ( '{' ) ;
     public final void rule__Block__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:615:1: ( ( '{' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:616:1: ( '{' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:1: ( ( '{' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:807:1: ( '{' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:616:1: ( '{' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:617:1: '{'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:807:1: ( '{' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:808:1: '{'
             {
              before(grammarAccess.getBlockAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,12,FOLLOW_12_in_rule__Block__Group__2__Impl1271); 
+            match(input,15,FOLLOW_15_in_rule__Block__Group__2__Impl1646); 
              after(grammarAccess.getBlockAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -1805,21 +2281,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__3"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:630:1: rule__Block__Group__3 : rule__Block__Group__3__Impl rule__Block__Group__4 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:821:1: rule__Block__Group__3 : rule__Block__Group__3__Impl rule__Block__Group__4 ;
     public final void rule__Block__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:634:1: ( rule__Block__Group__3__Impl rule__Block__Group__4 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:635:2: rule__Block__Group__3__Impl rule__Block__Group__4
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:825:1: ( rule__Block__Group__3__Impl rule__Block__Group__4 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:826:2: rule__Block__Group__3__Impl rule__Block__Group__4
             {
-            pushFollow(FOLLOW_rule__Block__Group__3__Impl_in_rule__Block__Group__31302);
+            pushFollow(FOLLOW_rule__Block__Group__3__Impl_in_rule__Block__Group__31677);
             rule__Block__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Block__Group__4_in_rule__Block__Group__31305);
+            pushFollow(FOLLOW_rule__Block__Group__4_in_rule__Block__Group__31680);
             rule__Block__Group__4();
 
             state._fsp--;
@@ -1843,20 +2319,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__3__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:642:1: rule__Block__Group__3__Impl : ( ( rule__Block__ColumnAssignment_3 )* ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:833:1: rule__Block__Group__3__Impl : ( ( rule__Block__ColumnsAssignment_3 )* ) ;
     public final void rule__Block__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:646:1: ( ( ( rule__Block__ColumnAssignment_3 )* ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:647:1: ( ( rule__Block__ColumnAssignment_3 )* )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:837:1: ( ( ( rule__Block__ColumnsAssignment_3 )* ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:838:1: ( ( rule__Block__ColumnsAssignment_3 )* )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:647:1: ( ( rule__Block__ColumnAssignment_3 )* )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:648:1: ( rule__Block__ColumnAssignment_3 )*
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:838:1: ( ( rule__Block__ColumnsAssignment_3 )* )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:839:1: ( rule__Block__ColumnsAssignment_3 )*
             {
-             before(grammarAccess.getBlockAccess().getColumnAssignment_3()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:649:1: ( rule__Block__ColumnAssignment_3 )*
+             before(grammarAccess.getBlockAccess().getColumnsAssignment_3()); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:840:1: ( rule__Block__ColumnsAssignment_3 )*
             loop7:
             do {
                 int alt7=2;
@@ -1869,10 +2345,10 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
                 switch (alt7) {
             	case 1 :
-            	    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:649:2: rule__Block__ColumnAssignment_3
+            	    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:840:2: rule__Block__ColumnsAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__Block__ColumnAssignment_3_in_rule__Block__Group__3__Impl1332);
-            	    rule__Block__ColumnAssignment_3();
+            	    pushFollow(FOLLOW_rule__Block__ColumnsAssignment_3_in_rule__Block__Group__3__Impl1707);
+            	    rule__Block__ColumnsAssignment_3();
 
             	    state._fsp--;
 
@@ -1885,7 +2361,7 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
                 }
             } while (true);
 
-             after(grammarAccess.getBlockAccess().getColumnAssignment_3()); 
+             after(grammarAccess.getBlockAccess().getColumnsAssignment_3()); 
 
             }
 
@@ -1908,16 +2384,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__4"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:659:1: rule__Block__Group__4 : rule__Block__Group__4__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:850:1: rule__Block__Group__4 : rule__Block__Group__4__Impl ;
     public final void rule__Block__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:663:1: ( rule__Block__Group__4__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:664:2: rule__Block__Group__4__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:854:1: ( rule__Block__Group__4__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:855:2: rule__Block__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Block__Group__4__Impl_in_rule__Block__Group__41363);
+            pushFollow(FOLLOW_rule__Block__Group__4__Impl_in_rule__Block__Group__41738);
             rule__Block__Group__4__Impl();
 
             state._fsp--;
@@ -1941,20 +2417,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Block__Group__4__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:670:1: rule__Block__Group__4__Impl : ( '}' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:861:1: rule__Block__Group__4__Impl : ( '}' ) ;
     public final void rule__Block__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:674:1: ( ( '}' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:675:1: ( '}' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:865:1: ( ( '}' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:866:1: ( '}' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:675:1: ( '}' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:676:1: '}'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:866:1: ( '}' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:867:1: '}'
             {
              before(grammarAccess.getBlockAccess().getRightCurlyBracketKeyword_4()); 
-            match(input,13,FOLLOW_13_in_rule__Block__Group__4__Impl1391); 
+            match(input,16,FOLLOW_16_in_rule__Block__Group__4__Impl1766); 
              after(grammarAccess.getBlockAccess().getRightCurlyBracketKeyword_4()); 
 
             }
@@ -1978,21 +2454,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__Group__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:699:1: rule__Column__Group__0 : rule__Column__Group__0__Impl rule__Column__Group__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:890:1: rule__Column__Group__0 : rule__Column__Group__0__Impl rule__Column__Group__1 ;
     public final void rule__Column__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:703:1: ( rule__Column__Group__0__Impl rule__Column__Group__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:704:2: rule__Column__Group__0__Impl rule__Column__Group__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:894:1: ( rule__Column__Group__0__Impl rule__Column__Group__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:895:2: rule__Column__Group__0__Impl rule__Column__Group__1
             {
-            pushFollow(FOLLOW_rule__Column__Group__0__Impl_in_rule__Column__Group__01432);
+            pushFollow(FOLLOW_rule__Column__Group__0__Impl_in_rule__Column__Group__01807);
             rule__Column__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Column__Group__1_in_rule__Column__Group__01435);
+            pushFollow(FOLLOW_rule__Column__Group__1_in_rule__Column__Group__01810);
             rule__Column__Group__1();
 
             state._fsp--;
@@ -2016,23 +2492,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__Group__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:711:1: rule__Column__Group__0__Impl : ( ( rule__Column__NameAssignment_0 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:902:1: rule__Column__Group__0__Impl : ( ( rule__Column__NameAssignment_0 ) ) ;
     public final void rule__Column__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:715:1: ( ( ( rule__Column__NameAssignment_0 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:716:1: ( ( rule__Column__NameAssignment_0 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:906:1: ( ( ( rule__Column__NameAssignment_0 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:907:1: ( ( rule__Column__NameAssignment_0 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:716:1: ( ( rule__Column__NameAssignment_0 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:717:1: ( rule__Column__NameAssignment_0 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:907:1: ( ( rule__Column__NameAssignment_0 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:908:1: ( rule__Column__NameAssignment_0 )
             {
              before(grammarAccess.getColumnAccess().getNameAssignment_0()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:718:1: ( rule__Column__NameAssignment_0 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:718:2: rule__Column__NameAssignment_0
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:909:1: ( rule__Column__NameAssignment_0 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:909:2: rule__Column__NameAssignment_0
             {
-            pushFollow(FOLLOW_rule__Column__NameAssignment_0_in_rule__Column__Group__0__Impl1462);
+            pushFollow(FOLLOW_rule__Column__NameAssignment_0_in_rule__Column__Group__0__Impl1837);
             rule__Column__NameAssignment_0();
 
             state._fsp--;
@@ -2063,21 +2539,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__Group__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:728:1: rule__Column__Group__1 : rule__Column__Group__1__Impl rule__Column__Group__2 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:919:1: rule__Column__Group__1 : rule__Column__Group__1__Impl rule__Column__Group__2 ;
     public final void rule__Column__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:732:1: ( rule__Column__Group__1__Impl rule__Column__Group__2 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:733:2: rule__Column__Group__1__Impl rule__Column__Group__2
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:923:1: ( rule__Column__Group__1__Impl rule__Column__Group__2 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:924:2: rule__Column__Group__1__Impl rule__Column__Group__2
             {
-            pushFollow(FOLLOW_rule__Column__Group__1__Impl_in_rule__Column__Group__11492);
+            pushFollow(FOLLOW_rule__Column__Group__1__Impl_in_rule__Column__Group__11867);
             rule__Column__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Column__Group__2_in_rule__Column__Group__11495);
+            pushFollow(FOLLOW_rule__Column__Group__2_in_rule__Column__Group__11870);
             rule__Column__Group__2();
 
             state._fsp--;
@@ -2101,31 +2577,31 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__Group__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:740:1: rule__Column__Group__1__Impl : ( ( rule__Column__MultipleAssignment_1 )? ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:931:1: rule__Column__Group__1__Impl : ( ( rule__Column__MultipleAssignment_1 )? ) ;
     public final void rule__Column__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:744:1: ( ( ( rule__Column__MultipleAssignment_1 )? ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:745:1: ( ( rule__Column__MultipleAssignment_1 )? )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:935:1: ( ( ( rule__Column__MultipleAssignment_1 )? ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:936:1: ( ( rule__Column__MultipleAssignment_1 )? )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:745:1: ( ( rule__Column__MultipleAssignment_1 )? )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:746:1: ( rule__Column__MultipleAssignment_1 )?
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:936:1: ( ( rule__Column__MultipleAssignment_1 )? )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:937:1: ( rule__Column__MultipleAssignment_1 )?
             {
              before(grammarAccess.getColumnAccess().getMultipleAssignment_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:747:1: ( rule__Column__MultipleAssignment_1 )?
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:938:1: ( rule__Column__MultipleAssignment_1 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==22) ) {
+            if ( (LA8_0==23) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
-                    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:747:2: rule__Column__MultipleAssignment_1
+                    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:938:2: rule__Column__MultipleAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Column__MultipleAssignment_1_in_rule__Column__Group__1__Impl1522);
+                    pushFollow(FOLLOW_rule__Column__MultipleAssignment_1_in_rule__Column__Group__1__Impl1897);
                     rule__Column__MultipleAssignment_1();
 
                     state._fsp--;
@@ -2159,21 +2635,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__Group__2"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:757:1: rule__Column__Group__2 : rule__Column__Group__2__Impl rule__Column__Group__3 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:948:1: rule__Column__Group__2 : rule__Column__Group__2__Impl rule__Column__Group__3 ;
     public final void rule__Column__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:761:1: ( rule__Column__Group__2__Impl rule__Column__Group__3 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:762:2: rule__Column__Group__2__Impl rule__Column__Group__3
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:952:1: ( rule__Column__Group__2__Impl rule__Column__Group__3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:953:2: rule__Column__Group__2__Impl rule__Column__Group__3
             {
-            pushFollow(FOLLOW_rule__Column__Group__2__Impl_in_rule__Column__Group__21553);
+            pushFollow(FOLLOW_rule__Column__Group__2__Impl_in_rule__Column__Group__21928);
             rule__Column__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Column__Group__3_in_rule__Column__Group__21556);
+            pushFollow(FOLLOW_rule__Column__Group__3_in_rule__Column__Group__21931);
             rule__Column__Group__3();
 
             state._fsp--;
@@ -2197,23 +2673,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__Group__2__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:769:1: rule__Column__Group__2__Impl : ( ( rule__Column__DefAssignment_2 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:960:1: rule__Column__Group__2__Impl : ( ( rule__Column__DefAssignment_2 ) ) ;
     public final void rule__Column__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:773:1: ( ( ( rule__Column__DefAssignment_2 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:774:1: ( ( rule__Column__DefAssignment_2 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:964:1: ( ( ( rule__Column__DefAssignment_2 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:965:1: ( ( rule__Column__DefAssignment_2 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:774:1: ( ( rule__Column__DefAssignment_2 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:775:1: ( rule__Column__DefAssignment_2 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:965:1: ( ( rule__Column__DefAssignment_2 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:966:1: ( rule__Column__DefAssignment_2 )
             {
              before(grammarAccess.getColumnAccess().getDefAssignment_2()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:776:1: ( rule__Column__DefAssignment_2 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:776:2: rule__Column__DefAssignment_2
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:967:1: ( rule__Column__DefAssignment_2 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:967:2: rule__Column__DefAssignment_2
             {
-            pushFollow(FOLLOW_rule__Column__DefAssignment_2_in_rule__Column__Group__2__Impl1583);
+            pushFollow(FOLLOW_rule__Column__DefAssignment_2_in_rule__Column__Group__2__Impl1958);
             rule__Column__DefAssignment_2();
 
             state._fsp--;
@@ -2244,16 +2720,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__Group__3"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:786:1: rule__Column__Group__3 : rule__Column__Group__3__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:977:1: rule__Column__Group__3 : rule__Column__Group__3__Impl ;
     public final void rule__Column__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:790:1: ( rule__Column__Group__3__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:791:2: rule__Column__Group__3__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:981:1: ( rule__Column__Group__3__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:982:2: rule__Column__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Column__Group__3__Impl_in_rule__Column__Group__31613);
+            pushFollow(FOLLOW_rule__Column__Group__3__Impl_in_rule__Column__Group__31988);
             rule__Column__Group__3__Impl();
 
             state._fsp--;
@@ -2277,20 +2753,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__Group__3__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:797:1: rule__Column__Group__3__Impl : ( ';' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:988:1: rule__Column__Group__3__Impl : ( ';' ) ;
     public final void rule__Column__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:801:1: ( ( ';' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:1: ( ';' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:992:1: ( ( ';' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:993:1: ( ';' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:1: ( ';' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:803:1: ';'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:993:1: ( ';' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:994:1: ';'
             {
              before(grammarAccess.getColumnAccess().getSemicolonKeyword_3()); 
-            match(input,14,FOLLOW_14_in_rule__Column__Group__3__Impl1641); 
+            match(input,13,FOLLOW_13_in_rule__Column__Group__3__Impl2016); 
              after(grammarAccess.getColumnAccess().getSemicolonKeyword_3()); 
 
             }
@@ -2314,21 +2790,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__MandatoryColumn__Group__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:824:1: rule__MandatoryColumn__Group__0 : rule__MandatoryColumn__Group__0__Impl rule__MandatoryColumn__Group__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1015:1: rule__MandatoryColumn__Group__0 : rule__MandatoryColumn__Group__0__Impl rule__MandatoryColumn__Group__1 ;
     public final void rule__MandatoryColumn__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:828:1: ( rule__MandatoryColumn__Group__0__Impl rule__MandatoryColumn__Group__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:829:2: rule__MandatoryColumn__Group__0__Impl rule__MandatoryColumn__Group__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1019:1: ( rule__MandatoryColumn__Group__0__Impl rule__MandatoryColumn__Group__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1020:2: rule__MandatoryColumn__Group__0__Impl rule__MandatoryColumn__Group__1
             {
-            pushFollow(FOLLOW_rule__MandatoryColumn__Group__0__Impl_in_rule__MandatoryColumn__Group__01680);
+            pushFollow(FOLLOW_rule__MandatoryColumn__Group__0__Impl_in_rule__MandatoryColumn__Group__02055);
             rule__MandatoryColumn__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__MandatoryColumn__Group__1_in_rule__MandatoryColumn__Group__01683);
+            pushFollow(FOLLOW_rule__MandatoryColumn__Group__1_in_rule__MandatoryColumn__Group__02058);
             rule__MandatoryColumn__Group__1();
 
             state._fsp--;
@@ -2352,20 +2828,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__MandatoryColumn__Group__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:836:1: rule__MandatoryColumn__Group__0__Impl : ( '=' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1027:1: rule__MandatoryColumn__Group__0__Impl : ( '=' ) ;
     public final void rule__MandatoryColumn__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:840:1: ( ( '=' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:841:1: ( '=' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1031:1: ( ( '=' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1032:1: ( '=' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:841:1: ( '=' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:842:1: '='
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1032:1: ( '=' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1033:1: '='
             {
              before(grammarAccess.getMandatoryColumnAccess().getEqualsSignKeyword_0()); 
-            match(input,15,FOLLOW_15_in_rule__MandatoryColumn__Group__0__Impl1711); 
+            match(input,17,FOLLOW_17_in_rule__MandatoryColumn__Group__0__Impl2086); 
              after(grammarAccess.getMandatoryColumnAccess().getEqualsSignKeyword_0()); 
 
             }
@@ -2389,16 +2865,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__MandatoryColumn__Group__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:855:1: rule__MandatoryColumn__Group__1 : rule__MandatoryColumn__Group__1__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1046:1: rule__MandatoryColumn__Group__1 : rule__MandatoryColumn__Group__1__Impl ;
     public final void rule__MandatoryColumn__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:859:1: ( rule__MandatoryColumn__Group__1__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:860:2: rule__MandatoryColumn__Group__1__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1050:1: ( rule__MandatoryColumn__Group__1__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1051:2: rule__MandatoryColumn__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__MandatoryColumn__Group__1__Impl_in_rule__MandatoryColumn__Group__11742);
+            pushFollow(FOLLOW_rule__MandatoryColumn__Group__1__Impl_in_rule__MandatoryColumn__Group__12117);
             rule__MandatoryColumn__Group__1__Impl();
 
             state._fsp--;
@@ -2422,23 +2898,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__MandatoryColumn__Group__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:866:1: rule__MandatoryColumn__Group__1__Impl : ( ( rule__MandatoryColumn__SpecAssignment_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1057:1: rule__MandatoryColumn__Group__1__Impl : ( ( rule__MandatoryColumn__SpecAssignment_1 ) ) ;
     public final void rule__MandatoryColumn__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:870:1: ( ( ( rule__MandatoryColumn__SpecAssignment_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:871:1: ( ( rule__MandatoryColumn__SpecAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1061:1: ( ( ( rule__MandatoryColumn__SpecAssignment_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1062:1: ( ( rule__MandatoryColumn__SpecAssignment_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:871:1: ( ( rule__MandatoryColumn__SpecAssignment_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:872:1: ( rule__MandatoryColumn__SpecAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1062:1: ( ( rule__MandatoryColumn__SpecAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1063:1: ( rule__MandatoryColumn__SpecAssignment_1 )
             {
              before(grammarAccess.getMandatoryColumnAccess().getSpecAssignment_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:873:1: ( rule__MandatoryColumn__SpecAssignment_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:873:2: rule__MandatoryColumn__SpecAssignment_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1064:1: ( rule__MandatoryColumn__SpecAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1064:2: rule__MandatoryColumn__SpecAssignment_1
             {
-            pushFollow(FOLLOW_rule__MandatoryColumn__SpecAssignment_1_in_rule__MandatoryColumn__Group__1__Impl1769);
+            pushFollow(FOLLOW_rule__MandatoryColumn__SpecAssignment_1_in_rule__MandatoryColumn__Group__1__Impl2144);
             rule__MandatoryColumn__SpecAssignment_1();
 
             state._fsp--;
@@ -2469,21 +2945,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__OptionalColumn__Group__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:887:1: rule__OptionalColumn__Group__0 : rule__OptionalColumn__Group__0__Impl rule__OptionalColumn__Group__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1078:1: rule__OptionalColumn__Group__0 : rule__OptionalColumn__Group__0__Impl rule__OptionalColumn__Group__1 ;
     public final void rule__OptionalColumn__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:891:1: ( rule__OptionalColumn__Group__0__Impl rule__OptionalColumn__Group__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:892:2: rule__OptionalColumn__Group__0__Impl rule__OptionalColumn__Group__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1082:1: ( rule__OptionalColumn__Group__0__Impl rule__OptionalColumn__Group__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1083:2: rule__OptionalColumn__Group__0__Impl rule__OptionalColumn__Group__1
             {
-            pushFollow(FOLLOW_rule__OptionalColumn__Group__0__Impl_in_rule__OptionalColumn__Group__01803);
+            pushFollow(FOLLOW_rule__OptionalColumn__Group__0__Impl_in_rule__OptionalColumn__Group__02178);
             rule__OptionalColumn__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__OptionalColumn__Group__1_in_rule__OptionalColumn__Group__01806);
+            pushFollow(FOLLOW_rule__OptionalColumn__Group__1_in_rule__OptionalColumn__Group__02181);
             rule__OptionalColumn__Group__1();
 
             state._fsp--;
@@ -2507,20 +2983,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__OptionalColumn__Group__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:899:1: rule__OptionalColumn__Group__0__Impl : ( '?=' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1090:1: rule__OptionalColumn__Group__0__Impl : ( '?=' ) ;
     public final void rule__OptionalColumn__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:903:1: ( ( '?=' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:904:1: ( '?=' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1094:1: ( ( '?=' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1095:1: ( '?=' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:904:1: ( '?=' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:905:1: '?='
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1095:1: ( '?=' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1096:1: '?='
             {
              before(grammarAccess.getOptionalColumnAccess().getQuestionMarkEqualsSignKeyword_0()); 
-            match(input,16,FOLLOW_16_in_rule__OptionalColumn__Group__0__Impl1834); 
+            match(input,18,FOLLOW_18_in_rule__OptionalColumn__Group__0__Impl2209); 
              after(grammarAccess.getOptionalColumnAccess().getQuestionMarkEqualsSignKeyword_0()); 
 
             }
@@ -2544,16 +3020,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__OptionalColumn__Group__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:918:1: rule__OptionalColumn__Group__1 : rule__OptionalColumn__Group__1__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1109:1: rule__OptionalColumn__Group__1 : rule__OptionalColumn__Group__1__Impl ;
     public final void rule__OptionalColumn__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:922:1: ( rule__OptionalColumn__Group__1__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:923:2: rule__OptionalColumn__Group__1__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1113:1: ( rule__OptionalColumn__Group__1__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1114:2: rule__OptionalColumn__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__OptionalColumn__Group__1__Impl_in_rule__OptionalColumn__Group__11865);
+            pushFollow(FOLLOW_rule__OptionalColumn__Group__1__Impl_in_rule__OptionalColumn__Group__12240);
             rule__OptionalColumn__Group__1__Impl();
 
             state._fsp--;
@@ -2577,23 +3053,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__OptionalColumn__Group__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:929:1: rule__OptionalColumn__Group__1__Impl : ( ( rule__OptionalColumn__SpecAssignment_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1120:1: rule__OptionalColumn__Group__1__Impl : ( ( rule__OptionalColumn__SpecAssignment_1 ) ) ;
     public final void rule__OptionalColumn__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:933:1: ( ( ( rule__OptionalColumn__SpecAssignment_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:934:1: ( ( rule__OptionalColumn__SpecAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1124:1: ( ( ( rule__OptionalColumn__SpecAssignment_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1125:1: ( ( rule__OptionalColumn__SpecAssignment_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:934:1: ( ( rule__OptionalColumn__SpecAssignment_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:935:1: ( rule__OptionalColumn__SpecAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1125:1: ( ( rule__OptionalColumn__SpecAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1126:1: ( rule__OptionalColumn__SpecAssignment_1 )
             {
              before(grammarAccess.getOptionalColumnAccess().getSpecAssignment_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:936:1: ( rule__OptionalColumn__SpecAssignment_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:936:2: rule__OptionalColumn__SpecAssignment_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1127:1: ( rule__OptionalColumn__SpecAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1127:2: rule__OptionalColumn__SpecAssignment_1
             {
-            pushFollow(FOLLOW_rule__OptionalColumn__SpecAssignment_1_in_rule__OptionalColumn__Group__1__Impl1892);
+            pushFollow(FOLLOW_rule__OptionalColumn__SpecAssignment_1_in_rule__OptionalColumn__Group__1__Impl2267);
             rule__OptionalColumn__SpecAssignment_1();
 
             state._fsp--;
@@ -2624,21 +3100,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__Group__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:950:1: rule__RowSpec__Group__0 : rule__RowSpec__Group__0__Impl rule__RowSpec__Group__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1141:1: rule__RowSpec__Group__0 : rule__RowSpec__Group__0__Impl rule__RowSpec__Group__1 ;
     public final void rule__RowSpec__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:954:1: ( rule__RowSpec__Group__0__Impl rule__RowSpec__Group__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:955:2: rule__RowSpec__Group__0__Impl rule__RowSpec__Group__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1145:1: ( rule__RowSpec__Group__0__Impl rule__RowSpec__Group__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1146:2: rule__RowSpec__Group__0__Impl rule__RowSpec__Group__1
             {
-            pushFollow(FOLLOW_rule__RowSpec__Group__0__Impl_in_rule__RowSpec__Group__01926);
+            pushFollow(FOLLOW_rule__RowSpec__Group__0__Impl_in_rule__RowSpec__Group__02301);
             rule__RowSpec__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RowSpec__Group__1_in_rule__RowSpec__Group__01929);
+            pushFollow(FOLLOW_rule__RowSpec__Group__1_in_rule__RowSpec__Group__02304);
             rule__RowSpec__Group__1();
 
             state._fsp--;
@@ -2662,20 +3138,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__Group__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:962:1: rule__RowSpec__Group__0__Impl : ( 'column' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1153:1: rule__RowSpec__Group__0__Impl : ( 'column' ) ;
     public final void rule__RowSpec__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:966:1: ( ( 'column' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:967:1: ( 'column' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1157:1: ( ( 'column' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1158:1: ( 'column' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:967:1: ( 'column' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:968:1: 'column'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1158:1: ( 'column' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1159:1: 'column'
             {
              before(grammarAccess.getRowSpecAccess().getColumnKeyword_0()); 
-            match(input,17,FOLLOW_17_in_rule__RowSpec__Group__0__Impl1957); 
+            match(input,19,FOLLOW_19_in_rule__RowSpec__Group__0__Impl2332); 
              after(grammarAccess.getRowSpecAccess().getColumnKeyword_0()); 
 
             }
@@ -2699,21 +3175,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__Group__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:981:1: rule__RowSpec__Group__1 : rule__RowSpec__Group__1__Impl rule__RowSpec__Group__2 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1172:1: rule__RowSpec__Group__1 : rule__RowSpec__Group__1__Impl rule__RowSpec__Group__2 ;
     public final void rule__RowSpec__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:985:1: ( rule__RowSpec__Group__1__Impl rule__RowSpec__Group__2 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:986:2: rule__RowSpec__Group__1__Impl rule__RowSpec__Group__2
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1176:1: ( rule__RowSpec__Group__1__Impl rule__RowSpec__Group__2 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1177:2: rule__RowSpec__Group__1__Impl rule__RowSpec__Group__2
             {
-            pushFollow(FOLLOW_rule__RowSpec__Group__1__Impl_in_rule__RowSpec__Group__11988);
+            pushFollow(FOLLOW_rule__RowSpec__Group__1__Impl_in_rule__RowSpec__Group__12363);
             rule__RowSpec__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RowSpec__Group__2_in_rule__RowSpec__Group__11991);
+            pushFollow(FOLLOW_rule__RowSpec__Group__2_in_rule__RowSpec__Group__12366);
             rule__RowSpec__Group__2();
 
             state._fsp--;
@@ -2737,23 +3213,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__Group__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:993:1: rule__RowSpec__Group__1__Impl : ( ( rule__RowSpec__HeaderAssignment_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1184:1: rule__RowSpec__Group__1__Impl : ( ( rule__RowSpec__HeaderAssignment_1 ) ) ;
     public final void rule__RowSpec__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:997:1: ( ( ( rule__RowSpec__HeaderAssignment_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:998:1: ( ( rule__RowSpec__HeaderAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1188:1: ( ( ( rule__RowSpec__HeaderAssignment_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1189:1: ( ( rule__RowSpec__HeaderAssignment_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:998:1: ( ( rule__RowSpec__HeaderAssignment_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:999:1: ( rule__RowSpec__HeaderAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1189:1: ( ( rule__RowSpec__HeaderAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1190:1: ( rule__RowSpec__HeaderAssignment_1 )
             {
              before(grammarAccess.getRowSpecAccess().getHeaderAssignment_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1000:1: ( rule__RowSpec__HeaderAssignment_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1000:2: rule__RowSpec__HeaderAssignment_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1191:1: ( rule__RowSpec__HeaderAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1191:2: rule__RowSpec__HeaderAssignment_1
             {
-            pushFollow(FOLLOW_rule__RowSpec__HeaderAssignment_1_in_rule__RowSpec__Group__1__Impl2018);
+            pushFollow(FOLLOW_rule__RowSpec__HeaderAssignment_1_in_rule__RowSpec__Group__1__Impl2393);
             rule__RowSpec__HeaderAssignment_1();
 
             state._fsp--;
@@ -2784,21 +3260,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__Group__2"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1010:1: rule__RowSpec__Group__2 : rule__RowSpec__Group__2__Impl rule__RowSpec__Group__3 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1201:1: rule__RowSpec__Group__2 : rule__RowSpec__Group__2__Impl rule__RowSpec__Group__3 ;
     public final void rule__RowSpec__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1014:1: ( rule__RowSpec__Group__2__Impl rule__RowSpec__Group__3 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1015:2: rule__RowSpec__Group__2__Impl rule__RowSpec__Group__3
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1205:1: ( rule__RowSpec__Group__2__Impl rule__RowSpec__Group__3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1206:2: rule__RowSpec__Group__2__Impl rule__RowSpec__Group__3
             {
-            pushFollow(FOLLOW_rule__RowSpec__Group__2__Impl_in_rule__RowSpec__Group__22048);
+            pushFollow(FOLLOW_rule__RowSpec__Group__2__Impl_in_rule__RowSpec__Group__22423);
             rule__RowSpec__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__RowSpec__Group__3_in_rule__RowSpec__Group__22051);
+            pushFollow(FOLLOW_rule__RowSpec__Group__3_in_rule__RowSpec__Group__22426);
             rule__RowSpec__Group__3();
 
             state._fsp--;
@@ -2822,20 +3298,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__Group__2__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1022:1: rule__RowSpec__Group__2__Impl : ( ':' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1213:1: rule__RowSpec__Group__2__Impl : ( ':' ) ;
     public final void rule__RowSpec__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1026:1: ( ( ':' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1027:1: ( ':' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1217:1: ( ( ':' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1218:1: ( ':' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1027:1: ( ':' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1028:1: ':'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1218:1: ( ':' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1219:1: ':'
             {
              before(grammarAccess.getRowSpecAccess().getColonKeyword_2()); 
-            match(input,18,FOLLOW_18_in_rule__RowSpec__Group__2__Impl2079); 
+            match(input,12,FOLLOW_12_in_rule__RowSpec__Group__2__Impl2454); 
              after(grammarAccess.getRowSpecAccess().getColonKeyword_2()); 
 
             }
@@ -2859,16 +3335,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__Group__3"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1041:1: rule__RowSpec__Group__3 : rule__RowSpec__Group__3__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1232:1: rule__RowSpec__Group__3 : rule__RowSpec__Group__3__Impl ;
     public final void rule__RowSpec__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1045:1: ( rule__RowSpec__Group__3__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1046:2: rule__RowSpec__Group__3__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1236:1: ( rule__RowSpec__Group__3__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1237:2: rule__RowSpec__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__RowSpec__Group__3__Impl_in_rule__RowSpec__Group__32110);
+            pushFollow(FOLLOW_rule__RowSpec__Group__3__Impl_in_rule__RowSpec__Group__32485);
             rule__RowSpec__Group__3__Impl();
 
             state._fsp--;
@@ -2892,23 +3368,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__Group__3__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1052:1: rule__RowSpec__Group__3__Impl : ( ( rule__RowSpec__SyntaxAssignment_3 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1243:1: rule__RowSpec__Group__3__Impl : ( ( rule__RowSpec__SyntaxAssignment_3 ) ) ;
     public final void rule__RowSpec__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1056:1: ( ( ( rule__RowSpec__SyntaxAssignment_3 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1057:1: ( ( rule__RowSpec__SyntaxAssignment_3 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1247:1: ( ( ( rule__RowSpec__SyntaxAssignment_3 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1248:1: ( ( rule__RowSpec__SyntaxAssignment_3 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1057:1: ( ( rule__RowSpec__SyntaxAssignment_3 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1058:1: ( rule__RowSpec__SyntaxAssignment_3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1248:1: ( ( rule__RowSpec__SyntaxAssignment_3 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1249:1: ( rule__RowSpec__SyntaxAssignment_3 )
             {
              before(grammarAccess.getRowSpecAccess().getSyntaxAssignment_3()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1059:1: ( rule__RowSpec__SyntaxAssignment_3 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1059:2: rule__RowSpec__SyntaxAssignment_3
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1250:1: ( rule__RowSpec__SyntaxAssignment_3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1250:2: rule__RowSpec__SyntaxAssignment_3
             {
-            pushFollow(FOLLOW_rule__RowSpec__SyntaxAssignment_3_in_rule__RowSpec__Group__3__Impl2137);
+            pushFollow(FOLLOW_rule__RowSpec__SyntaxAssignment_3_in_rule__RowSpec__Group__3__Impl2512);
             rule__RowSpec__SyntaxAssignment_3();
 
             state._fsp--;
@@ -2939,21 +3415,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__BlockSpec__Group__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1077:1: rule__BlockSpec__Group__0 : rule__BlockSpec__Group__0__Impl rule__BlockSpec__Group__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1268:1: rule__BlockSpec__Group__0 : rule__BlockSpec__Group__0__Impl rule__BlockSpec__Group__1 ;
     public final void rule__BlockSpec__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1081:1: ( rule__BlockSpec__Group__0__Impl rule__BlockSpec__Group__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1082:2: rule__BlockSpec__Group__0__Impl rule__BlockSpec__Group__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1272:1: ( rule__BlockSpec__Group__0__Impl rule__BlockSpec__Group__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1273:2: rule__BlockSpec__Group__0__Impl rule__BlockSpec__Group__1
             {
-            pushFollow(FOLLOW_rule__BlockSpec__Group__0__Impl_in_rule__BlockSpec__Group__02175);
+            pushFollow(FOLLOW_rule__BlockSpec__Group__0__Impl_in_rule__BlockSpec__Group__02550);
             rule__BlockSpec__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BlockSpec__Group__1_in_rule__BlockSpec__Group__02178);
+            pushFollow(FOLLOW_rule__BlockSpec__Group__1_in_rule__BlockSpec__Group__02553);
             rule__BlockSpec__Group__1();
 
             state._fsp--;
@@ -2977,20 +3453,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__BlockSpec__Group__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1089:1: rule__BlockSpec__Group__0__Impl : ( 'block' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1280:1: rule__BlockSpec__Group__0__Impl : ( 'block' ) ;
     public final void rule__BlockSpec__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1093:1: ( ( 'block' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1094:1: ( 'block' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1284:1: ( ( 'block' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1285:1: ( 'block' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1094:1: ( 'block' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1095:1: 'block'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1285:1: ( 'block' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1286:1: 'block'
             {
              before(grammarAccess.getBlockSpecAccess().getBlockKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__BlockSpec__Group__0__Impl2206); 
+            match(input,14,FOLLOW_14_in_rule__BlockSpec__Group__0__Impl2581); 
              after(grammarAccess.getBlockSpecAccess().getBlockKeyword_0()); 
 
             }
@@ -3014,16 +3490,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__BlockSpec__Group__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1108:1: rule__BlockSpec__Group__1 : rule__BlockSpec__Group__1__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1299:1: rule__BlockSpec__Group__1 : rule__BlockSpec__Group__1__Impl ;
     public final void rule__BlockSpec__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1112:1: ( rule__BlockSpec__Group__1__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1113:2: rule__BlockSpec__Group__1__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1303:1: ( rule__BlockSpec__Group__1__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1304:2: rule__BlockSpec__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__BlockSpec__Group__1__Impl_in_rule__BlockSpec__Group__12237);
+            pushFollow(FOLLOW_rule__BlockSpec__Group__1__Impl_in_rule__BlockSpec__Group__12612);
             rule__BlockSpec__Group__1__Impl();
 
             state._fsp--;
@@ -3047,23 +3523,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__BlockSpec__Group__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1119:1: rule__BlockSpec__Group__1__Impl : ( ( rule__BlockSpec__KindAssignment_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1310:1: rule__BlockSpec__Group__1__Impl : ( ( rule__BlockSpec__KindAssignment_1 ) ) ;
     public final void rule__BlockSpec__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1123:1: ( ( ( rule__BlockSpec__KindAssignment_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1124:1: ( ( rule__BlockSpec__KindAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1314:1: ( ( ( rule__BlockSpec__KindAssignment_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1315:1: ( ( rule__BlockSpec__KindAssignment_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1124:1: ( ( rule__BlockSpec__KindAssignment_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1125:1: ( rule__BlockSpec__KindAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1315:1: ( ( rule__BlockSpec__KindAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1316:1: ( rule__BlockSpec__KindAssignment_1 )
             {
              before(grammarAccess.getBlockSpecAccess().getKindAssignment_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1126:1: ( rule__BlockSpec__KindAssignment_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1126:2: rule__BlockSpec__KindAssignment_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1317:1: ( rule__BlockSpec__KindAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1317:2: rule__BlockSpec__KindAssignment_1
             {
-            pushFollow(FOLLOW_rule__BlockSpec__KindAssignment_1_in_rule__BlockSpec__Group__1__Impl2264);
+            pushFollow(FOLLOW_rule__BlockSpec__KindAssignment_1_in_rule__BlockSpec__Group__1__Impl2639);
             rule__BlockSpec__KindAssignment_1();
 
             state._fsp--;
@@ -3094,21 +3570,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Group_3__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1140:1: rule__Syntax__Group_3__0 : rule__Syntax__Group_3__0__Impl rule__Syntax__Group_3__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1331:1: rule__Syntax__Group_3__0 : rule__Syntax__Group_3__0__Impl rule__Syntax__Group_3__1 ;
     public final void rule__Syntax__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1144:1: ( rule__Syntax__Group_3__0__Impl rule__Syntax__Group_3__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1145:2: rule__Syntax__Group_3__0__Impl rule__Syntax__Group_3__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1335:1: ( rule__Syntax__Group_3__0__Impl rule__Syntax__Group_3__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1336:2: rule__Syntax__Group_3__0__Impl rule__Syntax__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Syntax__Group_3__0__Impl_in_rule__Syntax__Group_3__02298);
+            pushFollow(FOLLOW_rule__Syntax__Group_3__0__Impl_in_rule__Syntax__Group_3__02673);
             rule__Syntax__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Syntax__Group_3__1_in_rule__Syntax__Group_3__02301);
+            pushFollow(FOLLOW_rule__Syntax__Group_3__1_in_rule__Syntax__Group_3__02676);
             rule__Syntax__Group_3__1();
 
             state._fsp--;
@@ -3132,20 +3608,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Group_3__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1152:1: rule__Syntax__Group_3__0__Impl : ( 'token' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1343:1: rule__Syntax__Group_3__0__Impl : ( 'token' ) ;
     public final void rule__Syntax__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1156:1: ( ( 'token' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1157:1: ( 'token' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1347:1: ( ( 'token' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1348:1: ( 'token' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1157:1: ( 'token' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1158:1: 'token'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1348:1: ( 'token' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1349:1: 'token'
             {
              before(grammarAccess.getSyntaxAccess().getTokenKeyword_3_0()); 
-            match(input,19,FOLLOW_19_in_rule__Syntax__Group_3__0__Impl2329); 
+            match(input,20,FOLLOW_20_in_rule__Syntax__Group_3__0__Impl2704); 
              after(grammarAccess.getSyntaxAccess().getTokenKeyword_3_0()); 
 
             }
@@ -3169,16 +3645,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Group_3__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1171:1: rule__Syntax__Group_3__1 : rule__Syntax__Group_3__1__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1362:1: rule__Syntax__Group_3__1 : rule__Syntax__Group_3__1__Impl ;
     public final void rule__Syntax__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1175:1: ( rule__Syntax__Group_3__1__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1176:2: rule__Syntax__Group_3__1__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1366:1: ( rule__Syntax__Group_3__1__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1367:2: rule__Syntax__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Syntax__Group_3__1__Impl_in_rule__Syntax__Group_3__12360);
+            pushFollow(FOLLOW_rule__Syntax__Group_3__1__Impl_in_rule__Syntax__Group_3__12735);
             rule__Syntax__Group_3__1__Impl();
 
             state._fsp--;
@@ -3202,23 +3678,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Group_3__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1182:1: rule__Syntax__Group_3__1__Impl : ( ( rule__Syntax__TokenAssignment_3_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1373:1: rule__Syntax__Group_3__1__Impl : ( ( rule__Syntax__TokenAssignment_3_1 ) ) ;
     public final void rule__Syntax__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1186:1: ( ( ( rule__Syntax__TokenAssignment_3_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1187:1: ( ( rule__Syntax__TokenAssignment_3_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1377:1: ( ( ( rule__Syntax__TokenAssignment_3_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1378:1: ( ( rule__Syntax__TokenAssignment_3_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1187:1: ( ( rule__Syntax__TokenAssignment_3_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1188:1: ( rule__Syntax__TokenAssignment_3_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1378:1: ( ( rule__Syntax__TokenAssignment_3_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1379:1: ( rule__Syntax__TokenAssignment_3_1 )
             {
              before(grammarAccess.getSyntaxAccess().getTokenAssignment_3_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1189:1: ( rule__Syntax__TokenAssignment_3_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1189:2: rule__Syntax__TokenAssignment_3_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1380:1: ( rule__Syntax__TokenAssignment_3_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1380:2: rule__Syntax__TokenAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Syntax__TokenAssignment_3_1_in_rule__Syntax__Group_3__1__Impl2387);
+            pushFollow(FOLLOW_rule__Syntax__TokenAssignment_3_1_in_rule__Syntax__Group_3__1__Impl2762);
             rule__Syntax__TokenAssignment_3_1();
 
             state._fsp--;
@@ -3249,21 +3725,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Group_4__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1203:1: rule__Syntax__Group_4__0 : rule__Syntax__Group_4__0__Impl rule__Syntax__Group_4__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1394:1: rule__Syntax__Group_4__0 : rule__Syntax__Group_4__0__Impl rule__Syntax__Group_4__1 ;
     public final void rule__Syntax__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1207:1: ( rule__Syntax__Group_4__0__Impl rule__Syntax__Group_4__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1208:2: rule__Syntax__Group_4__0__Impl rule__Syntax__Group_4__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1398:1: ( rule__Syntax__Group_4__0__Impl rule__Syntax__Group_4__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1399:2: rule__Syntax__Group_4__0__Impl rule__Syntax__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Syntax__Group_4__0__Impl_in_rule__Syntax__Group_4__02421);
+            pushFollow(FOLLOW_rule__Syntax__Group_4__0__Impl_in_rule__Syntax__Group_4__02796);
             rule__Syntax__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Syntax__Group_4__1_in_rule__Syntax__Group_4__02424);
+            pushFollow(FOLLOW_rule__Syntax__Group_4__1_in_rule__Syntax__Group_4__02799);
             rule__Syntax__Group_4__1();
 
             state._fsp--;
@@ -3287,20 +3763,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Group_4__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1215:1: rule__Syntax__Group_4__0__Impl : ( 'rule' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1406:1: rule__Syntax__Group_4__0__Impl : ( 'rule' ) ;
     public final void rule__Syntax__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1219:1: ( ( 'rule' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1220:1: ( 'rule' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1410:1: ( ( 'rule' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1411:1: ( 'rule' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1220:1: ( 'rule' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1221:1: 'rule'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1411:1: ( 'rule' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1412:1: 'rule'
             {
              before(grammarAccess.getSyntaxAccess().getRuleKeyword_4_0()); 
-            match(input,20,FOLLOW_20_in_rule__Syntax__Group_4__0__Impl2452); 
+            match(input,21,FOLLOW_21_in_rule__Syntax__Group_4__0__Impl2827); 
              after(grammarAccess.getSyntaxAccess().getRuleKeyword_4_0()); 
 
             }
@@ -3324,16 +3800,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Group_4__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1234:1: rule__Syntax__Group_4__1 : rule__Syntax__Group_4__1__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1425:1: rule__Syntax__Group_4__1 : rule__Syntax__Group_4__1__Impl ;
     public final void rule__Syntax__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1238:1: ( rule__Syntax__Group_4__1__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1239:2: rule__Syntax__Group_4__1__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1429:1: ( rule__Syntax__Group_4__1__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1430:2: rule__Syntax__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__Syntax__Group_4__1__Impl_in_rule__Syntax__Group_4__12483);
+            pushFollow(FOLLOW_rule__Syntax__Group_4__1__Impl_in_rule__Syntax__Group_4__12858);
             rule__Syntax__Group_4__1__Impl();
 
             state._fsp--;
@@ -3357,23 +3833,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Group_4__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1245:1: rule__Syntax__Group_4__1__Impl : ( ( rule__Syntax__RuleAssignment_4_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1436:1: rule__Syntax__Group_4__1__Impl : ( ( rule__Syntax__RuleAssignment_4_1 ) ) ;
     public final void rule__Syntax__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1249:1: ( ( ( rule__Syntax__RuleAssignment_4_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1250:1: ( ( rule__Syntax__RuleAssignment_4_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1440:1: ( ( ( rule__Syntax__RuleAssignment_4_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1441:1: ( ( rule__Syntax__RuleAssignment_4_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1250:1: ( ( rule__Syntax__RuleAssignment_4_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1251:1: ( rule__Syntax__RuleAssignment_4_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1441:1: ( ( rule__Syntax__RuleAssignment_4_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1442:1: ( rule__Syntax__RuleAssignment_4_1 )
             {
              before(grammarAccess.getSyntaxAccess().getRuleAssignment_4_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1252:1: ( rule__Syntax__RuleAssignment_4_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1252:2: rule__Syntax__RuleAssignment_4_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1443:1: ( rule__Syntax__RuleAssignment_4_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1443:2: rule__Syntax__RuleAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Syntax__RuleAssignment_4_1_in_rule__Syntax__Group_4__1__Impl2510);
+            pushFollow(FOLLOW_rule__Syntax__RuleAssignment_4_1_in_rule__Syntax__Group_4__1__Impl2885);
             rule__Syntax__RuleAssignment_4_1();
 
             state._fsp--;
@@ -3404,21 +3880,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1266:1: rule__Rule__Group__0 : rule__Rule__Group__0__Impl rule__Rule__Group__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1457:1: rule__Rule__Group__0 : rule__Rule__Group__0__Impl rule__Rule__Group__1 ;
     public final void rule__Rule__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1270:1: ( rule__Rule__Group__0__Impl rule__Rule__Group__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1271:2: rule__Rule__Group__0__Impl rule__Rule__Group__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1461:1: ( rule__Rule__Group__0__Impl rule__Rule__Group__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1462:2: rule__Rule__Group__0__Impl rule__Rule__Group__1
             {
-            pushFollow(FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__02544);
+            pushFollow(FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__02919);
             rule__Rule__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__02547);
+            pushFollow(FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__02922);
             rule__Rule__Group__1();
 
             state._fsp--;
@@ -3442,20 +3918,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1278:1: rule__Rule__Group__0__Impl : ( 'rule' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1469:1: rule__Rule__Group__0__Impl : ( 'rule' ) ;
     public final void rule__Rule__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1282:1: ( ( 'rule' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1283:1: ( 'rule' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1473:1: ( ( 'rule' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1474:1: ( 'rule' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1283:1: ( 'rule' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1284:1: 'rule'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1474:1: ( 'rule' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1475:1: 'rule'
             {
              before(grammarAccess.getRuleAccess().getRuleKeyword_0()); 
-            match(input,20,FOLLOW_20_in_rule__Rule__Group__0__Impl2575); 
+            match(input,21,FOLLOW_21_in_rule__Rule__Group__0__Impl2950); 
              after(grammarAccess.getRuleAccess().getRuleKeyword_0()); 
 
             }
@@ -3479,21 +3955,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1297:1: rule__Rule__Group__1 : rule__Rule__Group__1__Impl rule__Rule__Group__2 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1488:1: rule__Rule__Group__1 : rule__Rule__Group__1__Impl rule__Rule__Group__2 ;
     public final void rule__Rule__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1301:1: ( rule__Rule__Group__1__Impl rule__Rule__Group__2 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1302:2: rule__Rule__Group__1__Impl rule__Rule__Group__2
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1492:1: ( rule__Rule__Group__1__Impl rule__Rule__Group__2 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1493:2: rule__Rule__Group__1__Impl rule__Rule__Group__2
             {
-            pushFollow(FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__12606);
+            pushFollow(FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__12981);
             rule__Rule__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__12609);
+            pushFollow(FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__12984);
             rule__Rule__Group__2();
 
             state._fsp--;
@@ -3517,23 +3993,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1309:1: rule__Rule__Group__1__Impl : ( ( rule__Rule__NameAssignment_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1500:1: rule__Rule__Group__1__Impl : ( ( rule__Rule__NameAssignment_1 ) ) ;
     public final void rule__Rule__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1313:1: ( ( ( rule__Rule__NameAssignment_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1314:1: ( ( rule__Rule__NameAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1504:1: ( ( ( rule__Rule__NameAssignment_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1505:1: ( ( rule__Rule__NameAssignment_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1314:1: ( ( rule__Rule__NameAssignment_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1315:1: ( rule__Rule__NameAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1505:1: ( ( rule__Rule__NameAssignment_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1506:1: ( rule__Rule__NameAssignment_1 )
             {
              before(grammarAccess.getRuleAccess().getNameAssignment_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1316:1: ( rule__Rule__NameAssignment_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1316:2: rule__Rule__NameAssignment_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1507:1: ( rule__Rule__NameAssignment_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1507:2: rule__Rule__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Rule__NameAssignment_1_in_rule__Rule__Group__1__Impl2636);
+            pushFollow(FOLLOW_rule__Rule__NameAssignment_1_in_rule__Rule__Group__1__Impl3011);
             rule__Rule__NameAssignment_1();
 
             state._fsp--;
@@ -3564,21 +4040,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__2"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1326:1: rule__Rule__Group__2 : rule__Rule__Group__2__Impl rule__Rule__Group__3 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1517:1: rule__Rule__Group__2 : rule__Rule__Group__2__Impl rule__Rule__Group__3 ;
     public final void rule__Rule__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1330:1: ( rule__Rule__Group__2__Impl rule__Rule__Group__3 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1331:2: rule__Rule__Group__2__Impl rule__Rule__Group__3
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1521:1: ( rule__Rule__Group__2__Impl rule__Rule__Group__3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1522:2: rule__Rule__Group__2__Impl rule__Rule__Group__3
             {
-            pushFollow(FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__22666);
+            pushFollow(FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__23041);
             rule__Rule__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group__3_in_rule__Rule__Group__22669);
+            pushFollow(FOLLOW_rule__Rule__Group__3_in_rule__Rule__Group__23044);
             rule__Rule__Group__3();
 
             state._fsp--;
@@ -3602,20 +4078,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__2__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1338:1: rule__Rule__Group__2__Impl : ( ':' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1529:1: rule__Rule__Group__2__Impl : ( ':' ) ;
     public final void rule__Rule__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1342:1: ( ( ':' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1343:1: ( ':' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1533:1: ( ( ':' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1534:1: ( ':' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1343:1: ( ':' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1344:1: ':'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1534:1: ( ':' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1535:1: ':'
             {
              before(grammarAccess.getRuleAccess().getColonKeyword_2()); 
-            match(input,18,FOLLOW_18_in_rule__Rule__Group__2__Impl2697); 
+            match(input,12,FOLLOW_12_in_rule__Rule__Group__2__Impl3072); 
              after(grammarAccess.getRuleAccess().getColonKeyword_2()); 
 
             }
@@ -3639,21 +4115,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__3"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1357:1: rule__Rule__Group__3 : rule__Rule__Group__3__Impl rule__Rule__Group__4 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1548:1: rule__Rule__Group__3 : rule__Rule__Group__3__Impl rule__Rule__Group__4 ;
     public final void rule__Rule__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1361:1: ( rule__Rule__Group__3__Impl rule__Rule__Group__4 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1362:2: rule__Rule__Group__3__Impl rule__Rule__Group__4
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1552:1: ( rule__Rule__Group__3__Impl rule__Rule__Group__4 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1553:2: rule__Rule__Group__3__Impl rule__Rule__Group__4
             {
-            pushFollow(FOLLOW_rule__Rule__Group__3__Impl_in_rule__Rule__Group__32728);
+            pushFollow(FOLLOW_rule__Rule__Group__3__Impl_in_rule__Rule__Group__33103);
             rule__Rule__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group__4_in_rule__Rule__Group__32731);
+            pushFollow(FOLLOW_rule__Rule__Group__4_in_rule__Rule__Group__33106);
             rule__Rule__Group__4();
 
             state._fsp--;
@@ -3677,23 +4153,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__3__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1369:1: rule__Rule__Group__3__Impl : ( ( rule__Rule__AlternativesAssignment_3 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1560:1: rule__Rule__Group__3__Impl : ( ( rule__Rule__AlternativesAssignment_3 ) ) ;
     public final void rule__Rule__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1373:1: ( ( ( rule__Rule__AlternativesAssignment_3 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1374:1: ( ( rule__Rule__AlternativesAssignment_3 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1564:1: ( ( ( rule__Rule__AlternativesAssignment_3 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1565:1: ( ( rule__Rule__AlternativesAssignment_3 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1374:1: ( ( rule__Rule__AlternativesAssignment_3 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1375:1: ( rule__Rule__AlternativesAssignment_3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1565:1: ( ( rule__Rule__AlternativesAssignment_3 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1566:1: ( rule__Rule__AlternativesAssignment_3 )
             {
              before(grammarAccess.getRuleAccess().getAlternativesAssignment_3()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1376:1: ( rule__Rule__AlternativesAssignment_3 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1376:2: rule__Rule__AlternativesAssignment_3
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1567:1: ( rule__Rule__AlternativesAssignment_3 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1567:2: rule__Rule__AlternativesAssignment_3
             {
-            pushFollow(FOLLOW_rule__Rule__AlternativesAssignment_3_in_rule__Rule__Group__3__Impl2758);
+            pushFollow(FOLLOW_rule__Rule__AlternativesAssignment_3_in_rule__Rule__Group__3__Impl3133);
             rule__Rule__AlternativesAssignment_3();
 
             state._fsp--;
@@ -3724,21 +4200,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__4"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1386:1: rule__Rule__Group__4 : rule__Rule__Group__4__Impl rule__Rule__Group__5 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1577:1: rule__Rule__Group__4 : rule__Rule__Group__4__Impl rule__Rule__Group__5 ;
     public final void rule__Rule__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1390:1: ( rule__Rule__Group__4__Impl rule__Rule__Group__5 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1391:2: rule__Rule__Group__4__Impl rule__Rule__Group__5
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1581:1: ( rule__Rule__Group__4__Impl rule__Rule__Group__5 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1582:2: rule__Rule__Group__4__Impl rule__Rule__Group__5
             {
-            pushFollow(FOLLOW_rule__Rule__Group__4__Impl_in_rule__Rule__Group__42788);
+            pushFollow(FOLLOW_rule__Rule__Group__4__Impl_in_rule__Rule__Group__43163);
             rule__Rule__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group__5_in_rule__Rule__Group__42791);
+            pushFollow(FOLLOW_rule__Rule__Group__5_in_rule__Rule__Group__43166);
             rule__Rule__Group__5();
 
             state._fsp--;
@@ -3762,35 +4238,35 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__4__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1398:1: rule__Rule__Group__4__Impl : ( ( rule__Rule__Group_4__0 )* ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1589:1: rule__Rule__Group__4__Impl : ( ( rule__Rule__Group_4__0 )* ) ;
     public final void rule__Rule__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1402:1: ( ( ( rule__Rule__Group_4__0 )* ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1403:1: ( ( rule__Rule__Group_4__0 )* )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1593:1: ( ( ( rule__Rule__Group_4__0 )* ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1594:1: ( ( rule__Rule__Group_4__0 )* )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1403:1: ( ( rule__Rule__Group_4__0 )* )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1404:1: ( rule__Rule__Group_4__0 )*
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1594:1: ( ( rule__Rule__Group_4__0 )* )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1595:1: ( rule__Rule__Group_4__0 )*
             {
              before(grammarAccess.getRuleAccess().getGroup_4()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1405:1: ( rule__Rule__Group_4__0 )*
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1596:1: ( rule__Rule__Group_4__0 )*
             loop9:
             do {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( (LA9_0==21) ) {
+                if ( (LA9_0==22) ) {
                     alt9=1;
                 }
 
 
                 switch (alt9) {
             	case 1 :
-            	    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1405:2: rule__Rule__Group_4__0
+            	    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1596:2: rule__Rule__Group_4__0
             	    {
-            	    pushFollow(FOLLOW_rule__Rule__Group_4__0_in_rule__Rule__Group__4__Impl2818);
+            	    pushFollow(FOLLOW_rule__Rule__Group_4__0_in_rule__Rule__Group__4__Impl3193);
             	    rule__Rule__Group_4__0();
 
             	    state._fsp--;
@@ -3827,16 +4303,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__5"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1415:1: rule__Rule__Group__5 : rule__Rule__Group__5__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1606:1: rule__Rule__Group__5 : rule__Rule__Group__5__Impl ;
     public final void rule__Rule__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1419:1: ( rule__Rule__Group__5__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1420:2: rule__Rule__Group__5__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1610:1: ( rule__Rule__Group__5__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1611:2: rule__Rule__Group__5__Impl
             {
-            pushFollow(FOLLOW_rule__Rule__Group__5__Impl_in_rule__Rule__Group__52849);
+            pushFollow(FOLLOW_rule__Rule__Group__5__Impl_in_rule__Rule__Group__53224);
             rule__Rule__Group__5__Impl();
 
             state._fsp--;
@@ -3860,20 +4336,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group__5__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1426:1: rule__Rule__Group__5__Impl : ( ';' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1617:1: rule__Rule__Group__5__Impl : ( ';' ) ;
     public final void rule__Rule__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1430:1: ( ( ';' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1431:1: ( ';' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1621:1: ( ( ';' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1622:1: ( ';' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1431:1: ( ';' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1432:1: ';'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1622:1: ( ';' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1623:1: ';'
             {
              before(grammarAccess.getRuleAccess().getSemicolonKeyword_5()); 
-            match(input,14,FOLLOW_14_in_rule__Rule__Group__5__Impl2877); 
+            match(input,13,FOLLOW_13_in_rule__Rule__Group__5__Impl3252); 
              after(grammarAccess.getRuleAccess().getSemicolonKeyword_5()); 
 
             }
@@ -3897,21 +4373,21 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group_4__0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1457:1: rule__Rule__Group_4__0 : rule__Rule__Group_4__0__Impl rule__Rule__Group_4__1 ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1648:1: rule__Rule__Group_4__0 : rule__Rule__Group_4__0__Impl rule__Rule__Group_4__1 ;
     public final void rule__Rule__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1461:1: ( rule__Rule__Group_4__0__Impl rule__Rule__Group_4__1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1462:2: rule__Rule__Group_4__0__Impl rule__Rule__Group_4__1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1652:1: ( rule__Rule__Group_4__0__Impl rule__Rule__Group_4__1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1653:2: rule__Rule__Group_4__0__Impl rule__Rule__Group_4__1
             {
-            pushFollow(FOLLOW_rule__Rule__Group_4__0__Impl_in_rule__Rule__Group_4__02920);
+            pushFollow(FOLLOW_rule__Rule__Group_4__0__Impl_in_rule__Rule__Group_4__03295);
             rule__Rule__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group_4__1_in_rule__Rule__Group_4__02923);
+            pushFollow(FOLLOW_rule__Rule__Group_4__1_in_rule__Rule__Group_4__03298);
             rule__Rule__Group_4__1();
 
             state._fsp--;
@@ -3935,20 +4411,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group_4__0__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1469:1: rule__Rule__Group_4__0__Impl : ( '|' ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1660:1: rule__Rule__Group_4__0__Impl : ( '|' ) ;
     public final void rule__Rule__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1473:1: ( ( '|' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1474:1: ( '|' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1664:1: ( ( '|' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1665:1: ( '|' )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1474:1: ( '|' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1475:1: '|'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1665:1: ( '|' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1666:1: '|'
             {
              before(grammarAccess.getRuleAccess().getVerticalLineKeyword_4_0()); 
-            match(input,21,FOLLOW_21_in_rule__Rule__Group_4__0__Impl2951); 
+            match(input,22,FOLLOW_22_in_rule__Rule__Group_4__0__Impl3326); 
              after(grammarAccess.getRuleAccess().getVerticalLineKeyword_4_0()); 
 
             }
@@ -3972,16 +4448,16 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group_4__1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1488:1: rule__Rule__Group_4__1 : rule__Rule__Group_4__1__Impl ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1679:1: rule__Rule__Group_4__1 : rule__Rule__Group_4__1__Impl ;
     public final void rule__Rule__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1492:1: ( rule__Rule__Group_4__1__Impl )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1493:2: rule__Rule__Group_4__1__Impl
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1683:1: ( rule__Rule__Group_4__1__Impl )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1684:2: rule__Rule__Group_4__1__Impl
             {
-            pushFollow(FOLLOW_rule__Rule__Group_4__1__Impl_in_rule__Rule__Group_4__12982);
+            pushFollow(FOLLOW_rule__Rule__Group_4__1__Impl_in_rule__Rule__Group_4__13357);
             rule__Rule__Group_4__1__Impl();
 
             state._fsp--;
@@ -4005,23 +4481,23 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__Group_4__1__Impl"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1499:1: rule__Rule__Group_4__1__Impl : ( ( rule__Rule__AlternativesAssignment_4_1 ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1690:1: rule__Rule__Group_4__1__Impl : ( ( rule__Rule__AlternativesAssignment_4_1 ) ) ;
     public final void rule__Rule__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1503:1: ( ( ( rule__Rule__AlternativesAssignment_4_1 ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1504:1: ( ( rule__Rule__AlternativesAssignment_4_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1694:1: ( ( ( rule__Rule__AlternativesAssignment_4_1 ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1695:1: ( ( rule__Rule__AlternativesAssignment_4_1 ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1504:1: ( ( rule__Rule__AlternativesAssignment_4_1 ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1505:1: ( rule__Rule__AlternativesAssignment_4_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1695:1: ( ( rule__Rule__AlternativesAssignment_4_1 ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1696:1: ( rule__Rule__AlternativesAssignment_4_1 )
             {
              before(grammarAccess.getRuleAccess().getAlternativesAssignment_4_1()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1506:1: ( rule__Rule__AlternativesAssignment_4_1 )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1506:2: rule__Rule__AlternativesAssignment_4_1
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1697:1: ( rule__Rule__AlternativesAssignment_4_1 )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1697:2: rule__Rule__AlternativesAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Rule__AlternativesAssignment_4_1_in_rule__Rule__Group_4__1__Impl3009);
+            pushFollow(FOLLOW_rule__Rule__AlternativesAssignment_4_1_in_rule__Rule__Group_4__1__Impl3384);
             rule__Rule__AlternativesAssignment_4_1();
 
             state._fsp--;
@@ -4051,26 +4527,22 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
     // $ANTLR end "rule__Rule__Group_4__1__Impl"
 
 
-    // $ANTLR start "rule__Grammar__ElementsAssignment"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1521:1: rule__Grammar__ElementsAssignment : ( ruleElement ) ;
-    public final void rule__Grammar__ElementsAssignment() throws RecognitionException {
+    // $ANTLR start "rule__Grammar__NameAssignment_1"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1712:1: rule__Grammar__NameAssignment_1 : ( RULE_ID ) ;
+    public final void rule__Grammar__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1525:1: ( ( ruleElement ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1526:1: ( ruleElement )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1716:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1717:1: ( RULE_ID )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1526:1: ( ruleElement )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1527:1: ruleElement
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1717:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1718:1: RULE_ID
             {
-             before(grammarAccess.getGrammarAccess().getElementsElementParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleElement_in_rule__Grammar__ElementsAssignment3048);
-            ruleElement();
-
-            state._fsp--;
-
-             after(grammarAccess.getGrammarAccess().getElementsElementParserRuleCall_0()); 
+             before(grammarAccess.getGrammarAccess().getNameIDTerminalRuleCall_1_0()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Grammar__NameAssignment_13423); 
+             after(grammarAccess.getGrammarAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
 
@@ -4089,24 +4561,110 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
         }
         return ;
     }
-    // $ANTLR end "rule__Grammar__ElementsAssignment"
+    // $ANTLR end "rule__Grammar__NameAssignment_1"
+
+
+    // $ANTLR start "rule__Grammar__RootAssignment_3"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1727:1: rule__Grammar__RootAssignment_3 : ( ( RULE_ID ) ) ;
+    public final void rule__Grammar__RootAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1731:1: ( ( ( RULE_ID ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1732:1: ( ( RULE_ID ) )
+            {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1732:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1733:1: ( RULE_ID )
+            {
+             before(grammarAccess.getGrammarAccess().getRootBlockCrossReference_3_0()); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1734:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1735:1: RULE_ID
+            {
+             before(grammarAccess.getGrammarAccess().getRootBlockIDTerminalRuleCall_3_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Grammar__RootAssignment_33458); 
+             after(grammarAccess.getGrammarAccess().getRootBlockIDTerminalRuleCall_3_0_1()); 
+
+            }
+
+             after(grammarAccess.getGrammarAccess().getRootBlockCrossReference_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__RootAssignment_3"
+
+
+    // $ANTLR start "rule__Grammar__ElementsAssignment_5"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1746:1: rule__Grammar__ElementsAssignment_5 : ( ruleElement ) ;
+    public final void rule__Grammar__ElementsAssignment_5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1750:1: ( ( ruleElement ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1751:1: ( ruleElement )
+            {
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1751:1: ( ruleElement )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1752:1: ruleElement
+            {
+             before(grammarAccess.getGrammarAccess().getElementsElementParserRuleCall_5_0()); 
+            pushFollow(FOLLOW_ruleElement_in_rule__Grammar__ElementsAssignment_53493);
+            ruleElement();
+
+            state._fsp--;
+
+             after(grammarAccess.getGrammarAccess().getElementsElementParserRuleCall_5_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Grammar__ElementsAssignment_5"
 
 
     // $ANTLR start "rule__Block__NameAssignment_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1536:1: rule__Block__NameAssignment_1 : ( RULE_ID ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1761:1: rule__Block__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Block__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1540:1: ( ( RULE_ID ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1541:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1765:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1766:1: ( RULE_ID )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1541:1: ( RULE_ID )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1542:1: RULE_ID
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1766:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1767:1: RULE_ID
             {
              before(grammarAccess.getBlockAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Block__NameAssignment_13079); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Block__NameAssignment_13524); 
              after(grammarAccess.getBlockAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -4129,26 +4687,26 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
     // $ANTLR end "rule__Block__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Block__ColumnAssignment_3"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1551:1: rule__Block__ColumnAssignment_3 : ( ruleColumn ) ;
-    public final void rule__Block__ColumnAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Block__ColumnsAssignment_3"
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1776:1: rule__Block__ColumnsAssignment_3 : ( ruleColumn ) ;
+    public final void rule__Block__ColumnsAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1555:1: ( ( ruleColumn ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1556:1: ( ruleColumn )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1780:1: ( ( ruleColumn ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1781:1: ( ruleColumn )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1556:1: ( ruleColumn )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1557:1: ruleColumn
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1781:1: ( ruleColumn )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1782:1: ruleColumn
             {
-             before(grammarAccess.getBlockAccess().getColumnColumnParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleColumn_in_rule__Block__ColumnAssignment_33110);
+             before(grammarAccess.getBlockAccess().getColumnsColumnParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleColumn_in_rule__Block__ColumnsAssignment_33555);
             ruleColumn();
 
             state._fsp--;
 
-             after(grammarAccess.getBlockAccess().getColumnColumnParserRuleCall_3_0()); 
+             after(grammarAccess.getBlockAccess().getColumnsColumnParserRuleCall_3_0()); 
 
             }
 
@@ -4167,24 +4725,24 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
         }
         return ;
     }
-    // $ANTLR end "rule__Block__ColumnAssignment_3"
+    // $ANTLR end "rule__Block__ColumnsAssignment_3"
 
 
     // $ANTLR start "rule__Column__NameAssignment_0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1566:1: rule__Column__NameAssignment_0 : ( RULE_ID ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1791:1: rule__Column__NameAssignment_0 : ( RULE_ID ) ;
     public final void rule__Column__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1570:1: ( ( RULE_ID ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1571:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1795:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1796:1: ( RULE_ID )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1571:1: ( RULE_ID )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1572:1: RULE_ID
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1796:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1797:1: RULE_ID
             {
              before(grammarAccess.getColumnAccess().getNameIDTerminalRuleCall_0_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Column__NameAssignment_03141); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Column__NameAssignment_03586); 
              after(grammarAccess.getColumnAccess().getNameIDTerminalRuleCall_0_0()); 
 
             }
@@ -4208,24 +4766,24 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__MultipleAssignment_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1581:1: rule__Column__MultipleAssignment_1 : ( ( '*' ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1806:1: rule__Column__MultipleAssignment_1 : ( ( '*' ) ) ;
     public final void rule__Column__MultipleAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1585:1: ( ( ( '*' ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1586:1: ( ( '*' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1810:1: ( ( ( '*' ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1811:1: ( ( '*' ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1586:1: ( ( '*' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1587:1: ( '*' )
-            {
-             before(grammarAccess.getColumnAccess().getMultipleAsteriskKeyword_1_0()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1588:1: ( '*' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1589:1: '*'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1811:1: ( ( '*' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1812:1: ( '*' )
             {
              before(grammarAccess.getColumnAccess().getMultipleAsteriskKeyword_1_0()); 
-            match(input,22,FOLLOW_22_in_rule__Column__MultipleAssignment_13177); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1813:1: ( '*' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1814:1: '*'
+            {
+             before(grammarAccess.getColumnAccess().getMultipleAsteriskKeyword_1_0()); 
+            match(input,23,FOLLOW_23_in_rule__Column__MultipleAssignment_13622); 
              after(grammarAccess.getColumnAccess().getMultipleAsteriskKeyword_1_0()); 
 
             }
@@ -4253,20 +4811,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Column__DefAssignment_2"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1604:1: rule__Column__DefAssignment_2 : ( ruleColumnDefinition ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1829:1: rule__Column__DefAssignment_2 : ( ruleColumnDefinition ) ;
     public final void rule__Column__DefAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1608:1: ( ( ruleColumnDefinition ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1609:1: ( ruleColumnDefinition )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1833:1: ( ( ruleColumnDefinition ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1834:1: ( ruleColumnDefinition )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1609:1: ( ruleColumnDefinition )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1610:1: ruleColumnDefinition
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1834:1: ( ruleColumnDefinition )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1835:1: ruleColumnDefinition
             {
              before(grammarAccess.getColumnAccess().getDefColumnDefinitionParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleColumnDefinition_in_rule__Column__DefAssignment_23216);
+            pushFollow(FOLLOW_ruleColumnDefinition_in_rule__Column__DefAssignment_23661);
             ruleColumnDefinition();
 
             state._fsp--;
@@ -4294,20 +4852,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__MandatoryColumn__SpecAssignment_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1619:1: rule__MandatoryColumn__SpecAssignment_1 : ( ruleColumnSpec ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1844:1: rule__MandatoryColumn__SpecAssignment_1 : ( ruleColumnSpec ) ;
     public final void rule__MandatoryColumn__SpecAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1623:1: ( ( ruleColumnSpec ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1624:1: ( ruleColumnSpec )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1848:1: ( ( ruleColumnSpec ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1849:1: ( ruleColumnSpec )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1624:1: ( ruleColumnSpec )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1625:1: ruleColumnSpec
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1849:1: ( ruleColumnSpec )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1850:1: ruleColumnSpec
             {
              before(grammarAccess.getMandatoryColumnAccess().getSpecColumnSpecParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleColumnSpec_in_rule__MandatoryColumn__SpecAssignment_13247);
+            pushFollow(FOLLOW_ruleColumnSpec_in_rule__MandatoryColumn__SpecAssignment_13692);
             ruleColumnSpec();
 
             state._fsp--;
@@ -4335,20 +4893,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__OptionalColumn__SpecAssignment_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1634:1: rule__OptionalColumn__SpecAssignment_1 : ( ruleColumnSpec ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1859:1: rule__OptionalColumn__SpecAssignment_1 : ( ruleColumnSpec ) ;
     public final void rule__OptionalColumn__SpecAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1638:1: ( ( ruleColumnSpec ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1639:1: ( ruleColumnSpec )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1863:1: ( ( ruleColumnSpec ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1864:1: ( ruleColumnSpec )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1639:1: ( ruleColumnSpec )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1640:1: ruleColumnSpec
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1864:1: ( ruleColumnSpec )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1865:1: ruleColumnSpec
             {
              before(grammarAccess.getOptionalColumnAccess().getSpecColumnSpecParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleColumnSpec_in_rule__OptionalColumn__SpecAssignment_13278);
+            pushFollow(FOLLOW_ruleColumnSpec_in_rule__OptionalColumn__SpecAssignment_13723);
             ruleColumnSpec();
 
             state._fsp--;
@@ -4376,20 +4934,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__HeaderAssignment_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1649:1: rule__RowSpec__HeaderAssignment_1 : ( RULE_STRING ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1874:1: rule__RowSpec__HeaderAssignment_1 : ( RULE_STRING ) ;
     public final void rule__RowSpec__HeaderAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1653:1: ( ( RULE_STRING ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1654:1: ( RULE_STRING )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1878:1: ( ( RULE_STRING ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1879:1: ( RULE_STRING )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1654:1: ( RULE_STRING )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1655:1: RULE_STRING
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1879:1: ( RULE_STRING )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1880:1: RULE_STRING
             {
              before(grammarAccess.getRowSpecAccess().getHeaderSTRINGTerminalRuleCall_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__RowSpec__HeaderAssignment_13309); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__RowSpec__HeaderAssignment_13754); 
              after(grammarAccess.getRowSpecAccess().getHeaderSTRINGTerminalRuleCall_1_0()); 
 
             }
@@ -4413,20 +4971,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__RowSpec__SyntaxAssignment_3"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1664:1: rule__RowSpec__SyntaxAssignment_3 : ( ruleSyntax ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1889:1: rule__RowSpec__SyntaxAssignment_3 : ( ruleSyntax ) ;
     public final void rule__RowSpec__SyntaxAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1668:1: ( ( ruleSyntax ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1669:1: ( ruleSyntax )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1893:1: ( ( ruleSyntax ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1894:1: ( ruleSyntax )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1669:1: ( ruleSyntax )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1670:1: ruleSyntax
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1894:1: ( ruleSyntax )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1895:1: ruleSyntax
             {
              before(grammarAccess.getRowSpecAccess().getSyntaxSyntaxParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleSyntax_in_rule__RowSpec__SyntaxAssignment_33340);
+            pushFollow(FOLLOW_ruleSyntax_in_rule__RowSpec__SyntaxAssignment_33785);
             ruleSyntax();
 
             state._fsp--;
@@ -4454,24 +5012,24 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__BlockSpec__KindAssignment_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1679:1: rule__BlockSpec__KindAssignment_1 : ( ( RULE_ID ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1904:1: rule__BlockSpec__KindAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__BlockSpec__KindAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1683:1: ( ( ( RULE_ID ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1684:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1908:1: ( ( ( RULE_ID ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1909:1: ( ( RULE_ID ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1684:1: ( ( RULE_ID ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1685:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1909:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1910:1: ( RULE_ID )
             {
              before(grammarAccess.getBlockSpecAccess().getKindBlockCrossReference_1_0()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1686:1: ( RULE_ID )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1687:1: RULE_ID
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1911:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1912:1: RULE_ID
             {
              before(grammarAccess.getBlockSpecAccess().getKindBlockIDTerminalRuleCall_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BlockSpec__KindAssignment_13375); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__BlockSpec__KindAssignment_13820); 
              after(grammarAccess.getBlockSpecAccess().getKindBlockIDTerminalRuleCall_1_0_1()); 
 
             }
@@ -4499,24 +5057,24 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Is_idAssignment_0"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1698:1: rule__Syntax__Is_idAssignment_0 : ( ( 'IDENTIFIER' ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1923:1: rule__Syntax__Is_idAssignment_0 : ( ( 'IDENTIFIER' ) ) ;
     public final void rule__Syntax__Is_idAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1702:1: ( ( ( 'IDENTIFIER' ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1703:1: ( ( 'IDENTIFIER' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1927:1: ( ( ( 'IDENTIFIER' ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1928:1: ( ( 'IDENTIFIER' ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1703:1: ( ( 'IDENTIFIER' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1704:1: ( 'IDENTIFIER' )
-            {
-             before(grammarAccess.getSyntaxAccess().getIs_idIDENTIFIERKeyword_0_0()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1705:1: ( 'IDENTIFIER' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1706:1: 'IDENTIFIER'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1928:1: ( ( 'IDENTIFIER' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1929:1: ( 'IDENTIFIER' )
             {
              before(grammarAccess.getSyntaxAccess().getIs_idIDENTIFIERKeyword_0_0()); 
-            match(input,23,FOLLOW_23_in_rule__Syntax__Is_idAssignment_03415); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1930:1: ( 'IDENTIFIER' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1931:1: 'IDENTIFIER'
+            {
+             before(grammarAccess.getSyntaxAccess().getIs_idIDENTIFIERKeyword_0_0()); 
+            match(input,24,FOLLOW_24_in_rule__Syntax__Is_idAssignment_03860); 
              after(grammarAccess.getSyntaxAccess().getIs_idIDENTIFIERKeyword_0_0()); 
 
             }
@@ -4544,24 +5102,24 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Is_stringAssignment_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1721:1: rule__Syntax__Is_stringAssignment_1 : ( ( 'STRING' ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1946:1: rule__Syntax__Is_stringAssignment_1 : ( ( 'STRING' ) ) ;
     public final void rule__Syntax__Is_stringAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1725:1: ( ( ( 'STRING' ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1726:1: ( ( 'STRING' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1950:1: ( ( ( 'STRING' ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1951:1: ( ( 'STRING' ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1726:1: ( ( 'STRING' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1727:1: ( 'STRING' )
-            {
-             before(grammarAccess.getSyntaxAccess().getIs_stringSTRINGKeyword_1_0()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1728:1: ( 'STRING' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1729:1: 'STRING'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1951:1: ( ( 'STRING' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1952:1: ( 'STRING' )
             {
              before(grammarAccess.getSyntaxAccess().getIs_stringSTRINGKeyword_1_0()); 
-            match(input,24,FOLLOW_24_in_rule__Syntax__Is_stringAssignment_13459); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1953:1: ( 'STRING' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1954:1: 'STRING'
+            {
+             before(grammarAccess.getSyntaxAccess().getIs_stringSTRINGKeyword_1_0()); 
+            match(input,25,FOLLOW_25_in_rule__Syntax__Is_stringAssignment_13904); 
              after(grammarAccess.getSyntaxAccess().getIs_stringSTRINGKeyword_1_0()); 
 
             }
@@ -4589,24 +5147,24 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__Is_intAssignment_2"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1744:1: rule__Syntax__Is_intAssignment_2 : ( ( 'INTEGER' ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1969:1: rule__Syntax__Is_intAssignment_2 : ( ( 'INTEGER' ) ) ;
     public final void rule__Syntax__Is_intAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1748:1: ( ( ( 'INTEGER' ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1749:1: ( ( 'INTEGER' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1973:1: ( ( ( 'INTEGER' ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1974:1: ( ( 'INTEGER' ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1749:1: ( ( 'INTEGER' ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1750:1: ( 'INTEGER' )
-            {
-             before(grammarAccess.getSyntaxAccess().getIs_intINTEGERKeyword_2_0()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1751:1: ( 'INTEGER' )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1752:1: 'INTEGER'
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1974:1: ( ( 'INTEGER' ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1975:1: ( 'INTEGER' )
             {
              before(grammarAccess.getSyntaxAccess().getIs_intINTEGERKeyword_2_0()); 
-            match(input,25,FOLLOW_25_in_rule__Syntax__Is_intAssignment_23503); 
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1976:1: ( 'INTEGER' )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1977:1: 'INTEGER'
+            {
+             before(grammarAccess.getSyntaxAccess().getIs_intINTEGERKeyword_2_0()); 
+            match(input,26,FOLLOW_26_in_rule__Syntax__Is_intAssignment_23948); 
              after(grammarAccess.getSyntaxAccess().getIs_intINTEGERKeyword_2_0()); 
 
             }
@@ -4634,20 +5192,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__TokenAssignment_3_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1767:1: rule__Syntax__TokenAssignment_3_1 : ( RULE_STRING ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1992:1: rule__Syntax__TokenAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__Syntax__TokenAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1771:1: ( ( RULE_STRING ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1772:1: ( RULE_STRING )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1996:1: ( ( RULE_STRING ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1997:1: ( RULE_STRING )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1772:1: ( RULE_STRING )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1773:1: RULE_STRING
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1997:1: ( RULE_STRING )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1998:1: RULE_STRING
             {
              before(grammarAccess.getSyntaxAccess().getTokenSTRINGTerminalRuleCall_3_1_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Syntax__TokenAssignment_3_13542); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Syntax__TokenAssignment_3_13987); 
              after(grammarAccess.getSyntaxAccess().getTokenSTRINGTerminalRuleCall_3_1_0()); 
 
             }
@@ -4671,24 +5229,24 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Syntax__RuleAssignment_4_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1782:1: rule__Syntax__RuleAssignment_4_1 : ( ( RULE_ID ) ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2007:1: rule__Syntax__RuleAssignment_4_1 : ( ( RULE_ID ) ) ;
     public final void rule__Syntax__RuleAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1786:1: ( ( ( RULE_ID ) ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1787:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2011:1: ( ( ( RULE_ID ) ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2012:1: ( ( RULE_ID ) )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1787:1: ( ( RULE_ID ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1788:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2012:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2013:1: ( RULE_ID )
             {
              before(grammarAccess.getSyntaxAccess().getRuleRuleCrossReference_4_1_0()); 
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1789:1: ( RULE_ID )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1790:1: RULE_ID
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2014:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2015:1: RULE_ID
             {
              before(grammarAccess.getSyntaxAccess().getRuleRuleIDTerminalRuleCall_4_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Syntax__RuleAssignment_4_13577); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Syntax__RuleAssignment_4_14022); 
              after(grammarAccess.getSyntaxAccess().getRuleRuleIDTerminalRuleCall_4_1_0_1()); 
 
             }
@@ -4716,20 +5274,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__NameAssignment_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1801:1: rule__Rule__NameAssignment_1 : ( RULE_ID ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2026:1: rule__Rule__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Rule__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1805:1: ( ( RULE_ID ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1806:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2030:1: ( ( RULE_ID ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2031:1: ( RULE_ID )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1806:1: ( RULE_ID )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1807:1: RULE_ID
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2031:1: ( RULE_ID )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2032:1: RULE_ID
             {
              before(grammarAccess.getRuleAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Rule__NameAssignment_13612); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Rule__NameAssignment_14057); 
              after(grammarAccess.getRuleAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -4753,20 +5311,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__AlternativesAssignment_3"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1816:1: rule__Rule__AlternativesAssignment_3 : ( ruleSyntaxSeq ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2041:1: rule__Rule__AlternativesAssignment_3 : ( ruleSyntaxSeq ) ;
     public final void rule__Rule__AlternativesAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1820:1: ( ( ruleSyntaxSeq ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1821:1: ( ruleSyntaxSeq )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2045:1: ( ( ruleSyntaxSeq ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2046:1: ( ruleSyntaxSeq )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1821:1: ( ruleSyntaxSeq )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1822:1: ruleSyntaxSeq
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2046:1: ( ruleSyntaxSeq )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2047:1: ruleSyntaxSeq
             {
              before(grammarAccess.getRuleAccess().getAlternativesSyntaxSeqParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleSyntaxSeq_in_rule__Rule__AlternativesAssignment_33643);
+            pushFollow(FOLLOW_ruleSyntaxSeq_in_rule__Rule__AlternativesAssignment_34088);
             ruleSyntaxSeq();
 
             state._fsp--;
@@ -4794,20 +5352,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__Rule__AlternativesAssignment_4_1"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1831:1: rule__Rule__AlternativesAssignment_4_1 : ( ruleSyntaxSeq ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2056:1: rule__Rule__AlternativesAssignment_4_1 : ( ruleSyntaxSeq ) ;
     public final void rule__Rule__AlternativesAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1835:1: ( ( ruleSyntaxSeq ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1836:1: ( ruleSyntaxSeq )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2060:1: ( ( ruleSyntaxSeq ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2061:1: ( ruleSyntaxSeq )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1836:1: ( ruleSyntaxSeq )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1837:1: ruleSyntaxSeq
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2061:1: ( ruleSyntaxSeq )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2062:1: ruleSyntaxSeq
             {
              before(grammarAccess.getRuleAccess().getAlternativesSyntaxSeqParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleSyntaxSeq_in_rule__Rule__AlternativesAssignment_4_13674);
+            pushFollow(FOLLOW_ruleSyntaxSeq_in_rule__Rule__AlternativesAssignment_4_14119);
             ruleSyntaxSeq();
 
             state._fsp--;
@@ -4835,20 +5393,20 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
 
     // $ANTLR start "rule__SyntaxSeq__PartsAssignment"
-    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1846:1: rule__SyntaxSeq__PartsAssignment : ( ruleSyntax ) ;
+    // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2071:1: rule__SyntaxSeq__PartsAssignment : ( ruleSyntax ) ;
     public final void rule__SyntaxSeq__PartsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1850:1: ( ( ruleSyntax ) )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1851:1: ( ruleSyntax )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2075:1: ( ( ruleSyntax ) )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2076:1: ( ruleSyntax )
             {
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1851:1: ( ruleSyntax )
-            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1852:1: ruleSyntax
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2076:1: ( ruleSyntax )
+            // ../dk.sdu.mmmi.sgl.ui/src-gen/dk/sdu/mmmi/sgl/ui/contentassist/antlr/internal/InternalSpreadsheetGrammarLanguage.g:2077:1: ruleSyntax
             {
              before(grammarAccess.getSyntaxSeqAccess().getPartsSyntaxParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleSyntax_in_rule__SyntaxSeq__PartsAssignment3705);
+            pushFollow(FOLLOW_ruleSyntax_in_rule__SyntaxSeq__PartsAssignment4150);
             ruleSyntax();
 
             state._fsp--;
@@ -4881,157 +5439,176 @@ public class InternalSpreadsheetGrammarLanguageParser extends AbstractInternalCo
 
     public static final BitSet FOLLOW_ruleGrammar_in_entryRuleGrammar61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGrammar68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Grammar__ElementsAssignment_in_ruleGrammar94 = new BitSet(new long[]{0x0000000000100802L});
-    public static final BitSet FOLLOW_ruleElement_in_entryRuleElement122 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleElement129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Element__Alternatives_in_ruleElement155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlock_in_entryRuleBlock182 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBlock189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Block__Group__0_in_ruleBlock215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumn_in_entryRuleColumn242 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleColumn249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Column__Group__0_in_ruleColumn275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnDefinition_in_entryRuleColumnDefinition302 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleColumnDefinition309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColumnDefinition__Alternatives_in_ruleColumnDefinition335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMandatoryColumn_in_entryRuleMandatoryColumn362 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMandatoryColumn369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MandatoryColumn__Group__0_in_ruleMandatoryColumn395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOptionalColumn_in_entryRuleOptionalColumn422 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOptionalColumn429 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OptionalColumn__Group__0_in_ruleOptionalColumn455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnSpec_in_entryRuleColumnSpec482 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleColumnSpec489 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ColumnSpec__Alternatives_in_ruleColumnSpec515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRowSpec_in_entryRuleRowSpec542 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRowSpec549 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RowSpec__Group__0_in_ruleRowSpec575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockSpec_in_entryRuleBlockSpec602 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBlockSpec609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockSpec__Group__0_in_ruleBlockSpec635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSyntax_in_entryRuleSyntax662 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSyntax669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Alternatives_in_ruleSyntax695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule722 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRule729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__0_in_ruleRule755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSyntaxSeq_in_entryRuleSyntaxSeq782 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSyntaxSeq789 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__SyntaxSeq__PartsAssignment_in_ruleSyntaxSeq817 = new BitSet(new long[]{0x0000000003980002L});
-    public static final BitSet FOLLOW_rule__SyntaxSeq__PartsAssignment_in_ruleSyntaxSeq829 = new BitSet(new long[]{0x0000000003980002L});
-    public static final BitSet FOLLOW_ruleBlock_in_rule__Element__Alternatives868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_rule__Element__Alternatives885 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMandatoryColumn_in_rule__ColumnDefinition__Alternatives917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOptionalColumn_in_rule__ColumnDefinition__Alternatives934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRowSpec_in_rule__ColumnSpec__Alternatives966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockSpec_in_rule__ColumnSpec__Alternatives983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Is_idAssignment_0_in_rule__Syntax__Alternatives1015 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Is_stringAssignment_1_in_rule__Syntax__Alternatives1033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Is_intAssignment_2_in_rule__Syntax__Alternatives1051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Group_3__0_in_rule__Syntax__Alternatives1069 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Group_4__0_in_rule__Syntax__Alternatives1087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Block__Group__0__Impl_in_rule__Block__Group__01118 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Block__Group__1_in_rule__Block__Group__01121 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Block__Group__0__Impl1149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Block__Group__1__Impl_in_rule__Block__Group__11180 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__Block__Group__2_in_rule__Block__Group__11183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Block__NameAssignment_1_in_rule__Block__Group__1__Impl1210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Block__Group__2__Impl_in_rule__Block__Group__21240 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_rule__Block__Group__3_in_rule__Block__Group__21243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Block__Group__2__Impl1271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Block__Group__3__Impl_in_rule__Block__Group__31302 = new BitSet(new long[]{0x0000000000002010L});
-    public static final BitSet FOLLOW_rule__Block__Group__4_in_rule__Block__Group__31305 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Block__ColumnAssignment_3_in_rule__Block__Group__3__Impl1332 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__Block__Group__4__Impl_in_rule__Block__Group__41363 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Block__Group__4__Impl1391 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Column__Group__0__Impl_in_rule__Column__Group__01432 = new BitSet(new long[]{0x0000000000418000L});
-    public static final BitSet FOLLOW_rule__Column__Group__1_in_rule__Column__Group__01435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Column__NameAssignment_0_in_rule__Column__Group__0__Impl1462 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Column__Group__1__Impl_in_rule__Column__Group__11492 = new BitSet(new long[]{0x0000000000418000L});
-    public static final BitSet FOLLOW_rule__Column__Group__2_in_rule__Column__Group__11495 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Column__MultipleAssignment_1_in_rule__Column__Group__1__Impl1522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Column__Group__2__Impl_in_rule__Column__Group__21553 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Column__Group__3_in_rule__Column__Group__21556 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Column__DefAssignment_2_in_rule__Column__Group__2__Impl1583 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Column__Group__3__Impl_in_rule__Column__Group__31613 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Column__Group__3__Impl1641 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MandatoryColumn__Group__0__Impl_in_rule__MandatoryColumn__Group__01680 = new BitSet(new long[]{0x0000000000020800L});
-    public static final BitSet FOLLOW_rule__MandatoryColumn__Group__1_in_rule__MandatoryColumn__Group__01683 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__MandatoryColumn__Group__0__Impl1711 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MandatoryColumn__Group__1__Impl_in_rule__MandatoryColumn__Group__11742 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__MandatoryColumn__SpecAssignment_1_in_rule__MandatoryColumn__Group__1__Impl1769 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OptionalColumn__Group__0__Impl_in_rule__OptionalColumn__Group__01803 = new BitSet(new long[]{0x0000000000020800L});
-    public static final BitSet FOLLOW_rule__OptionalColumn__Group__1_in_rule__OptionalColumn__Group__01806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__OptionalColumn__Group__0__Impl1834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OptionalColumn__Group__1__Impl_in_rule__OptionalColumn__Group__11865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OptionalColumn__SpecAssignment_1_in_rule__OptionalColumn__Group__1__Impl1892 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RowSpec__Group__0__Impl_in_rule__RowSpec__Group__01926 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__RowSpec__Group__1_in_rule__RowSpec__Group__01929 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__RowSpec__Group__0__Impl1957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RowSpec__Group__1__Impl_in_rule__RowSpec__Group__11988 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__RowSpec__Group__2_in_rule__RowSpec__Group__11991 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RowSpec__HeaderAssignment_1_in_rule__RowSpec__Group__1__Impl2018 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RowSpec__Group__2__Impl_in_rule__RowSpec__Group__22048 = new BitSet(new long[]{0x0000000003980000L});
-    public static final BitSet FOLLOW_rule__RowSpec__Group__3_in_rule__RowSpec__Group__22051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__RowSpec__Group__2__Impl2079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RowSpec__Group__3__Impl_in_rule__RowSpec__Group__32110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__RowSpec__SyntaxAssignment_3_in_rule__RowSpec__Group__3__Impl2137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockSpec__Group__0__Impl_in_rule__BlockSpec__Group__02175 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__BlockSpec__Group__1_in_rule__BlockSpec__Group__02178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__BlockSpec__Group__0__Impl2206 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockSpec__Group__1__Impl_in_rule__BlockSpec__Group__12237 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockSpec__KindAssignment_1_in_rule__BlockSpec__Group__1__Impl2264 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Group_3__0__Impl_in_rule__Syntax__Group_3__02298 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__Syntax__Group_3__1_in_rule__Syntax__Group_3__02301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__Syntax__Group_3__0__Impl2329 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Group_3__1__Impl_in_rule__Syntax__Group_3__12360 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__TokenAssignment_3_1_in_rule__Syntax__Group_3__1__Impl2387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Group_4__0__Impl_in_rule__Syntax__Group_4__02421 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Syntax__Group_4__1_in_rule__Syntax__Group_4__02424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Syntax__Group_4__0__Impl2452 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__Group_4__1__Impl_in_rule__Syntax__Group_4__12483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Syntax__RuleAssignment_4_1_in_rule__Syntax__Group_4__1__Impl2510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__02544 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__02547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__Rule__Group__0__Impl2575 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__12606 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__12609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__NameAssignment_1_in_rule__Rule__Group__1__Impl2636 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__22666 = new BitSet(new long[]{0x0000000003980000L});
-    public static final BitSet FOLLOW_rule__Rule__Group__3_in_rule__Rule__Group__22669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Rule__Group__2__Impl2697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__3__Impl_in_rule__Rule__Group__32728 = new BitSet(new long[]{0x0000000000204000L});
-    public static final BitSet FOLLOW_rule__Rule__Group__4_in_rule__Rule__Group__32731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__AlternativesAssignment_3_in_rule__Rule__Group__3__Impl2758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__4__Impl_in_rule__Rule__Group__42788 = new BitSet(new long[]{0x0000000000204000L});
-    public static final BitSet FOLLOW_rule__Rule__Group__5_in_rule__Rule__Group__42791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group_4__0_in_rule__Rule__Group__4__Impl2818 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__5__Impl_in_rule__Rule__Group__52849 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Rule__Group__5__Impl2877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group_4__0__Impl_in_rule__Rule__Group_4__02920 = new BitSet(new long[]{0x0000000003980000L});
-    public static final BitSet FOLLOW_rule__Rule__Group_4__1_in_rule__Rule__Group_4__02923 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__Rule__Group_4__0__Impl2951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group_4__1__Impl_in_rule__Rule__Group_4__12982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__AlternativesAssignment_4_1_in_rule__Rule__Group_4__1__Impl3009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleElement_in_rule__Grammar__ElementsAssignment3048 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Block__NameAssignment_13079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumn_in_rule__Block__ColumnAssignment_33110 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Column__NameAssignment_03141 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__Column__MultipleAssignment_13177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnDefinition_in_rule__Column__DefAssignment_23216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnSpec_in_rule__MandatoryColumn__SpecAssignment_13247 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleColumnSpec_in_rule__OptionalColumn__SpecAssignment_13278 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__RowSpec__HeaderAssignment_13309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSyntax_in_rule__RowSpec__SyntaxAssignment_33340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__BlockSpec__KindAssignment_13375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Syntax__Is_idAssignment_03415 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Syntax__Is_stringAssignment_13459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Syntax__Is_intAssignment_23503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Syntax__TokenAssignment_3_13542 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Syntax__RuleAssignment_4_13577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Rule__NameAssignment_13612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSyntaxSeq_in_rule__Rule__AlternativesAssignment_33643 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSyntaxSeq_in_rule__Rule__AlternativesAssignment_4_13674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSyntax_in_rule__SyntaxSeq__PartsAssignment3705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__0_in_ruleGrammar94 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleElement_in_entryRuleElement121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleElement128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Element__Alternatives_in_ruleElement154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlock_in_entryRuleBlock181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBlock188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Block__Group__0_in_ruleBlock214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumn_in_entryRuleColumn241 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleColumn248 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Column__Group__0_in_ruleColumn274 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnDefinition_in_entryRuleColumnDefinition301 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleColumnDefinition308 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColumnDefinition__Alternatives_in_ruleColumnDefinition334 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMandatoryColumn_in_entryRuleMandatoryColumn361 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMandatoryColumn368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MandatoryColumn__Group__0_in_ruleMandatoryColumn394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOptionalColumn_in_entryRuleOptionalColumn421 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOptionalColumn428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OptionalColumn__Group__0_in_ruleOptionalColumn454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnSpec_in_entryRuleColumnSpec481 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleColumnSpec488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ColumnSpec__Alternatives_in_ruleColumnSpec514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRowSpec_in_entryRuleRowSpec541 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRowSpec548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RowSpec__Group__0_in_ruleRowSpec574 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockSpec_in_entryRuleBlockSpec601 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBlockSpec608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockSpec__Group__0_in_ruleBlockSpec634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSyntax_in_entryRuleSyntax661 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSyntax668 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Alternatives_in_ruleSyntax694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule721 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRule728 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__0_in_ruleRule754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSyntaxSeq_in_entryRuleSyntaxSeq781 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSyntaxSeq788 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__SyntaxSeq__PartsAssignment_in_ruleSyntaxSeq816 = new BitSet(new long[]{0x0000000007300002L});
+    public static final BitSet FOLLOW_rule__SyntaxSeq__PartsAssignment_in_ruleSyntaxSeq828 = new BitSet(new long[]{0x0000000007300002L});
+    public static final BitSet FOLLOW_ruleBlock_in_rule__Element__Alternatives867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_rule__Element__Alternatives884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMandatoryColumn_in_rule__ColumnDefinition__Alternatives916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOptionalColumn_in_rule__ColumnDefinition__Alternatives933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRowSpec_in_rule__ColumnSpec__Alternatives965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockSpec_in_rule__ColumnSpec__Alternatives982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Is_idAssignment_0_in_rule__Syntax__Alternatives1014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Is_stringAssignment_1_in_rule__Syntax__Alternatives1032 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Is_intAssignment_2_in_rule__Syntax__Alternatives1050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Group_3__0_in_rule__Syntax__Alternatives1068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Group_4__0_in_rule__Syntax__Alternatives1086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__0__Impl_in_rule__Grammar__Group__01117 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__1_in_rule__Grammar__Group__01120 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Grammar__Group__0__Impl1148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__1__Impl_in_rule__Grammar__Group__11179 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__2_in_rule__Grammar__Group__11182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__NameAssignment_1_in_rule__Grammar__Group__1__Impl1209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__2__Impl_in_rule__Grammar__Group__21239 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__3_in_rule__Grammar__Group__21242 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Grammar__Group__2__Impl1270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__3__Impl_in_rule__Grammar__Group__31301 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__4_in_rule__Grammar__Group__31304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__RootAssignment_3_in_rule__Grammar__Group__3__Impl1331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__4__Impl_in_rule__Grammar__Group__41361 = new BitSet(new long[]{0x0000000000204000L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__5_in_rule__Grammar__Group__41364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Grammar__Group__4__Impl1392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__Group__5__Impl_in_rule__Grammar__Group__51423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Grammar__ElementsAssignment_5_in_rule__Grammar__Group__5__Impl1450 = new BitSet(new long[]{0x0000000000204002L});
+    public static final BitSet FOLLOW_rule__Block__Group__0__Impl_in_rule__Block__Group__01493 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Block__Group__1_in_rule__Block__Group__01496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Block__Group__0__Impl1524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Block__Group__1__Impl_in_rule__Block__Group__11555 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Block__Group__2_in_rule__Block__Group__11558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Block__NameAssignment_1_in_rule__Block__Group__1__Impl1585 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Block__Group__2__Impl_in_rule__Block__Group__21615 = new BitSet(new long[]{0x0000000000010010L});
+    public static final BitSet FOLLOW_rule__Block__Group__3_in_rule__Block__Group__21618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Block__Group__2__Impl1646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Block__Group__3__Impl_in_rule__Block__Group__31677 = new BitSet(new long[]{0x0000000000010010L});
+    public static final BitSet FOLLOW_rule__Block__Group__4_in_rule__Block__Group__31680 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Block__ColumnsAssignment_3_in_rule__Block__Group__3__Impl1707 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__Block__Group__4__Impl_in_rule__Block__Group__41738 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Block__Group__4__Impl1766 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Column__Group__0__Impl_in_rule__Column__Group__01807 = new BitSet(new long[]{0x0000000000860000L});
+    public static final BitSet FOLLOW_rule__Column__Group__1_in_rule__Column__Group__01810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Column__NameAssignment_0_in_rule__Column__Group__0__Impl1837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Column__Group__1__Impl_in_rule__Column__Group__11867 = new BitSet(new long[]{0x0000000000860000L});
+    public static final BitSet FOLLOW_rule__Column__Group__2_in_rule__Column__Group__11870 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Column__MultipleAssignment_1_in_rule__Column__Group__1__Impl1897 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Column__Group__2__Impl_in_rule__Column__Group__21928 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__Column__Group__3_in_rule__Column__Group__21931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Column__DefAssignment_2_in_rule__Column__Group__2__Impl1958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Column__Group__3__Impl_in_rule__Column__Group__31988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Column__Group__3__Impl2016 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MandatoryColumn__Group__0__Impl_in_rule__MandatoryColumn__Group__02055 = new BitSet(new long[]{0x0000000000084000L});
+    public static final BitSet FOLLOW_rule__MandatoryColumn__Group__1_in_rule__MandatoryColumn__Group__02058 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__MandatoryColumn__Group__0__Impl2086 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MandatoryColumn__Group__1__Impl_in_rule__MandatoryColumn__Group__12117 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__MandatoryColumn__SpecAssignment_1_in_rule__MandatoryColumn__Group__1__Impl2144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OptionalColumn__Group__0__Impl_in_rule__OptionalColumn__Group__02178 = new BitSet(new long[]{0x0000000000084000L});
+    public static final BitSet FOLLOW_rule__OptionalColumn__Group__1_in_rule__OptionalColumn__Group__02181 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__OptionalColumn__Group__0__Impl2209 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OptionalColumn__Group__1__Impl_in_rule__OptionalColumn__Group__12240 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OptionalColumn__SpecAssignment_1_in_rule__OptionalColumn__Group__1__Impl2267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RowSpec__Group__0__Impl_in_rule__RowSpec__Group__02301 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__RowSpec__Group__1_in_rule__RowSpec__Group__02304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__RowSpec__Group__0__Impl2332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RowSpec__Group__1__Impl_in_rule__RowSpec__Group__12363 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__RowSpec__Group__2_in_rule__RowSpec__Group__12366 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RowSpec__HeaderAssignment_1_in_rule__RowSpec__Group__1__Impl2393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RowSpec__Group__2__Impl_in_rule__RowSpec__Group__22423 = new BitSet(new long[]{0x0000000007300000L});
+    public static final BitSet FOLLOW_rule__RowSpec__Group__3_in_rule__RowSpec__Group__22426 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__RowSpec__Group__2__Impl2454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RowSpec__Group__3__Impl_in_rule__RowSpec__Group__32485 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__RowSpec__SyntaxAssignment_3_in_rule__RowSpec__Group__3__Impl2512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockSpec__Group__0__Impl_in_rule__BlockSpec__Group__02550 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__BlockSpec__Group__1_in_rule__BlockSpec__Group__02553 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__BlockSpec__Group__0__Impl2581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockSpec__Group__1__Impl_in_rule__BlockSpec__Group__12612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockSpec__KindAssignment_1_in_rule__BlockSpec__Group__1__Impl2639 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Group_3__0__Impl_in_rule__Syntax__Group_3__02673 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Syntax__Group_3__1_in_rule__Syntax__Group_3__02676 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__Syntax__Group_3__0__Impl2704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Group_3__1__Impl_in_rule__Syntax__Group_3__12735 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__TokenAssignment_3_1_in_rule__Syntax__Group_3__1__Impl2762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Group_4__0__Impl_in_rule__Syntax__Group_4__02796 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Syntax__Group_4__1_in_rule__Syntax__Group_4__02799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Syntax__Group_4__0__Impl2827 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__Group_4__1__Impl_in_rule__Syntax__Group_4__12858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Syntax__RuleAssignment_4_1_in_rule__Syntax__Group_4__1__Impl2885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__02919 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__02922 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__Rule__Group__0__Impl2950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__12981 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__12984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__NameAssignment_1_in_rule__Rule__Group__1__Impl3011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__23041 = new BitSet(new long[]{0x0000000007300000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__3_in_rule__Rule__Group__23044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Rule__Group__2__Impl3072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__3__Impl_in_rule__Rule__Group__33103 = new BitSet(new long[]{0x0000000000402000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__4_in_rule__Rule__Group__33106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__AlternativesAssignment_3_in_rule__Rule__Group__3__Impl3133 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__4__Impl_in_rule__Rule__Group__43163 = new BitSet(new long[]{0x0000000000402000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__5_in_rule__Rule__Group__43166 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group_4__0_in_rule__Rule__Group__4__Impl3193 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__5__Impl_in_rule__Rule__Group__53224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Rule__Group__5__Impl3252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group_4__0__Impl_in_rule__Rule__Group_4__03295 = new BitSet(new long[]{0x0000000007300000L});
+    public static final BitSet FOLLOW_rule__Rule__Group_4__1_in_rule__Rule__Group_4__03298 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__Rule__Group_4__0__Impl3326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group_4__1__Impl_in_rule__Rule__Group_4__13357 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__AlternativesAssignment_4_1_in_rule__Rule__Group_4__1__Impl3384 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Grammar__NameAssignment_13423 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Grammar__RootAssignment_33458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleElement_in_rule__Grammar__ElementsAssignment_53493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Block__NameAssignment_13524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumn_in_rule__Block__ColumnsAssignment_33555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Column__NameAssignment_03586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Column__MultipleAssignment_13622 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnDefinition_in_rule__Column__DefAssignment_23661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnSpec_in_rule__MandatoryColumn__SpecAssignment_13692 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleColumnSpec_in_rule__OptionalColumn__SpecAssignment_13723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__RowSpec__HeaderAssignment_13754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSyntax_in_rule__RowSpec__SyntaxAssignment_33785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__BlockSpec__KindAssignment_13820 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Syntax__Is_idAssignment_03860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Syntax__Is_stringAssignment_13904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__Syntax__Is_intAssignment_23948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Syntax__TokenAssignment_3_13987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Syntax__RuleAssignment_4_14022 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Rule__NameAssignment_14057 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSyntaxSeq_in_rule__Rule__AlternativesAssignment_34088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSyntaxSeq_in_rule__Rule__AlternativesAssignment_4_14119 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSyntax_in_rule__SyntaxSeq__PartsAssignment4150 = new BitSet(new long[]{0x0000000000000002L});
 
 }

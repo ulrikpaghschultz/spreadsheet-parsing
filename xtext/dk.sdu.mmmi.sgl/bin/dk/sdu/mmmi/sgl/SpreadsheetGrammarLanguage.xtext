@@ -3,12 +3,12 @@ grammar dk.sdu.mmmi.sgl.SpreadsheetGrammarLanguage with org.eclipse.xtext.common
 generate spreadsheetGrammarLanguage "http://www.sdu.dk/mmmi/sgl/SpreadsheetGrammarLanguage"
 
 Grammar:
-	elements+=Element*;
+	'language' name=ID ':' root=[Block] ';' elements+=Element*;
 	
 Element: Block | Rule;
 
 Block:
-	'block' name=ID '{' column+=Column* '}'
+	'block' name=ID '{' (columns+=Column)* '}'
 ;
 
 Column:

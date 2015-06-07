@@ -41,6 +41,7 @@ public class SpreadsheetGrammarLanguageParser extends AbstractContentAssistParse
 					put(grammarAccess.getColumnDefinitionAccess().getAlternatives(), "rule__ColumnDefinition__Alternatives");
 					put(grammarAccess.getColumnSpecAccess().getAlternatives(), "rule__ColumnSpec__Alternatives");
 					put(grammarAccess.getSyntaxAccess().getAlternatives(), "rule__Syntax__Alternatives");
+					put(grammarAccess.getGrammarAccess().getGroup(), "rule__Grammar__Group__0");
 					put(grammarAccess.getBlockAccess().getGroup(), "rule__Block__Group__0");
 					put(grammarAccess.getColumnAccess().getGroup(), "rule__Column__Group__0");
 					put(grammarAccess.getMandatoryColumnAccess().getGroup(), "rule__MandatoryColumn__Group__0");
@@ -51,9 +52,11 @@ public class SpreadsheetGrammarLanguageParser extends AbstractContentAssistParse
 					put(grammarAccess.getSyntaxAccess().getGroup_4(), "rule__Syntax__Group_4__0");
 					put(grammarAccess.getRuleAccess().getGroup(), "rule__Rule__Group__0");
 					put(grammarAccess.getRuleAccess().getGroup_4(), "rule__Rule__Group_4__0");
-					put(grammarAccess.getGrammarAccess().getElementsAssignment(), "rule__Grammar__ElementsAssignment");
+					put(grammarAccess.getGrammarAccess().getNameAssignment_1(), "rule__Grammar__NameAssignment_1");
+					put(grammarAccess.getGrammarAccess().getRootAssignment_3(), "rule__Grammar__RootAssignment_3");
+					put(grammarAccess.getGrammarAccess().getElementsAssignment_5(), "rule__Grammar__ElementsAssignment_5");
 					put(grammarAccess.getBlockAccess().getNameAssignment_1(), "rule__Block__NameAssignment_1");
-					put(grammarAccess.getBlockAccess().getColumnAssignment_3(), "rule__Block__ColumnAssignment_3");
+					put(grammarAccess.getBlockAccess().getColumnsAssignment_3(), "rule__Block__ColumnsAssignment_3");
 					put(grammarAccess.getColumnAccess().getNameAssignment_0(), "rule__Column__NameAssignment_0");
 					put(grammarAccess.getColumnAccess().getMultipleAssignment_1(), "rule__Column__MultipleAssignment_1");
 					put(grammarAccess.getColumnAccess().getDefAssignment_2(), "rule__Column__DefAssignment_2");

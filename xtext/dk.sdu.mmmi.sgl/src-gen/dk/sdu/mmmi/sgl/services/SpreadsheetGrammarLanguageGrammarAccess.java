@@ -20,18 +20,54 @@ public class SpreadsheetGrammarLanguageGrammarAccess extends AbstractGrammarElem
 	
 	public class GrammarElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Grammar");
-		private final Assignment cElementsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cElementsElementParserRuleCall_0 = (RuleCall)cElementsAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLanguageKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cRootAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cRootBlockCrossReference_3_0 = (CrossReference)cRootAssignment_3.eContents().get(0);
+		private final RuleCall cRootBlockIDTerminalRuleCall_3_0_1 = (RuleCall)cRootBlockCrossReference_3_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cElementsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cElementsElementParserRuleCall_5_0 = (RuleCall)cElementsAssignment_5.eContents().get(0);
 		
 		//Grammar:
-		//	elements+=Element*;
+		//	"language" name=ID ":" root=[Block] ";" elements+=Element*;
 		public ParserRule getRule() { return rule; }
 
+		//"language" name=ID ":" root=[Block] ";" elements+=Element*
+		public Group getGroup() { return cGroup; }
+
+		//"language"
+		public Keyword getLanguageKeyword_0() { return cLanguageKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+
+		//root=[Block]
+		public Assignment getRootAssignment_3() { return cRootAssignment_3; }
+
+		//[Block]
+		public CrossReference getRootBlockCrossReference_3_0() { return cRootBlockCrossReference_3_0; }
+
+		//ID
+		public RuleCall getRootBlockIDTerminalRuleCall_3_0_1() { return cRootBlockIDTerminalRuleCall_3_0_1; }
+
+		//";"
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+
 		//elements+=Element*
-		public Assignment getElementsAssignment() { return cElementsAssignment; }
+		public Assignment getElementsAssignment_5() { return cElementsAssignment_5; }
 
 		//Element
-		public RuleCall getElementsElementParserRuleCall_0() { return cElementsElementParserRuleCall_0; }
+		public RuleCall getElementsElementParserRuleCall_5_0() { return cElementsElementParserRuleCall_5_0; }
 	}
 
 	public class ElementElements extends AbstractParserRuleElementFinder {
@@ -61,15 +97,15 @@ public class SpreadsheetGrammarLanguageGrammarAccess extends AbstractGrammarElem
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cColumnAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cColumnColumnParserRuleCall_3_0 = (RuleCall)cColumnAssignment_3.eContents().get(0);
+		private final Assignment cColumnsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cColumnsColumnParserRuleCall_3_0 = (RuleCall)cColumnsAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Block:
-		//	"block" name=ID "{" column+=Column* "}";
+		//	"block" name=ID "{" columns+=Column* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"block" name=ID "{" column+=Column* "}"
+		//"block" name=ID "{" columns+=Column* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"block"
@@ -84,11 +120,11 @@ public class SpreadsheetGrammarLanguageGrammarAccess extends AbstractGrammarElem
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//column+=Column*
-		public Assignment getColumnAssignment_3() { return cColumnAssignment_3; }
+		//columns+=Column*
+		public Assignment getColumnsAssignment_3() { return cColumnsAssignment_3; }
 
 		//Column
-		public RuleCall getColumnColumnParserRuleCall_3_0() { return cColumnColumnParserRuleCall_3_0; }
+		public RuleCall getColumnsColumnParserRuleCall_3_0() { return cColumnsColumnParserRuleCall_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
@@ -497,7 +533,7 @@ public class SpreadsheetGrammarLanguageGrammarAccess extends AbstractGrammarElem
 
 	
 	//Grammar:
-	//	elements+=Element*;
+	//	"language" name=ID ":" root=[Block] ";" elements+=Element*;
 	public GrammarElements getGrammarAccess() {
 		return pGrammar;
 	}
@@ -517,7 +553,7 @@ public class SpreadsheetGrammarLanguageGrammarAccess extends AbstractGrammarElem
 	}
 
 	//Block:
-	//	"block" name=ID "{" column+=Column* "}";
+	//	"block" name=ID "{" columns+=Column* "}";
 	public BlockElements getBlockAccess() {
 		return pBlock;
 	}

@@ -67,13 +67,31 @@ public interface SpreadsheetGrammarLanguagePackage extends EPackage
   int GRAMMAR = 0;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRAMMAR__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Root</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GRAMMAR__ROOT = 1;
+
+  /**
    * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GRAMMAR__ELEMENTS = 0;
+  int GRAMMAR__ELEMENTS = 2;
 
   /**
    * The number of structural features of the '<em>Grammar</em>' class.
@@ -82,7 +100,7 @@ public interface SpreadsheetGrammarLanguagePackage extends EPackage
    * @generated
    * @ordered
    */
-  int GRAMMAR_FEATURE_COUNT = 1;
+  int GRAMMAR_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.impl.ElementImpl <em>Element</em>}' class.
@@ -132,13 +150,13 @@ public interface SpreadsheetGrammarLanguagePackage extends EPackage
   int BLOCK__NAME = ELEMENT__NAME;
 
   /**
-   * The feature id for the '<em><b>Column</b></em>' containment reference list.
+   * The feature id for the '<em><b>Columns</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BLOCK__COLUMN = ELEMENT_FEATURE_COUNT + 0;
+  int BLOCK__COLUMNS = ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Block</em>' class.
@@ -504,6 +522,28 @@ public interface SpreadsheetGrammarLanguagePackage extends EPackage
   EClass getGrammar();
 
   /**
+   * Returns the meta object for the attribute '{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Grammar#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Grammar#getName()
+   * @see #getGrammar()
+   * @generated
+   */
+  EAttribute getGrammar_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Grammar#getRoot <em>Root</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Root</em>'.
+   * @see dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Grammar#getRoot()
+   * @see #getGrammar()
+   * @generated
+   */
+  EReference getGrammar_Root();
+
+  /**
    * Returns the meta object for the containment reference list '{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Grammar#getElements <em>Elements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -546,15 +586,15 @@ public interface SpreadsheetGrammarLanguagePackage extends EPackage
   EClass getBlock();
 
   /**
-   * Returns the meta object for the containment reference list '{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Block#getColumn <em>Column</em>}'.
+   * Returns the meta object for the containment reference list '{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Block#getColumns <em>Columns</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Column</em>'.
-   * @see dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Block#getColumn()
+   * @return the meta object for the containment reference list '<em>Columns</em>'.
+   * @see dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Block#getColumns()
    * @see #getBlock()
    * @generated
    */
-  EReference getBlock_Column();
+  EReference getBlock_Columns();
 
   /**
    * Returns the meta object for class '{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Column <em>Column</em>}'.
@@ -844,6 +884,22 @@ public interface SpreadsheetGrammarLanguagePackage extends EPackage
     EClass GRAMMAR = eINSTANCE.getGrammar();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute GRAMMAR__NAME = eINSTANCE.getGrammar_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Root</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference GRAMMAR__ROOT = eINSTANCE.getGrammar_Root();
+
+    /**
      * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -880,12 +936,12 @@ public interface SpreadsheetGrammarLanguagePackage extends EPackage
     EClass BLOCK = eINSTANCE.getBlock();
 
     /**
-     * The meta object literal for the '<em><b>Column</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Columns</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference BLOCK__COLUMN = eINSTANCE.getBlock_Column();
+    EReference BLOCK__COLUMNS = eINSTANCE.getBlock_Columns();
 
     /**
      * The meta object literal for the '{@link dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.impl.ColumnImpl <em>Column</em>}' class.

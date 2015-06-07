@@ -122,7 +122,7 @@ public class SpreadsheetGrammarLanguageSemanticSequencer extends AbstractDelegat
 	
 	/**
 	 * Constraint:
-	 *     (name=ID column+=Column*)
+	 *     (name=ID columns+=Column*)
 	 */
 	protected void sequence_Block(EObject context, Block semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -140,7 +140,7 @@ public class SpreadsheetGrammarLanguageSemanticSequencer extends AbstractDelegat
 	
 	/**
 	 * Constraint:
-	 *     elements+=Element*
+	 *     (name=ID root=[Block|ID] elements+=Element*)
 	 */
 	protected void sequence_Grammar(EObject context, Grammar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

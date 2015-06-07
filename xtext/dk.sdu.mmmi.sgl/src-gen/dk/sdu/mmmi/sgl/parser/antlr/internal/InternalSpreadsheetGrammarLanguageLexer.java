@@ -27,6 +27,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
     public static final int RULE_ANY_OTHER=10;
+    public static final int T__26=26;
     public static final int RULE_INT=6;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=7;
@@ -54,10 +55,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:11:7: ( 'block' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:11:9: 'block'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:11:7: ( 'language' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:11:9: 'language'
             {
-            match("block"); 
+            match("language"); 
 
 
             }
@@ -75,10 +76,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:12:7: ( '{' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:12:9: '{'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:12:7: ( ':' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:12:9: ':'
             {
-            match('{'); 
+            match(':'); 
 
             }
 
@@ -95,10 +96,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:13:7: ( '}' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:13:9: '}'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:13:7: ( ';' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:13:9: ';'
             {
-            match('}'); 
+            match(';'); 
 
             }
 
@@ -115,10 +116,11 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:14:7: ( '*' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:14:9: '*'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:14:7: ( 'block' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:14:9: 'block'
             {
-            match('*'); 
+            match("block"); 
+
 
             }
 
@@ -135,10 +137,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:15:7: ( ';' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:15:9: ';'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:15:7: ( '{' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:15:9: '{'
             {
-            match(';'); 
+            match('{'); 
 
             }
 
@@ -155,10 +157,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:16:7: ( '=' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:16:9: '='
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:16:7: ( '}' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:16:9: '}'
             {
-            match('='); 
+            match('}'); 
 
             }
 
@@ -175,11 +177,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:17:7: ( '?=' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:17:9: '?='
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:17:7: ( '*' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:17:9: '*'
             {
-            match("?="); 
-
+            match('*'); 
 
             }
 
@@ -196,11 +197,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:18:7: ( 'column' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:18:9: 'column'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:18:7: ( '=' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:18:9: '='
             {
-            match("column"); 
-
+            match('='); 
 
             }
 
@@ -217,10 +217,11 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:19:7: ( ':' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:19:9: ':'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:19:7: ( '?=' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:19:9: '?='
             {
-            match(':'); 
+            match("?="); 
+
 
             }
 
@@ -237,10 +238,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:20:7: ( 'IDENTIFIER' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:20:9: 'IDENTIFIER'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:20:7: ( 'column' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:20:9: 'column'
             {
-            match("IDENTIFIER"); 
+            match("column"); 
 
 
             }
@@ -258,10 +259,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:21:7: ( 'STRING' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:21:9: 'STRING'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:21:7: ( 'IDENTIFIER' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:21:9: 'IDENTIFIER'
             {
-            match("STRING"); 
+            match("IDENTIFIER"); 
 
 
             }
@@ -279,10 +280,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:22:7: ( 'INTEGER' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:22:9: 'INTEGER'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:22:7: ( 'STRING' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:22:9: 'STRING'
             {
-            match("INTEGER"); 
+            match("STRING"); 
 
 
             }
@@ -300,10 +301,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:23:7: ( 'token' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:23:9: 'token'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:23:7: ( 'INTEGER' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:23:9: 'INTEGER'
             {
-            match("token"); 
+            match("INTEGER"); 
 
 
             }
@@ -321,10 +322,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:24:7: ( 'rule' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:24:9: 'rule'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:24:7: ( 'token' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:24:9: 'token'
             {
-            match("rule"); 
+            match("token"); 
 
 
             }
@@ -342,10 +343,11 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:25:7: ( '|' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:25:9: '|'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:25:7: ( 'rule' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:25:9: 'rule'
             {
-            match('|'); 
+            match("rule"); 
+
 
             }
 
@@ -357,15 +359,35 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
     }
     // $ANTLR end "T__25"
 
+    // $ANTLR start "T__26"
+    public final void mT__26() throws RecognitionException {
+        try {
+            int _type = T__26;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:26:7: ( '|' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:26:9: '|'
+            {
+            match('|'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__26"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:798:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:798:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:841:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:841:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:798:11: ( '^' )?
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:841:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -374,7 +396,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:798:11: '^'
+                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:841:11: '^'
                     {
                     match('^'); 
 
@@ -392,7 +414,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:798:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:841:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -441,10 +463,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:800:10: ( ( '0' .. '9' )+ )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:800:12: ( '0' .. '9' )+
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:843:10: ( ( '0' .. '9' )+ )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:843:12: ( '0' .. '9' )+
             {
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:800:12: ( '0' .. '9' )+
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:843:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -458,7 +480,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:800:13: '0' .. '9'
+            	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:843:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -490,10 +512,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -511,10 +533,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -530,7 +552,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:21: '\\\\' .
+                    	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -538,7 +560,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -563,10 +585,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -582,7 +604,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:54: '\\\\' .
+                    	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -590,7 +612,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:802:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:845:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -633,12 +655,12 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:804:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:804:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:847:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:847:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:804:24: ( options {greedy=false; } : . )*
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:847:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -663,7 +685,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:804:52: .
+            	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:847:52: .
             	    {
             	    matchAny(); 
 
@@ -693,12 +715,12 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:849:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:849:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:849:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -711,7 +733,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:849:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -731,7 +753,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
                 }
             } while (true);
 
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:40: ( ( '\\r' )? '\\n' )?
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:849:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -740,9 +762,9 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:41: ( '\\r' )? '\\n'
+                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:849:41: ( '\\r' )? '\\n'
                     {
-                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:41: ( '\\r' )?
+                    // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:849:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -751,7 +773,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:806:41: '\\r'
+                            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:849:41: '\\r'
                             {
                             match('\r'); 
 
@@ -783,10 +805,10 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:808:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:808:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:851:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:851:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:808:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:851:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -840,8 +862,8 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:810:16: ( . )
-            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:810:18: .
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:853:16: ( . )
+            // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:853:18: .
             {
             matchAny(); 
 
@@ -856,8 +878,8 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=22;
+        // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=23;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -966,49 +988,56 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
                 }
                 break;
             case 16 :
-                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:100: RULE_ID
+                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:100: T__26
+                {
+                mT__26(); 
+
+                }
+                break;
+            case 17 :
+                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:106: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 17 :
-                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:108: RULE_INT
+            case 18 :
+                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:114: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 18 :
-                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:117: RULE_STRING
+            case 19 :
+                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:123: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 19 :
-                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:129: RULE_ML_COMMENT
+            case 20 :
+                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:135: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 20 :
-                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:145: RULE_SL_COMMENT
+            case 21 :
+                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:151: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 21 :
-                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:161: RULE_WS
+            case 22 :
+                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:167: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 22 :
-                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:169: RULE_ANY_OTHER
+            case 23 :
+                // ../dk.sdu.mmmi.sgl/src-gen/dk/sdu/mmmi/sgl/parser/antlr/internal/InternalSpreadsheetGrammarLanguage.g:1:175: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1022,65 +1051,64 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\1\30\5\uffff\1\26\1\30\1\uffff\4\30\1\uffff\1\26\2\uffff\3\26\2\uffff\1\30\7\uffff\1\30\1\uffff\5\30\6\uffff\15\30\1\100\1\101\4\30\1\106\2\uffff\1\107\2\30\1\112\2\uffff\1\30\1\114\1\uffff\1\30\1\uffff\1\30\1\117\1\uffff";
+        "\1\uffff\1\31\2\uffff\1\31\4\uffff\1\27\5\31\1\uffff\1\27\2\uffff\3\27\2\uffff\1\31\3\uffff\1\31\5\uffff\6\31\6\uffff\17\31\1\105\1\31\1\107\4\31\1\114\1\uffff\1\31\1\uffff\1\116\2\31\1\121\1\uffff\1\31\1\uffff\1\31\1\124\1\uffff\1\125\1\31\2\uffff\1\31\1\130\1\uffff";
     static final String DFA12_eofS =
-        "\120\uffff";
+        "\131\uffff";
     static final String DFA12_minS =
-        "\1\0\1\154\5\uffff\1\75\1\157\1\uffff\1\104\1\124\1\157\1\165\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\157\7\uffff\1\154\1\uffff\1\105\1\124\1\122\1\153\1\154\6\uffff\1\143\1\165\1\116\1\105\1\111\2\145\1\153\1\155\1\124\1\107\1\116\1\156\2\60\1\156\1\111\1\105\1\107\1\60\2\uffff\1\60\1\106\1\122\1\60\2\uffff\1\111\1\60\1\uffff\1\105\1\uffff\1\122\1\60\1\uffff";
+        "\1\0\1\141\2\uffff\1\154\4\uffff\1\75\1\157\1\104\1\124\1\157\1\165\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\156\3\uffff\1\157\5\uffff\1\154\1\105\1\124\1\122\1\153\1\154\6\uffff\1\147\1\143\1\165\1\116\1\105\1\111\2\145\1\165\1\153\1\155\1\124\1\107\1\116\1\156\1\60\1\141\1\60\1\156\1\111\1\105\1\107\1\60\1\uffff\1\147\1\uffff\1\60\1\106\1\122\1\60\1\uffff\1\145\1\uffff\1\111\1\60\1\uffff\1\60\1\105\2\uffff\1\122\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\154\5\uffff\1\75\1\157\1\uffff\1\116\1\124\1\157\1\165\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\157\7\uffff\1\154\1\uffff\1\105\1\124\1\122\1\153\1\154\6\uffff\1\143\1\165\1\116\1\105\1\111\2\145\1\153\1\155\1\124\1\107\1\116\1\156\2\172\1\156\1\111\1\105\1\107\1\172\2\uffff\1\172\1\106\1\122\1\172\2\uffff\1\111\1\172\1\uffff\1\105\1\uffff\1\122\1\172\1\uffff";
+        "\1\uffff\1\141\2\uffff\1\154\4\uffff\1\75\1\157\1\116\1\124\1\157\1\165\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\156\3\uffff\1\157\5\uffff\1\154\1\105\1\124\1\122\1\153\1\154\6\uffff\1\147\1\143\1\165\1\116\1\105\1\111\2\145\1\165\1\153\1\155\1\124\1\107\1\116\1\156\1\172\1\141\1\172\1\156\1\111\1\105\1\107\1\172\1\uffff\1\147\1\uffff\1\172\1\106\1\122\1\172\1\uffff\1\145\1\uffff\1\111\1\172\1\uffff\1\172\1\105\2\uffff\1\122\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\3\1\4\1\5\1\6\2\uffff\1\11\4\uffff\1\17\1\uffff\1\20\1\21\3\uffff\1\25\1\26\1\uffff\1\20\1\2\1\3\1\4\1\5\1\6\1\7\1\uffff\1\11\5\uffff\1\17\1\21\1\22\1\23\1\24\1\25\24\uffff\1\16\1\1\4\uffff\1\15\1\10\2\uffff\1\13\1\uffff\1\14\2\uffff\1\12";
+        "\2\uffff\1\2\1\3\1\uffff\1\5\1\6\1\7\1\10\6\uffff\1\20\1\uffff\1\21\1\22\3\uffff\1\26\1\27\1\uffff\1\21\1\2\1\3\1\uffff\1\5\1\6\1\7\1\10\1\11\6\uffff\1\20\1\22\1\23\1\24\1\25\1\26\27\uffff\1\17\1\uffff\1\4\4\uffff\1\16\1\uffff\1\12\2\uffff\1\14\2\uffff\1\15\1\1\2\uffff\1\13";
     static final String DFA12_specialS =
-        "\1\1\21\uffff\1\2\1\0\74\uffff}>";
+        "\1\2\22\uffff\1\0\1\1\104\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\26\2\25\2\26\1\25\22\26\1\25\1\26\1\22\4\26\1\23\2\26\1\4\4\26\1\24\12\21\1\11\1\5\1\26\1\6\1\26\1\7\1\26\10\20\1\12\11\20\1\13\7\20\3\26\1\17\1\20\1\26\1\20\1\1\1\10\16\20\1\15\1\20\1\14\6\20\1\2\1\16\1\3\uff82\26",
-            "\1\27",
+            "\11\27\2\26\2\27\1\26\22\27\1\26\1\27\1\23\4\27\1\24\2\27\1\7\4\27\1\25\12\22\1\2\1\3\1\27\1\10\1\27\1\11\1\27\10\21\1\13\11\21\1\14\7\21\3\27\1\20\1\21\1\27\1\21\1\4\1\12\10\21\1\1\5\21\1\16\1\21\1\15\6\21\1\5\1\17\1\6\uff82\27",
+            "\1\30",
+            "",
+            "",
+            "\1\34",
             "",
             "",
             "",
             "",
-            "",
-            "\1\36",
-            "\1\37",
-            "",
-            "\1\41\11\uffff\1\42",
-            "\1\43",
-            "\1\44",
+            "\1\41",
+            "\1\42",
+            "\1\43\11\uffff\1\44",
             "\1\45",
+            "\1\46",
+            "\1\47",
             "",
-            "\32\30\4\uffff\1\30\1\uffff\32\30",
-            "",
-            "",
-            "\0\50",
-            "\0\50",
-            "\1\51\4\uffff\1\52",
+            "\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
             "",
-            "\1\54",
+            "\0\52",
+            "\0\52",
+            "\1\53\4\uffff\1\54",
             "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\55",
             "",
             "\1\56",
+            "",
+            "",
+            "",
             "\1\57",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\60",
             "\1\61",
             "\1\62",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\63",
             "\1\64",
             "\1\65",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\66",
             "\1\67",
             "\1\70",
@@ -1091,28 +1119,38 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
             "\1\75",
             "\1\76",
             "\1\77",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\1\100",
+            "\1\101",
             "\1\102",
             "\1\103",
             "\1\104",
-            "\1\105",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "",
-            "",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\106",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\1\110",
             "\1\111",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
-            "",
-            "",
+            "\1\112",
             "\1\113",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
             "\1\115",
             "",
-            "\1\116",
-            "\12\30\7\uffff\32\30\4\uffff\1\30\1\uffff\32\30",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\117",
+            "\1\120",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\1\122",
+            "",
+            "\1\123",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\1\126",
+            "",
+            "",
+            "\1\127",
+            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             ""
     };
 
@@ -1146,7 +1184,7 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -1156,69 +1194,71 @@ public class InternalSpreadsheetGrammarLanguageLexer extends Lexer {
                         int LA12_19 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 40;}
+                        if ( ((LA12_19>='\u0000' && LA12_19<='\uFFFF')) ) {s = 42;}
 
-                        else s = 22;
+                        else s = 23;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_0 = input.LA(1);
+                        int LA12_20 = input.LA(1);
 
                         s = -1;
-                        if ( (LA12_0=='b') ) {s = 1;}
+                        if ( ((LA12_20>='\u0000' && LA12_20<='\uFFFF')) ) {s = 42;}
 
-                        else if ( (LA12_0=='{') ) {s = 2;}
-
-                        else if ( (LA12_0=='}') ) {s = 3;}
-
-                        else if ( (LA12_0=='*') ) {s = 4;}
-
-                        else if ( (LA12_0==';') ) {s = 5;}
-
-                        else if ( (LA12_0=='=') ) {s = 6;}
-
-                        else if ( (LA12_0=='?') ) {s = 7;}
-
-                        else if ( (LA12_0=='c') ) {s = 8;}
-
-                        else if ( (LA12_0==':') ) {s = 9;}
-
-                        else if ( (LA12_0=='I') ) {s = 10;}
-
-                        else if ( (LA12_0=='S') ) {s = 11;}
-
-                        else if ( (LA12_0=='t') ) {s = 12;}
-
-                        else if ( (LA12_0=='r') ) {s = 13;}
-
-                        else if ( (LA12_0=='|') ) {s = 14;}
-
-                        else if ( (LA12_0=='^') ) {s = 15;}
-
-                        else if ( ((LA12_0>='A' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='R')||(LA12_0>='T' && LA12_0<='Z')||LA12_0=='_'||LA12_0=='a'||(LA12_0>='d' && LA12_0<='q')||LA12_0=='s'||(LA12_0>='u' && LA12_0<='z')) ) {s = 16;}
-
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 17;}
-
-                        else if ( (LA12_0=='\"') ) {s = 18;}
-
-                        else if ( (LA12_0=='\'') ) {s = 19;}
-
-                        else if ( (LA12_0=='/') ) {s = 20;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 21;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<=')')||(LA12_0>='+' && LA12_0<='.')||LA12_0=='<'||LA12_0=='>'||LA12_0=='@'||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 22;}
+                        else s = 23;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_18 = input.LA(1);
+                        int LA12_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_18>='\u0000' && LA12_18<='\uFFFF')) ) {s = 40;}
+                        if ( (LA12_0=='l') ) {s = 1;}
 
-                        else s = 22;
+                        else if ( (LA12_0==':') ) {s = 2;}
+
+                        else if ( (LA12_0==';') ) {s = 3;}
+
+                        else if ( (LA12_0=='b') ) {s = 4;}
+
+                        else if ( (LA12_0=='{') ) {s = 5;}
+
+                        else if ( (LA12_0=='}') ) {s = 6;}
+
+                        else if ( (LA12_0=='*') ) {s = 7;}
+
+                        else if ( (LA12_0=='=') ) {s = 8;}
+
+                        else if ( (LA12_0=='?') ) {s = 9;}
+
+                        else if ( (LA12_0=='c') ) {s = 10;}
+
+                        else if ( (LA12_0=='I') ) {s = 11;}
+
+                        else if ( (LA12_0=='S') ) {s = 12;}
+
+                        else if ( (LA12_0=='t') ) {s = 13;}
+
+                        else if ( (LA12_0=='r') ) {s = 14;}
+
+                        else if ( (LA12_0=='|') ) {s = 15;}
+
+                        else if ( (LA12_0=='^') ) {s = 16;}
+
+                        else if ( ((LA12_0>='A' && LA12_0<='H')||(LA12_0>='J' && LA12_0<='R')||(LA12_0>='T' && LA12_0<='Z')||LA12_0=='_'||LA12_0=='a'||(LA12_0>='d' && LA12_0<='k')||(LA12_0>='m' && LA12_0<='q')||LA12_0=='s'||(LA12_0>='u' && LA12_0<='z')) ) {s = 17;}
+
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 18;}
+
+                        else if ( (LA12_0=='\"') ) {s = 19;}
+
+                        else if ( (LA12_0=='\'') ) {s = 20;}
+
+                        else if ( (LA12_0=='/') ) {s = 21;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 22;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<=')')||(LA12_0>='+' && LA12_0<='.')||LA12_0=='<'||LA12_0=='>'||LA12_0=='@'||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 23;}
 
                         if ( s>=0 ) return s;
                         break;
