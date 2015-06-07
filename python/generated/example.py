@@ -4,8 +4,6 @@ Created on Jun 7, 2015
 @author: ups
 '''
 
-print 1
-
 class ExampleParser(object):
     '''
     example of code that would be generated
