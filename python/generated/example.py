@@ -35,7 +35,9 @@ class ExampleParser(object):
         results = []
         relativeRow = 0
         while relativeRow<height:
-            results.append(self.parseObject(row+relativeRow,column,columnHeaders))
+            increment_and_object = self.parseObject(row+relativeRow,column,columnHeaders)
+            results.append(increment_and_object[1])
+            relativeRow += increment_and_object[0]
         return results
     
 
@@ -48,7 +50,7 @@ class ExampleParser(object):
             relativeRow += 1
             if not self.spreadsheet.empty(row+relativeRow,column):
                 break
-        return {"name": value_Form_name, "questions": value_Form_questions}
+        return (relativeRow,{"name": value_Form_name, "questions": value_Form_questions})
     
     def parseObject_question(self, row, column):
         value_Question_name = parse_identifier(self.spreadsheet.cell(row,column))
