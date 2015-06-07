@@ -13,7 +13,10 @@ class GenericParserHelper(object):
     def __init__(self, spreadsheet):
         self.spreadsheet = spreadsheet
     def getCell(self,row,column):
-        return self.spreadsheet.objCells[row][column].data
+        value = self.spreadsheet.objCells[row][column].data
+        if value==None:
+            raise Exception("None value not exprected when reading cell "+str(row)+","+str(column))
+        return value
     def emptyCell(self,row,column):
         return self.spreadsheet.objCells[row][column].isEmpty()
     def parse_syntax_IDENTIFIER(self,text):
@@ -50,8 +53,8 @@ class GenericParserHelper(object):
         return lambda text: self.internal_parse_syntax_token_helper(token,text)
     def internal_parse_syntax_token_helper(self,token,string):
         text = string.lstrip()
-        if text.startwith(token):
+        if text.startswith(token):
             return (token,text[len(token):])
-        raise None
+        return None
 
         

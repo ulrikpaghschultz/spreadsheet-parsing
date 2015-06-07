@@ -47,7 +47,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	class Parse«grammar.name»(GenericParserHelper):
 	
 		def __init__(self, spreadsheet):
-			super(GenericParserHelper,self).__init__(spreadsheet)
+			GenericParserHelper.__init__(spreadsheet)
 	
 		def matchColumns(self,columnHeaders):
 			return columnHeaders==[«FOR h:grammar.computeHeaders SEPARATOR ","»"«h»"«ENDFOR»]
@@ -105,7 +105,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	'''
 	
 	def dispatch genParserSingle(OptionalColumn col, String name) '''
-	if self.emptyCell(self,row,current_column):
+	if self.emptyCell(row,current_column):
 		value_«name» = None
 	else:
 		value_«name» = «col.spec.genParserSingleBody»
@@ -123,10 +123,10 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	def dispatch genParserMultipleBody(RowSpec spec, String name) '''
 	relativeRow = 0
 	while True:
-		value_«name».append(self.parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row+relativeRow,current_column+1))
+		value_«name».append(self.parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row+relativeRow,current_column))
 		relativeRow += 1
 		result_row_increment += 1
-		if not self.emptyCell(row+relativeRow,current_column):
+		if not self.emptyCell(row+relativeRow,current_column-1):
 			break
 	'''
 

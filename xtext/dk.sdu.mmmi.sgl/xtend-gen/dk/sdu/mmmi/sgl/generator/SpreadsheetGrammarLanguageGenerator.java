@@ -75,7 +75,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("def __init__(self, spreadsheet):");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("super(GenericParserHelper,self).__init__(spreadsheet)");
+    _builder.append("GenericParserHelper.__init__(spreadsheet)");
     _builder.newLine();
     _builder.newLine();
     _builder.append("\t");
@@ -248,7 +248,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
   
   protected CharSequence _genParserSingle(final OptionalColumn col, final String name) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("if self.emptyCell(self,row,current_column):");
+    _builder.append("if self.emptyCell(row,current_column):");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("value_");
@@ -300,7 +300,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     Syntax _syntax = spec.getSyntax();
     String _generateSyntaxName = this.generateSyntaxName(_syntax);
     _builder.append(_generateSyntaxName, "\t");
-    _builder.append("(self.getCell(row+relativeRow,current_column+1))");
+    _builder.append("(self.getCell(row+relativeRow,current_column))");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("relativeRow += 1");
@@ -309,7 +309,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("result_row_increment += 1");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("if not self.emptyCell(row+relativeRow,current_column):");
+    _builder.append("if not self.emptyCell(row+relativeRow,current_column-1):");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("break");
