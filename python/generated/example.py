@@ -16,7 +16,7 @@ class ExampleParser(object):
         self.spreadsheet = spreadsheet
 
     def matchColumns(self,columnHeaders):
-        return True # if the headers provided as a list of strings matches the columns of this parser object
+        return columnHeaders==["Form","Name","Question","Type","Value","Condition"]
     
     def parseBlock(self,columnHeaders,row,column,width,height):
         return None # column headers not included in block, returns list of objects extracted from spreadsheet, or None if parse err
