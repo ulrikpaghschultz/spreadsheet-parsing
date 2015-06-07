@@ -117,7 +117,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     Block _root = grammar.getRoot();
     String _name_1 = _root.getName();
     _builder.append(_name_1, "\t\t\t");
-    _builder.append("(row+relativeRow,column)");
+    _builder.append("(row+relativeRow,column,row+height)");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
     _builder.append("results.append(increment_and_object[1])");
@@ -146,7 +146,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("def parse_");
     String _name = block.getName();
     _builder.append(_name, "");
-    _builder.append("(self,row,column):");
+    _builder.append("(self,row,column,max_row):");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("column_offset = 0");
@@ -306,13 +306,12 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("relativeRow += 1");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("result_row_increment += 1");
-    _builder.newLine();
-    _builder.append("\t");
     _builder.append("if not self.emptyCell(row+relativeRow,current_column-1):");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("break");
+    _builder.newLine();
+    _builder.append("result_row_increment = max(result_row_increment,relativeRow)");
     _builder.newLine();
     return _builder;
   }
@@ -324,17 +323,20 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("while True:");
     _builder.newLine();
     _builder.append("\t");
+    _builder.append("if row+relativeRow>=max_row:");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("break");
+    _builder.newLine();
+    _builder.append("\t");
     _builder.append("increment_and_object = self.parse_");
     Block _kind = spec.getKind();
     String _name = _kind.getName();
     _builder.append(_name, "\t");
-    _builder.append("(row+relativeRow,current_column)");
+    _builder.append("(row+relativeRow,current_column,max_row)");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("relativeRow += increment_and_object[0]");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("result_row_increment += increment_and_object[0]");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("value_");
@@ -346,6 +348,8 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("break");
+    _builder.newLine();
+    _builder.append("result_row_increment = max(result_row_increment,relativeRow)");
     _builder.newLine();
     return _builder;
   }

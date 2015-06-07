@@ -11,12 +11,12 @@ class ParseQuestionnaire(GenericParserHelper):
 		results = []
 		relativeRow = 0
 		while relativeRow<height:
-			increment_and_object = self.parse_Forms(row+relativeRow,column)
+			increment_and_object = self.parse_Forms(row+relativeRow,column,row+height)
 			results.append(increment_and_object[1])
 			relativeRow += increment_and_object[0]
 		return results
 	
-	def parse_Forms(self,row,column):
+	def parse_Forms(self,row,column,max_row):
 		column_offset = 0
 		result_row_increment = 1
 		result_object = {}
@@ -30,17 +30,19 @@ class ParseQuestionnaire(GenericParserHelper):
 		value_questions = []
 		relativeRow = 0
 		while True:
-			increment_and_object = self.parse_Question(row+relativeRow,current_column)
+			if row+relativeRow>=max_row:
+				break
+			increment_and_object = self.parse_Question(row+relativeRow,current_column,max_row)
 			relativeRow += increment_and_object[0]
-			result_row_increment += increment_and_object[0]
 			value_questions.append(increment_and_object[1])
 			if not self.emptyCell(row+relativeRow,current_column-1):
 				break
+		result_row_increment = max(result_row_increment,relativeRow)
 		result_object["questions"] = value_questions
 		column_offset += 1
 		return (result_row_increment,result_object)
 	
-	def parse_Question(self,row,column):
+	def parse_Question(self,row,column,max_row):
 		column_offset = 0
 		result_row_increment = 1
 		result_object = {}
