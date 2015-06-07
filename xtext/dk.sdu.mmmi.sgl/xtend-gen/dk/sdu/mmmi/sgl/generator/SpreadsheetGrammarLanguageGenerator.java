@@ -281,7 +281,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
   
   protected CharSequence _genParserSingleBody(final BlockSpec spec) {
     try {
-      throw new Error("Illegal grammar: block with single-relation column");
+      throw new Exception("Illegal grammar: block with single-relation column");
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }
@@ -404,7 +404,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("if object_and_rest==None:");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("raise Error(\"Failed parsing as ");
+    _builder.append("raise Exception(\"Failed parsing as ");
     String _name_2 = rule.getName();
     _builder.append(_name_2, "\t\t");
     _builder.append(", text: \"+text)");
@@ -416,7 +416,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("if len(rest_maybe)>0:");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("raise Error(\"Surplus text when parsing ");
+    _builder.append("raise Exception(\"Surplus text when parsing ");
     String _name_3 = rule.getName();
     _builder.append(_name_3, "\t\t");
     _builder.append(", text: \"+rest_maybe)");

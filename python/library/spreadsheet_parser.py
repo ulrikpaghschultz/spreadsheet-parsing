@@ -21,7 +21,7 @@ class GenericParserHelper(object):
         return self.spreadsheet.objCells[row][column].isEmpty()
     def parse_syntax_IDENTIFIER(self,text):
         result = self.internal_parse_syntax_IDENTIFIER(text)
-        if result!=None:
+        if result!=None and len(result[1])==0:
             return result[0]
         raise Exception('parse error: illegal identifier '+text)
     def parse_syntax_STRING(self,text):
@@ -39,14 +39,16 @@ class GenericParserHelper(object):
             return result[0]
         raise Exception('parse error: expected token '+token+' but got '+string)
     def internal_parse_syntax_IDENTIFIER(self,text):
-        if self.regexp_parse_identifier.match(text):
-            return (text,'')
+        m=self.regexp_parse_identifier.match(text)
+        if m:
+            value=m.group(0)
+            return ({'IDENTIFIER':value},text[len(value):])
         return None
     def internal_parse_syntax_STRING(self,text):
-        return (text,'')
+        return ({'STRING':text},'')
     def internal_parse_syntax_INTEGER(self,text):
         try:
-            return (int(text),'')
+            return ({'INTEGER':int(text)},'')
         except ValueError:
             return None
     def internal_parse_syntax_token(self,token):
@@ -54,7 +56,7 @@ class GenericParserHelper(object):
     def internal_parse_syntax_token_helper(self,token,string):
         text = string.lstrip()
         if text.startswith(token):
-            return (token,text[len(token):])
+            return ({'TOKEN':token},text[len(token):])
         return None
 
         

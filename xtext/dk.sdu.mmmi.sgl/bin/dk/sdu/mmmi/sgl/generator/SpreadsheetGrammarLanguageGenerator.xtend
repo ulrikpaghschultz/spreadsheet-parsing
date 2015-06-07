@@ -117,7 +117,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 
 	
 	def dispatch genParserSingleBody(BlockSpec spec) {
-		throw new Error("Illegal grammar: block with single-relation column")
+		throw new Exception("Illegal grammar: block with single-relation column")
 	}
 
 	def dispatch genParserMultipleBody(RowSpec spec, String name) '''
@@ -160,10 +160,10 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	def parse_syntax_«rule.name»(self,text):
 		object_and_rest = self.internal_parse_syntax_«rule.name»(text)
 		if object_and_rest==None:
-			raise Error("Failed parsing as «rule.name», text: "+text)
+			raise Exception("Failed parsing as «rule.name», text: "+text)
 		rest_maybe = object_and_rest[1].lstrip()
 		if len(rest_maybe)>0:
-			raise Error("Surplus text when parsing «rule.name», text: "+rest_maybe)
+			raise Exception("Surplus text when parsing «rule.name», text: "+rest_maybe)
 		return object_and_rest[0]
 	
 	def internal_parse_syntax_«rule.name»(self,text):
