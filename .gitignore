@@ -2,3 +2,7 @@
 *.sgl~
 
 *.class
+
+*._trace
+
+*._trace

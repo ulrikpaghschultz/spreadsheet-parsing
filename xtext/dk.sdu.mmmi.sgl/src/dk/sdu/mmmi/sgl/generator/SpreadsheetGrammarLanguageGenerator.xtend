@@ -47,7 +47,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	class Parse«grammar.name»(GenericParserHelper):
 	
 		def __init__(self, spreadsheet):
-			GenericParserHelper.__init__(spreadsheet)
+			GenericParserHelper.__init__(self,spreadsheet)
 	
 		def matchColumns(self,columnHeaders):
 			return columnHeaders==[«FOR h:grammar.computeHeaders SEPARATOR ","»"«h»"«ENDFOR»]
@@ -133,11 +133,11 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	def dispatch genParserMultipleBody(BlockSpec spec, String name) '''
 	relativeRow = 0
 	while True:
-		increment_and_object = self.parse_«spec.kind.name»(row+relativeRow,current_column+1)
+		increment_and_object = self.parse_«spec.kind.name»(row+relativeRow,current_column)
 		relativeRow += increment_and_object[0]
 		result_row_increment += increment_and_object[0]
 		value_«name».append(increment_and_object[1])
-		if not self.emptyCell(row+relativeRow,current_column):
+		if not self.emptyCell(row+relativeRow,current_column-1):
 			break
 	'''
 
@@ -174,11 +174,11 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 		«ENDFOR»
 		return None
 	«FOR a:rule.alternatives»
-	«a.parts.genInternalParser(rule.name+"_"+a.uniqueCode)»	
+	«a.parts.genInternalParser(rule.name+"_"+a.uniqueCode,rule.name)»	
 	«ENDFOR»
 	'''
 	
-	def genInternalParser(EList<Syntax> list, String name) '''
+	def genInternalParser(EList<Syntax> list, String name, String dataname) '''
 	
 	def parse_syntax_«name»(self,text):
 		current = text
@@ -190,7 +190,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 		result.append(object_and_rest[0])
 		current = object_and_rest[1]
 		«ENDFOR»
-		return (result,current)
+		return ({"«dataname»":result},current)
 	'''
 
 	def String uniqueCode(SyntaxSeq seq) {

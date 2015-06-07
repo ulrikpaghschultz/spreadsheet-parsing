@@ -75,7 +75,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("def __init__(self, spreadsheet):");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("GenericParserHelper.__init__(spreadsheet)");
+    _builder.append("GenericParserHelper.__init__(self,spreadsheet)");
     _builder.newLine();
     _builder.newLine();
     _builder.append("\t");
@@ -328,7 +328,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     Block _kind = spec.getKind();
     String _name = _kind.getName();
     _builder.append(_name, "\t");
-    _builder.append("(row+relativeRow,current_column+1)");
+    _builder.append("(row+relativeRow,current_column)");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("relativeRow += increment_and_object[0]");
@@ -342,7 +342,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append(".append(increment_and_object[1])");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
-    _builder.append("if not self.emptyCell(row+relativeRow,current_column):");
+    _builder.append("if not self.emptyCell(row+relativeRow,current_column-1):");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("break");
@@ -462,7 +462,8 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
         String _plus = (_name_6 + "_");
         String _uniqueCode_1 = this.uniqueCode(a_1);
         String _plus_1 = (_plus + _uniqueCode_1);
-        CharSequence _genInternalParser = this.genInternalParser(_parts, _plus_1);
+        String _name_7 = rule.getName();
+        CharSequence _genInternalParser = this.genInternalParser(_parts, _plus_1, _name_7);
         _builder.append(_genInternalParser, "");
         _builder.append("\t");
         _builder.newLineIfNotEmpty();
@@ -471,7 +472,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence genInternalParser(final EList<Syntax> list, final String name) {
+  public CharSequence genInternalParser(final EList<Syntax> list, final String name, final String dataname) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.newLine();
     _builder.append("def parse_syntax_");
@@ -508,8 +509,10 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
       }
     }
     _builder.append("\t");
-    _builder.append("return (result,current)");
-    _builder.newLine();
+    _builder.append("return ({\"");
+    _builder.append(dataname, "\t");
+    _builder.append("\":result},current)");
+    _builder.newLineIfNotEmpty();
     return _builder;
   }
   
