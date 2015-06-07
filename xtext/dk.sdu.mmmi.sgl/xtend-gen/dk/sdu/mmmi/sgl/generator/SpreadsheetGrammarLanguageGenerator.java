@@ -3,15 +3,20 @@
  */
 package dk.sdu.mmmi.sgl.generator;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterators;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Block;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.BlockSpec;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Column;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.ColumnDefinition;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.ColumnSpec;
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Element;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Grammar;
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.MandatoryColumn;
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.OptionalColumn;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.RowSpec;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Rule;
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Syntax;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -24,6 +29,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
+import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
 
@@ -55,24 +61,18 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
   
   public CharSequence generate(final Grammar grammar) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("import cellparser");
+    _builder.append("from spreadsheet_parser import *");
     _builder.newLine();
     _builder.append("class Parse");
     String _name = grammar.getName();
     _builder.append(_name, "");
-    _builder.append("(object):");
+    _builder.append("(GenericParserHelper):");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
     _builder.append("def __init__(self, spreadsheet):");
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("self.spreadsheet = spreadsheet");
-    _builder.newLine();
-    _builder.append("\t");
-    _builder.append("def getCell(self,row,column):");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("return self.spreadsheet.objCells.[row][column].data");
+    _builder.append("super(GenericParserHelper,self).__init__(spreadsheet)");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("def matchColumns(self,columnHeaders):");
@@ -108,8 +108,12 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("while relativeRow<height:");
     _builder.newLine();
     _builder.append("\t\t\t");
-    _builder.append("increment_and_object = self.parseObject(row+relativeRow,column,columnHeaders)");
-    _builder.newLine();
+    _builder.append("increment_and_object = self.parse_");
+    Block _root = grammar.getRoot();
+    String _name_1 = _root.getName();
+    _builder.append(_name_1, "\t\t\t");
+    _builder.append("(row+relativeRow,column)");
+    _builder.newLineIfNotEmpty();
     _builder.append("\t\t\t");
     _builder.append("results.append(increment_and_object[1])");
     _builder.newLine();
@@ -119,7 +123,274 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("\t\t");
     _builder.append("return results");
     _builder.newLine();
+    {
+      EList<Element> _elements = grammar.getElements();
+      for(final Element e : _elements) {
+        _builder.append("\t");
+        CharSequence _genParser = this.genParser(e);
+        _builder.append(_genParser, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     return _builder;
+  }
+  
+  protected CharSequence _genParser(final Rule rule) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("def parse_syntax_");
+    String _name = rule.getName();
+    _builder.append(_name, "");
+    _builder.append("(text):");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("return text");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  protected CharSequence _genParser(final Block block) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("def parse_");
+    String _name = block.getName();
+    _builder.append(_name, "");
+    _builder.append("(self,row,column):");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("column_offset = 0");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("result_row_increment = 1");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("result_object = {}");
+    _builder.newLine();
+    {
+      EList<Column> _columns = block.getColumns();
+      for(final Column c : _columns) {
+        _builder.append("\t");
+        _builder.append("# Column ");
+        String _name_1 = c.getName();
+        _builder.append(_name_1, "\t");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("current_column = column+column_offset");
+        _builder.newLine();
+        {
+          boolean _isMultiple = c.isMultiple();
+          if (_isMultiple) {
+            _builder.append("\t");
+            ColumnDefinition _def = c.getDef();
+            String _name_2 = c.getName();
+            CharSequence _genParserMultiple = this.genParserMultiple(_def, _name_2);
+            _builder.append(_genParserMultiple, "\t");
+            _builder.newLineIfNotEmpty();
+          } else {
+            _builder.append("\t");
+            ColumnDefinition _def_1 = c.getDef();
+            String _name_3 = c.getName();
+            CharSequence _genParserSingle = this.genParserSingle(_def_1, _name_3);
+            _builder.append(_genParserSingle, "\t");
+            _builder.newLineIfNotEmpty();
+          }
+        }
+        _builder.append("\t");
+        _builder.append("result_object[\"");
+        String _name_4 = c.getName();
+        _builder.append(_name_4, "\t");
+        _builder.append("\"] = value_");
+        String _name_5 = c.getName();
+        _builder.append(_name_5, "\t");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("column_offset += 1");
+        _builder.newLine();
+      }
+    }
+    _builder.append("\t");
+    _builder.append("return (result_row_increment,result_object)");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  protected CharSequence _genParserMultiple(final MandatoryColumn col, final String name) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("value_");
+    _builder.append(name, "");
+    _builder.append(" = []");
+    _builder.newLineIfNotEmpty();
+    ColumnSpec _spec = col.getSpec();
+    CharSequence _genParserMultipleBody = this.genParserMultipleBody(_spec, name);
+    _builder.append(_genParserMultipleBody, "");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  protected CharSequence _genParserMultiple(final OptionalColumn col, final String name) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("value_");
+    _builder.append(name, "");
+    _builder.append(" = []");
+    _builder.newLineIfNotEmpty();
+    _builder.append("if not self.emptyCell(row,current_column):");
+    _builder.newLine();
+    _builder.append("\t");
+    ColumnSpec _spec = col.getSpec();
+    CharSequence _genParserMultipleBody = this.genParserMultipleBody(_spec, name);
+    _builder.append(_genParserMultipleBody, "\t");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  protected CharSequence _genParserSingle(final MandatoryColumn col, final String name) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("value_");
+    _builder.append(name, "");
+    _builder.append(" = ");
+    ColumnSpec _spec = col.getSpec();
+    CharSequence _genParserSingleBody = this.genParserSingleBody(_spec);
+    _builder.append(_genParserSingleBody, "");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  protected CharSequence _genParserSingle(final OptionalColumn col, final String name) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("if self.emptyCell(self,row,current_column):");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("value_");
+    _builder.append(name, "\t");
+    _builder.append(" = None");
+    _builder.newLineIfNotEmpty();
+    _builder.append("else:");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("value_");
+    _builder.append(name, "\t");
+    _builder.append(" = ");
+    ColumnSpec _spec = col.getSpec();
+    CharSequence _genParserSingleBody = this.genParserSingleBody(_spec);
+    _builder.append(_genParserSingleBody, "\t");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  protected CharSequence _genParserSingleBody(final RowSpec spec) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("parse_syntax_");
+    Syntax _syntax = spec.getSyntax();
+    String _generateSyntaxName = this.generateSyntaxName(_syntax);
+    _builder.append(_generateSyntaxName, "");
+    _builder.append("(self.getCell(row,current_column))");
+    _builder.newLineIfNotEmpty();
+    return _builder;
+  }
+  
+  protected CharSequence _genParserSingleBody(final BlockSpec spec) {
+    try {
+      throw new Error("Illegal grammar: block with single-relation column");
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  protected CharSequence _genParserMultipleBody(final RowSpec spec, final String name) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("relativeRow = 0");
+    _builder.newLine();
+    _builder.append("while True:");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("value_");
+    _builder.append(name, "\t");
+    _builder.append(".append(self.parse_syntax_");
+    Syntax _syntax = spec.getSyntax();
+    String _generateSyntaxName = this.generateSyntaxName(_syntax);
+    _builder.append(_generateSyntaxName, "\t");
+    _builder.append("(self.getCell(row+relativeRow,current_column+1))");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("relativeRow += 1");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("result_row_increment += 1");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("if not self.emptyCell(row+relativeRow,current_column):");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("break");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  protected CharSequence _genParserMultipleBody(final BlockSpec spec, final String name) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("relativeRow = 0");
+    _builder.newLine();
+    _builder.append("while True:");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("increment_and_object = self.parse_");
+    Block _kind = spec.getKind();
+    String _name = _kind.getName();
+    _builder.append(_name, "\t");
+    _builder.append("(row+relativeRow,current_column+1)");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("relativeRow += increment_and_object[0]");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("result_row_increment += increment_and_object[0]");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("value_");
+    _builder.append(name, "\t");
+    _builder.append(".append(increment_and_object[1])");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("if not self.emptyCell(row+relativeRow,current_column):");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("break");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public String generateSyntaxName(final Syntax syntax) {
+    String _xifexpression = null;
+    boolean _isIs_id = syntax.isIs_id();
+    if (_isIs_id) {
+      _xifexpression = "IDENTIFIER";
+    } else {
+      String _xifexpression_1 = null;
+      boolean _isIs_string = syntax.isIs_string();
+      if (_isIs_string) {
+        _xifexpression_1 = "STRING";
+      } else {
+        String _xifexpression_2 = null;
+        boolean _isIs_int = syntax.isIs_int();
+        if (_isIs_int) {
+          _xifexpression_2 = "INTEGER";
+        } else {
+          String _xifexpression_3 = null;
+          String _token = syntax.getToken();
+          boolean _notEquals = (!Objects.equal(_token, null));
+          if (_notEquals) {
+            String _token_1 = syntax.getToken();
+            String _plus = ("token(\"" + _token_1);
+            _xifexpression_3 = (_plus + "\")");
+          } else {
+            Rule _rule = syntax.getRule();
+            _xifexpression_3 = _rule.getName();
+          }
+          _xifexpression_2 = _xifexpression_3;
+        }
+        _xifexpression_1 = _xifexpression_2;
+      }
+      _xifexpression = _xifexpression_1;
+    }
+    return _xifexpression;
   }
   
   public List<String> computeHeaders(final Grammar grammar) {
@@ -164,6 +435,61 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
   protected void _collectHeaders(final BlockSpec spec, final List<String> collector) {
     Block _kind = spec.getKind();
     this.collectHeaders(_kind, collector);
+  }
+  
+  public CharSequence genParser(final Element block) {
+    if (block instanceof Block) {
+      return _genParser((Block)block);
+    } else if (block instanceof Rule) {
+      return _genParser((Rule)block);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(block).toString());
+    }
+  }
+  
+  public CharSequence genParserMultiple(final ColumnDefinition col, final String name) {
+    if (col instanceof MandatoryColumn) {
+      return _genParserMultiple((MandatoryColumn)col, name);
+    } else if (col instanceof OptionalColumn) {
+      return _genParserMultiple((OptionalColumn)col, name);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(col, name).toString());
+    }
+  }
+  
+  public CharSequence genParserSingle(final ColumnDefinition col, final String name) {
+    if (col instanceof MandatoryColumn) {
+      return _genParserSingle((MandatoryColumn)col, name);
+    } else if (col instanceof OptionalColumn) {
+      return _genParserSingle((OptionalColumn)col, name);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(col, name).toString());
+    }
+  }
+  
+  public CharSequence genParserSingleBody(final ColumnSpec spec) {
+    if (spec instanceof BlockSpec) {
+      return _genParserSingleBody((BlockSpec)spec);
+    } else if (spec instanceof RowSpec) {
+      return _genParserSingleBody((RowSpec)spec);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(spec).toString());
+    }
+  }
+  
+  public CharSequence genParserMultipleBody(final ColumnSpec spec, final String name) {
+    if (spec instanceof BlockSpec) {
+      return _genParserMultipleBody((BlockSpec)spec, name);
+    } else if (spec instanceof RowSpec) {
+      return _genParserMultipleBody((RowSpec)spec, name);
+    } else {
+      throw new IllegalArgumentException("Unhandled parameter types: " +
+        Arrays.<Object>asList(spec, name).toString());
+    }
   }
   
   public void collectHeaders(final EObject block, final List<String> collector) {

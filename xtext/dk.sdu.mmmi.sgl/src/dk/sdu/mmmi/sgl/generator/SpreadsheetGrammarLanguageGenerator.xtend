@@ -16,6 +16,9 @@ import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.ColumnDefinition
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.RowSpec
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.ColumnSpec
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.BlockSpec
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.MandatoryColumn
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.OptionalColumn
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Syntax
 
 /**
  * Generates code from your model files on save.
@@ -38,23 +41,113 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	}
 	
 	def generate(Grammar grammar) '''
-	import cellparser
-	class Parse«grammar.name»(object):
+	from spreadsheet_parser import *
+	class Parse«grammar.name»(GenericParserHelper):
 		def __init__(self, spreadsheet):
-			self.spreadsheet = spreadsheet
-		def getCell(self,row,column):
-			return self.spreadsheet.objCells.[row][column].data
+			super(GenericParserHelper,self).__init__(spreadsheet)
 		def matchColumns(self,columnHeaders):
 			return columnHeaders==[«FOR h:grammar.computeHeaders SEPARATOR ","»"«h»"«ENDFOR»]
 		def parseBlock(self,columnHeaders,row,column,height):
 			results = []
 			relativeRow = 0
 			while relativeRow<height:
-				increment_and_object = self.parseObject(row+relativeRow,column,columnHeaders)
+				increment_and_object = self.parse_«grammar.root.name»(row+relativeRow,column)
 				results.append(increment_and_object[1])
 				relativeRow += increment_and_object[0]
 			return results
+		«FOR e:grammar.elements»
+		«e.genParser»
+		«ENDFOR»
 	'''
+	
+	//
+	// Parse functions for grammar
+	//
+	
+	def dispatch genParser(Rule rule) '''
+	def parse_syntax_«rule.name»(text):
+		return text
+	'''
+
+	def dispatch genParser(Block block) '''
+	def parse_«block.name»(self,row,column):
+		column_offset = 0
+		result_row_increment = 1
+		result_object = {}
+		«FOR c:block.columns»
+		# Column «c.name»
+		current_column = column+column_offset
+		«IF c.multiple»
+		«c.def.genParserMultiple(c.name)»
+		«ELSE»
+		«c.def.genParserSingle(c.name)»
+		«ENDIF»
+		result_object["«c.name»"] = value_«c.name»
+		column_offset += 1
+		«ENDFOR»
+		return (result_row_increment,result_object)
+	'''
+	
+	def dispatch genParserMultiple(MandatoryColumn col, String name) '''
+	value_«name» = []
+	«col.spec.genParserMultipleBody(name)»
+	'''
+	
+	def dispatch genParserMultiple(OptionalColumn col, String name) '''
+	value_«name» = []
+	if not self.emptyCell(row,current_column):
+		«col.spec.genParserMultipleBody(name)»
+	'''
+
+	def dispatch genParserSingle(MandatoryColumn col, String name) '''
+	value_«name» = «col.spec.genParserSingleBody»
+	'''
+	
+	def dispatch genParserSingle(OptionalColumn col, String name) '''
+	if self.emptyCell(self,row,current_column):
+		value_«name» = None
+	else:
+		value_«name» = «col.spec.genParserSingleBody»
+	'''
+
+	def dispatch genParserSingleBody(RowSpec spec) '''
+	parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row,current_column))
+	'''
+	
+	def dispatch genParserSingleBody(BlockSpec spec) {
+		throw new Error("Illegal grammar: block with single-relation column")
+	}
+
+	def dispatch genParserMultipleBody(RowSpec spec, String name) '''
+	relativeRow = 0
+	while True:
+		value_«name».append(self.parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row+relativeRow,current_column+1))
+		relativeRow += 1
+		result_row_increment += 1
+		if not self.emptyCell(row+relativeRow,current_column):
+			break
+	'''
+
+	def dispatch genParserMultipleBody(BlockSpec spec, String name) '''
+	relativeRow = 0
+	while True:
+		increment_and_object = self.parse_«spec.kind.name»(row+relativeRow,current_column+1)
+		relativeRow += increment_and_object[0]
+		result_row_increment += increment_and_object[0]
+		value_«name».append(increment_and_object[1])
+		if not self.emptyCell(row+relativeRow,current_column):
+			break
+	'''
+
+	// Helper stuff
+	
+	def String generateSyntaxName(Syntax syntax) {
+		if(syntax.is_id) "IDENTIFIER"
+		else if(syntax.is_string) "STRING"
+		else if(syntax.is_int) "INTEGER"
+		else if(syntax.token!=null) "token(\""+syntax.token+"\")"
+		else syntax.rule.name
+	}
 	
 	//
 	// Computation of headers
