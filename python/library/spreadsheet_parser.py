@@ -4,6 +4,7 @@ Created on Jun 7, 2015
 @author: ups
 '''
 import re
+
 class GenericParserHelper(object):
     '''
     classdocs
@@ -16,14 +17,41 @@ class GenericParserHelper(object):
     def emptyCell(self,row,column):
         return self.spreadsheet.objCells[row][column].isEmpty()
     def parse_syntax_IDENTIFIER(self,text):
-        if self.regexp_parse_identifier.match(text):
-            return text
+        result = self.internal_parse_syntax_IDENTIFIER(text)
+        if result!=None:
+            return result[0]
         raise Exception('parse error: illegal identifier '+text)
     def parse_syntax_STRING(self,text):
-        return text
+        return self.internal_parse_syntax_STRING(text)[0]
     def parse_syntax_INTEGER(self,text):
-        return int(text)
-    def parse_syntax_token(self,string):
-        return lambda text: (text if text==string else self.signalTokenError(string,text))
-    def signalTokenError(self,string,text):
-        raise Exception('parse error: expected token '+string+' but got '+text)
+        result = self.internal_parse_syntax_INTEGER(text)[0]
+        if result!=None:
+            return result[0]
+        raise Exception('parse error: illegal integer '+text)
+    def parse_syntax_token(self,token):
+        return lambda text: self.parse_syntax_token_helper(token,text)
+    def parse_syntax_token_helper(self,token,string):
+        result = self.internal_parse_syntax_token(token)
+        if result!=None:
+            return result[0]
+        raise Exception('parse error: expected token '+token+' but got '+string)
+    def internal_parse_syntax_IDENTIFIER(self,text):
+        if self.regexp_parse_identifier.match(text):
+            return (text,'')
+        return None
+    def internal_parse_syntax_STRING(self,text):
+        return (text,'')
+    def internal_parse_syntax_INTEGER(self,text):
+        try:
+            return (int(text),'')
+        except ValueError:
+            return None
+    def internal_parse_syntax_token(self,token):
+        return lambda text: self.internal_parse_syntax_token_helper(token,text)
+    def internal_parse_syntax_token_helper(self,token,string):
+        text = string.lstrip()
+        if text.startwith(token):
+            return (token,text[len(token):])
+        raise None
+
+        

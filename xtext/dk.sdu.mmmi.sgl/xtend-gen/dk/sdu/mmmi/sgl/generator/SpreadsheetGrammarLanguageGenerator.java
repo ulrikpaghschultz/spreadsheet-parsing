@@ -17,8 +17,10 @@ import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.OptionalColumn;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.RowSpec;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Rule;
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Syntax;
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.SyntaxSeq;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
@@ -68,11 +70,13 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append(_name, "");
     _builder.append("(GenericParserHelper):");
     _builder.newLineIfNotEmpty();
+    _builder.newLine();
     _builder.append("\t");
     _builder.append("def __init__(self, spreadsheet):");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("super(GenericParserHelper,self).__init__(spreadsheet)");
+    _builder.newLine();
     _builder.newLine();
     _builder.append("\t");
     _builder.append("def matchColumns(self,columnHeaders):");
@@ -95,6 +99,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     }
     _builder.append("]");
     _builder.newLineIfNotEmpty();
+    _builder.newLine();
     _builder.append("\t");
     _builder.append("def parseBlock(self,columnHeaders,row,column,height):");
     _builder.newLine();
@@ -135,21 +140,9 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     return _builder;
   }
   
-  protected CharSequence _genParser(final Rule rule) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("def parse_syntax_");
-    String _name = rule.getName();
-    _builder.append(_name, "");
-    _builder.append("(text):");
-    _builder.newLineIfNotEmpty();
-    _builder.append("\t");
-    _builder.append("return text");
-    _builder.newLine();
-    return _builder;
-  }
-  
   protected CharSequence _genParser(final Block block) {
     StringConcatenation _builder = new StringConcatenation();
+    _builder.newLine();
     _builder.append("def parse_");
     String _name = block.getName();
     _builder.append(_name, "");
@@ -277,7 +270,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
   
   protected CharSequence _genParserSingleBody(final RowSpec spec) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("parse_syntax_");
+    _builder.append("self.parse_syntax_");
     Syntax _syntax = spec.getSyntax();
     String _generateSyntaxName = this.generateSyntaxName(_syntax);
     _builder.append(_generateSyntaxName, "");
@@ -392,6 +385,152 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     }
     return _xifexpression;
   }
+  
+  protected CharSequence _genParser(final Rule rule) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.newLine();
+    _builder.append("def parse_syntax_");
+    String _name = rule.getName();
+    _builder.append(_name, "");
+    _builder.append("(self,text):");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("object_and_rest = self.internal_parse_syntax_");
+    String _name_1 = rule.getName();
+    _builder.append(_name_1, "\t");
+    _builder.append("(text)");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("if object_and_rest==None:");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("raise Error(\"Failed parsing as ");
+    String _name_2 = rule.getName();
+    _builder.append(_name_2, "\t\t");
+    _builder.append(", text: \"+text)");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("rest_maybe = object_and_rest[1].lstrip()");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("if len(rest_maybe)>0:");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("raise Error(\"Surplus text when parsing ");
+    String _name_3 = rule.getName();
+    _builder.append(_name_3, "\t\t");
+    _builder.append(", text: \"+rest_maybe)");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("return object_and_rest[0]");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("def internal_parse_syntax_");
+    String _name_4 = rule.getName();
+    _builder.append(_name_4, "");
+    _builder.append("(self,text):");
+    _builder.newLineIfNotEmpty();
+    {
+      EList<SyntaxSeq> _alternatives = rule.getAlternatives();
+      for(final SyntaxSeq a : _alternatives) {
+        _builder.append("\t");
+        _builder.append("object_and_rest = self.parse_syntax_");
+        String _name_5 = rule.getName();
+        _builder.append(_name_5, "\t");
+        _builder.append("_");
+        String _uniqueCode = this.uniqueCode(a);
+        _builder.append(_uniqueCode, "\t");
+        _builder.append("(text)");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("if object_and_rest!=None:");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("return object_and_rest");
+        _builder.newLine();
+      }
+    }
+    _builder.append("\t");
+    _builder.append("return None");
+    _builder.newLine();
+    {
+      EList<SyntaxSeq> _alternatives_1 = rule.getAlternatives();
+      for(final SyntaxSeq a_1 : _alternatives_1) {
+        EList<Syntax> _parts = a_1.getParts();
+        String _name_6 = rule.getName();
+        String _plus = (_name_6 + "_");
+        String _uniqueCode_1 = this.uniqueCode(a_1);
+        String _plus_1 = (_plus + _uniqueCode_1);
+        CharSequence _genInternalParser = this.genInternalParser(_parts, _plus_1);
+        _builder.append(_genInternalParser, "");
+        _builder.append("\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    return _builder;
+  }
+  
+  public CharSequence genInternalParser(final EList<Syntax> list, final String name) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.newLine();
+    _builder.append("def parse_syntax_");
+    _builder.append(name, "");
+    _builder.append("(self,text):");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("current = text");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("result = []");
+    _builder.newLine();
+    {
+      for(final Syntax part : list) {
+        _builder.append("\t");
+        _builder.append("object_and_rest = self.internal_parse_syntax_");
+        String _generateSyntaxName = this.generateSyntaxName(part);
+        _builder.append(_generateSyntaxName, "\t");
+        _builder.append("(current)");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("if object_and_rest==None:");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("\t");
+        _builder.append("return None");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("result.append(object_and_rest[0])");
+        _builder.newLine();
+        _builder.append("\t");
+        _builder.append("current = object_and_rest[1]");
+        _builder.newLine();
+      }
+    }
+    _builder.append("\t");
+    _builder.append("return (result,current)");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public String uniqueCode(final SyntaxSeq seq) {
+    String _xblockexpression = null;
+    {
+      boolean _containsKey = this.uniqueCodes.containsKey(seq);
+      boolean _not = (!_containsKey);
+      if (_not) {
+        int _plusPlus = this.uniqueCodesCounter++;
+        String _string = Integer.toString(_plusPlus);
+        this.uniqueCodes.put(seq, _string);
+      }
+      _xblockexpression = this.uniqueCodes.get(seq);
+    }
+    return _xblockexpression;
+  }
+  
+  private final HashMap<SyntaxSeq, String> uniqueCodes = new HashMap<SyntaxSeq, String>();
+  
+  private int uniqueCodesCounter = 0;
   
   public List<String> computeHeaders(final Grammar grammar) {
     ArrayList<String> _xblockexpression = null;

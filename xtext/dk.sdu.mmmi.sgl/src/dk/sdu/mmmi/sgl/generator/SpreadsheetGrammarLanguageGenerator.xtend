@@ -14,11 +14,13 @@ import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Rule
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Column
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.ColumnDefinition
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.RowSpec
-import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.ColumnSpec
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.BlockSpec
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.MandatoryColumn
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.OptionalColumn
 import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.Syntax
+import dk.sdu.mmmi.sgl.spreadsheetGrammarLanguage.SyntaxSeq
+import org.eclipse.emf.common.util.EList
+import java.util.HashMap
 
 /**
  * Generates code from your model files on save.
@@ -43,10 +45,13 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	def generate(Grammar grammar) '''
 	from spreadsheet_parser import *
 	class Parse«grammar.name»(GenericParserHelper):
+	
 		def __init__(self, spreadsheet):
 			super(GenericParserHelper,self).__init__(spreadsheet)
+	
 		def matchColumns(self,columnHeaders):
 			return columnHeaders==[«FOR h:grammar.computeHeaders SEPARATOR ","»"«h»"«ENDFOR»]
+	
 		def parseBlock(self,columnHeaders,row,column,height):
 			results = []
 			relativeRow = 0
@@ -64,12 +69,8 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	// Parse functions for grammar
 	//
 	
-	def dispatch genParser(Rule rule) '''
-	def parse_syntax_«rule.name»(text):
-		return text
-	'''
-
 	def dispatch genParser(Block block) '''
+	
 	def parse_«block.name»(self,row,column):
 		column_offset = 0
 		result_row_increment = 1
@@ -111,8 +112,9 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	'''
 
 	def dispatch genParserSingleBody(RowSpec spec) '''
-	parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row,current_column))
+	self.parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row,current_column))
 	'''
+
 	
 	def dispatch genParserSingleBody(BlockSpec spec) {
 		throw new Error("Illegal grammar: block with single-relation column")
@@ -148,6 +150,57 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 		else if(syntax.token!=null) "token(\""+syntax.token+"\")"
 		else syntax.rule.name
 	}
+	
+	//
+	// Parse functions for rules
+	//
+	
+	def dispatch genParser(Rule rule) '''
+	
+	def parse_syntax_«rule.name»(self,text):
+		object_and_rest = self.internal_parse_syntax_«rule.name»(text)
+		if object_and_rest==None:
+			raise Error("Failed parsing as «rule.name», text: "+text)
+		rest_maybe = object_and_rest[1].lstrip()
+		if len(rest_maybe)>0:
+			raise Error("Surplus text when parsing «rule.name», text: "+rest_maybe)
+		return object_and_rest[0]
+	
+	def internal_parse_syntax_«rule.name»(self,text):
+		«FOR a:rule.alternatives»
+		object_and_rest = self.parse_syntax_«rule.name»_«a.uniqueCode»(text)
+		if object_and_rest!=None:
+			return object_and_rest
+		«ENDFOR»
+		return None
+	«FOR a:rule.alternatives»
+	«a.parts.genInternalParser(rule.name+"_"+a.uniqueCode)»	
+	«ENDFOR»
+	'''
+	
+	def genInternalParser(EList<Syntax> list, String name) '''
+	
+	def parse_syntax_«name»(self,text):
+		current = text
+		result = []
+		«FOR part:list»
+		object_and_rest = self.internal_parse_syntax_«part.generateSyntaxName»(current)
+		if object_and_rest==None:
+			return None
+		result.append(object_and_rest[0])
+		current = object_and_rest[1]
+		«ENDFOR»
+		return (result,current)
+	'''
+
+	def String uniqueCode(SyntaxSeq seq) {
+		if(!uniqueCodes.containsKey(seq))
+			uniqueCodes.put(seq,Integer.toString(uniqueCodesCounter++))
+		uniqueCodes.get(seq)
+	}
+
+	val uniqueCodes = new HashMap<SyntaxSeq,String>
+	var uniqueCodesCounter = 0
 	
 	//
 	// Computation of headers
