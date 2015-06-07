@@ -16,7 +16,25 @@ class Cell:
         self.data = data
         self.data_type = data_type
         self.fn = fn
-        
+    
+    def isEmpty(self):
+        if  self.cell_type == "empty":
+            return True
+        else:
+            return False
+    
+    def isHeader(self):
+        if  self.cell_type == "header":
+            return True
+        else:
+            return False
+    
+    def isData(self):
+        if  self.cell_type == "data":
+            return True
+        else:
+            return False
+ 
 class Empty(Cell):
     def __init__(self,row,column):
         Cell.__init__(self, row, column, "empty", None, None, None)
@@ -56,7 +74,6 @@ class Spreadsheet:
     
     def Print(self):
         for row in self.objCells:
-            print ""
             for obj in row:
                 if obj.cell_type == "empty":
                     print "O",
@@ -66,5 +83,5 @@ class Spreadsheet:
                     print "*",
                 else:
                     print "?",
-                 
+            print ""    
 

@@ -22,3 +22,6 @@ print S.noOfRows
 print S.objCells[1][1].data
         
 S.Print()
+
+print S.objCells[1][1].isEmpty()
+
