@@ -53,6 +53,6 @@ class ExampleParser(object):
     def parseObject_question(self, row, column):
         value_Question_name = parse_identifier(self.spreadsheet.cell(row,column))
         value_Question_question = parse_string(self.spreadhseet.cell(row,column+1))
-        return {"name:" value_Question_name, "question": value_Question_question}
+        return {"name": value_Question_name, "question": value_Question_question}
     
     
