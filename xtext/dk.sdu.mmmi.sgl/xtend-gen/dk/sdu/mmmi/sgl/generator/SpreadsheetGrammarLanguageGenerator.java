@@ -69,6 +69,12 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("self.spreadsheet = spreadsheet");
     _builder.newLine();
     _builder.append("\t");
+    _builder.append("def getCell(self,row,column):");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return self.spreadsheet.objCells.[row][column].data");
+    _builder.newLine();
+    _builder.append("\t");
     _builder.append("def matchColumns(self,columnHeaders):");
     _builder.newLine();
     _builder.append("\t\t");

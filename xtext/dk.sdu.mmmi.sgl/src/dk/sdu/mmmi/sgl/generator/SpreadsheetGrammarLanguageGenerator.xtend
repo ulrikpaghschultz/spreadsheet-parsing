@@ -42,6 +42,8 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	class Parse«grammar.name»(object):
 		def __init__(self, spreadsheet):
 			self.spreadsheet = spreadsheet
+		def getCell(self,row,column):
+			return self.spreadsheet.objCells.[row][column].data
 		def matchColumns(self,columnHeaders):
 			return columnHeaders==[«FOR h:grammar.computeHeaders SEPARATOR ","»"«h»"«ENDFOR»]
 		def parseBlock(self,columnHeaders,row,column,height):
