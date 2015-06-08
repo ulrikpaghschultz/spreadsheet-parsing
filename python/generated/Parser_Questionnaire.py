@@ -7,6 +7,9 @@ class ParseQuestionnaire(GenericParserHelper):
 	def matchColumns(self,columnHeaders):
 		return columnHeaders==["Form","Name","Question","Type","Value","Condition"]
 
+	def getColumns(self):
+		return ["Form","Name","Question","Type","Value","Condition"]
+
 	def parseBlock(self,columnHeaders,row,column,height):
 		results = []
 		relativeRow = 0
