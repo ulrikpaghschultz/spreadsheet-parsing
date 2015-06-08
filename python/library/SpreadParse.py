@@ -4,7 +4,6 @@ Created on Jun 7, 2015
 @author: sorin
 '''
 import csv
-
 #csv_test_file = "testCsvFile.csv"
 
 
@@ -71,6 +70,23 @@ class Spreadsheet:
                 i=i+1
         self.noOfRows = i
         self.noOfCols = j
+        
+    def FindHeaders(self,headers):
+        header_size = len(headers)
+        r=0
+        for row in self.objCells:
+            c = 0
+            for obj in row:
+                if ((obj.cell_type == "data") and (c < self.noOfCols - header_size)):
+                    read_buffer = self.objCells[r][c:c+header_size]
+                    read_data = [cell.data for cell in read_buffer]
+                    if read_data == headers:
+                        for cell in read_buffer:
+                            cell.cell_type = "header"
+                        return (r,c)
+                c += 1
+            r += 1
+        return (-1,-1)
     
     def Print(self):
         for row in self.objCells:
@@ -83,5 +99,6 @@ class Spreadsheet:
                     print "*",
                 else:
                     print "?",
-            print ""    
+            print ""
+ 
 

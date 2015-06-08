@@ -9,7 +9,7 @@ H1 = Header(3,4,"Header")
 D1 = Data(4,5, "some random data","string",None)
 
 
-
+headers=['Form','Name','Question','Type','Value','Condition']
 
         
 S= Spreadsheet()
@@ -25,3 +25,6 @@ S.Print()
 
 print S.objCells[1][1].isEmpty()
 
+hr,hc = S.FindHeaders(headers)
+
+S.Print()
