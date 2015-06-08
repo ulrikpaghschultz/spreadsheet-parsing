@@ -7,14 +7,14 @@ s=SpreadParse.Spreadsheet()
 s.InitFromFile("testCsvFile.csv")
 s.Print
 pq=Parser_Questionnaire.ParseQuestionnaire(s)
-headers=['Form','Name','Question','Type','Value','Condition']
-print pq.matchColumns(headers)
-x=pq.parseBlock(headers,14,2,7)
-hr,hc = s.FindHeaders(headers)
+headers = pq.getColumnHeaders()
+#print pq.matchColumns(headers)
 
-s.Print
+start_row,start_col, depth =s.FindBlockAndDepth(headers)
+print start_row,start_col, depth
 
-x=pq.parseBlock(headers,hr+1,hc,7)
+#x=pq.parseBlock(headers,14,2,7)
+x=pq.parseBlock(headers,start_row,start_col, depth)
 print x
 
 

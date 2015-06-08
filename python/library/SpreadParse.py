@@ -71,14 +71,14 @@ class Spreadsheet:
         self.noOfRows = i
         self.noOfCols = j
         
-    def FindHeaders(self,headers):
-        header_size = len(headers)
+    def __FindHeaders(self,headers):
+        headers_len = len(headers)
         r=0
         for row in self.objCells:
             c = 0
             for obj in row:
-                if ((obj.cell_type == "data") and (c < self.noOfCols - header_size)):
-                    read_buffer = self.objCells[r][c:c+header_size]
+                if ((obj.cell_type == "data") and (c < self.noOfCols - headers_len)):
+                    read_buffer = self.objCells[r][c:c+headers_len]
                     read_data = [cell.data for cell in read_buffer]
                     if read_data == headers:
                         for cell in read_buffer:
@@ -87,6 +87,26 @@ class Spreadsheet:
                 c += 1
             r += 1
         return (-1,-1)
+    
+    def FindBlockAndDepth(self,headers):
+        hr,hc = self.__FindHeaders(headers)
+        print "row", hr, "col",hc
+        headers_len = len(headers)
+        max_depth = -1
+        if(hr != -1 and hc != -1):
+            hr +=1 #the block starts one row below header's row
+            for i in range(0,headers_len):
+                depth = self.getColDepth(hr,hc+i)
+                if max_depth < depth:
+                    max_depth = depth
+        return hr,hc,max_depth
+     
+    def getColDepth(self, row, col):
+        i = 0   
+        while (i < self.noOfRows - row) and (self.objCells[row+i][col].isEmpty() == False):
+            i += 1
+        return i
+         
     
     def Print(self):
         for row in self.objCells:
