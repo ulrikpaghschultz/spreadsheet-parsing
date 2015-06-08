@@ -101,6 +101,28 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.newLineIfNotEmpty();
     _builder.newLine();
     _builder.append("\t");
+    _builder.append("def getColumns(self):");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("return [");
+    {
+      List<String> _computeHeaders_1 = this.computeHeaders(grammar);
+      boolean _hasElements_1 = false;
+      for(final String h_1 : _computeHeaders_1) {
+        if (!_hasElements_1) {
+          _hasElements_1 = true;
+        } else {
+          _builder.appendImmediate(",", "\t\t");
+        }
+        _builder.append("\"");
+        _builder.append(h_1, "\t\t");
+        _builder.append("\"");
+      }
+    }
+    _builder.append("]");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("\t");
     _builder.append("def parseBlock(self,columnHeaders,row,column,height):");
     _builder.newLine();
     _builder.append("\t\t");
