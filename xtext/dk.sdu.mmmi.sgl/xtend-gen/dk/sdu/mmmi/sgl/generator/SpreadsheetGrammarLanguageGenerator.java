@@ -101,7 +101,7 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.newLineIfNotEmpty();
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("def getColumns(self):");
+    _builder.append("def getColumnHeaders(self):");
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("return [");

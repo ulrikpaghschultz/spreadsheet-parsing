@@ -52,7 +52,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 		def matchColumns(self,columnHeaders):
 			return columnHeaders==[«FOR h:grammar.computeHeaders SEPARATOR ","»"«h»"«ENDFOR»]
 	
-		def getColumns(self):
+		def getColumnHeaders(self):
 			return [«FOR h:grammar.computeHeaders SEPARATOR ","»"«h»"«ENDFOR»]
 	
 		def parseBlock(self,columnHeaders,row,column,height):
