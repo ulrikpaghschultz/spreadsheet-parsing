@@ -1,0 +1,72 @@
+/*
+ *
+ * https://docs.google.com/spreadsheets/d/1kkDjDjTZ3VKvgSbQtodFPqbFdRmAIqRPimQadC3DFzw/edit#gid=31890285
+ *  
+Use case #,
+* Manual,
+* Learn,
+* Auto,
+* E-stop,
+* Bumpers & arm switch,
+* Far obstacle,
+* Close obstacle,
+* Keep alive,
+* Reverse,
+* Forward,
+* Stop,
+* Green,
+* Yellow,
+* Red,
+* Beep,
+* Arm power,
+* Decompress,
+* State,
+* Use case description,
+ * 
+ * 
+ */
+
+
+language LogicTable: Forms;
+
+block Forms {
+  case = column "Use case #": STRING;
+  table* = block Table;
+}
+
+block Table {
+  //name = column "Name": IDENTIFIER;
+  manual = column "Manual": rule Bool;
+  learn = column "Learn": rule Bool;
+  auto = column "Auto": rule Bool;
+  e_stop = column "E-stop": rule BoolAny;
+  bump_arm = column "Bumpers & arm switch": rule BoolAny;
+  far = column "Far obstacle": rule BoolAny;
+  close = column "Close obstacle": rule BoolAny;
+  keep_alive = column "Keep alive": rule BoolAny;
+  reverse = column "Reverse": rule BoolAny;
+  forward = column "Forward": rule BoolAny;
+  stop = column "Stop": rule BoolAny;
+  green = column "Green": rule BoolBlink;
+  yellow = column "Yellow": rule BoolBlink;
+  red = column "Red": rule BoolBlink;
+  beep = column "Beep": rule BoolBlink;
+  arm_power = column "Arm power": rule Bool;
+  decompress = column "Decompress": rule Bool;
+  state ?= column "State": STRING;
+  use_case = column "Use case description": STRING;
+}
+
+rule Bool:
+  token "0" | token "1"
+;
+
+rule BoolAny:
+   STRING
+  //token "*=0" | token "*" | token "x" | rule Bool 
+;
+
+
+rule BoolBlink:
+  token "1s" | token ".5s" | rule Bool   
+;
