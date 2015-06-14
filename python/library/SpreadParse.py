@@ -90,7 +90,7 @@ class Spreadsheet:
     
     def FindBlockAndDepth(self,headers):
         hr,hc = self.__FindHeaders(headers)
-        print "row", hr, "col",hc
+        #print "row", hr, "col",hc
         headers_len = len(headers)
         max_depth = -1
         if(hr != -1 and hc != -1):
@@ -106,7 +106,22 @@ class Spreadsheet:
         while (i < self.noOfRows - row) and (self.objCells[row+i][col].isEmpty() == False):
             i += 1
         return i
-         
+    
+    #debugging functionality
+    
+    def checkHeaders(self,headers):
+        for i in range(0,len(headers)):
+            print '______________',headers[i:i+1]
+            hr,hc = self.__FindHeaders(headers[i:i+1])
+            if(hr == -1 or hc == -1):
+                print "Not found: ", headers[i], " (row:", hr, "col:", hc, ")"                
+    
+    def printCsvFile(self):
+        for row in self.objCells:
+            for obj in row:
+                print obj.data
+            print "++++++++++++++++++++++++"
+
     
     def Print(self):
         for row in self.objCells:
