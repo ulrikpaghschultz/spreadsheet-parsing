@@ -40,48 +40,28 @@ block Risks {
   aspect ?= column "Aspect Under Consideration": STRING;
   hazards = column "Significant Hazards": STRING;
   risk = column "Who is at risk ?": STRING;
-  likelihood = column "Likelihood 1-5": STRING;
-  severity = column "Severity 1-5": STRING;
-  result = column "Result": STRING;
-  action ?= column "Action Required": STRING;
+  likelihood = column "Likelihood 1-5": rule number;
+  severity = column "Severity 1-5": rule number;
+  result = column "Result": rule number;
+  action ?= column "Action Required": rule yes_no;
   mitigation ?= column "Mitigation measure taken by Designer.       (1) Remove,     2)Reduce,       (3)Protection, (4)Information": STRING;
   software ?= column "Software": STRING;
   mech_hw ?= column "Mechanical/hardware": STRING;
   manual ?= column "User manual": STRING;
   other ?= column "Other": STRING;
   reason ?= column "Reason why not actioned at higher mitigation / elimination level ?": STRING;
-  res_likelihood ?= column "Residual Likelihood": STRING;
-  res_severity ?= column "Residual Severity": STRING;
-  res_result ?= column "Result": STRING;
+  res_likelihood ?= column "Residual Likelihood": rule number;
+  res_severity ?= column "Residual Severity": rule number;
+  res_result ?= column "Result": rule number;
   notes ?= column "Notes to assist recipient in further reducing the residual hazard risk": STRING;
   standards ?= column "Standards / legislation": STRING;
   description ?= column "Description by department/contacts": STRING;
 }
 
-rule Datatype:
-  token "boolean" | token "money" | token "int"
+rule number:
+  INTEGER
 ;
 
-rule AExp:
-  rule Add | rule Sub | INTEGER | IDENTIFIER
-;
-
-rule Add:
-  token "(" rule AExp token "+" rule AExp token ")"
-;
-
-rule Sub:
-  token "(" rule AExp token "-" rule AExp token ")"
-;
-
-rule BExp:
-   rule And | rule Or | IDENTIFIER
-;
-
-rule And:
-  token "(" rule BExp token "and" rule BExp token ")"
-;
-
-rule Or:
-  token "(" rule BExp token "or" rule BExp token ")"
+rule yes_no:
+  token "yes"|token "no"
 ;
