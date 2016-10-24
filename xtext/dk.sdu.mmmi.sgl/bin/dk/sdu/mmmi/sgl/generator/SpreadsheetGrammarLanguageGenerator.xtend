@@ -56,6 +56,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 			return [«FOR h:grammar.computeHeaders SEPARATOR ","»"«h»"«ENDFOR»]
 	
 		def parseBlock(self,columnHeaders,row,column,height):
+			self.debug_trace("parseBlock",row,column)
 			results = []
 			relativeRow = 0
 			while relativeRow<height:
@@ -75,6 +76,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	def dispatch genParser(Block block) '''
 	
 	def parse_«block.name»(self,row,column,max_row):
+		self.debug_trace("parse_«block.name»",row,column)
 		column_offset = 0
 		result_row_increment = 1
 		result_object = {}
@@ -115,7 +117,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	'''
 
 	def dispatch genParserSingleBody(RowSpec spec) '''
-	self.parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row,current_column))
+	self.debug_trace_2("parse_syntax_«spec.syntax.generateSyntaxName»",row,current_column,lambda:self.parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row,current_column)))
 	'''
 
 	
@@ -126,6 +128,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	def dispatch genParserMultipleBody(RowSpec spec, String name) '''
 	relativeRow = 0
 	while True:
+		self.debug_trace("parse_syntax_«spec.syntax.generateSyntaxName»",row+relativeRow,current_column)
 		value_«name».append(self.parse_syntax_«spec.syntax.generateSyntaxName»(self.getCell(row+relativeRow,current_column))
 		relativeRow += 1
 		if not self.emptyCell(row+relativeRow,current_column-1):
@@ -138,6 +141,7 @@ class SpreadsheetGrammarLanguageGenerator implements IGenerator {
 	while True:
 		if row+relativeRow>=max_row:
 			break
+		self.debug_trace("parse_syntax_«spec.kind.name»",row+relativeRow,current_column)
 		increment_and_object = self.parse_«spec.kind.name»(row+relativeRow,current_column,max_row)
 		relativeRow += increment_and_object[0]
 		value_«name».append(increment_and_object[1])

@@ -42,13 +42,12 @@ import org.eclipse.xtext.xbase.lib.Procedures.Procedure1;
  */
 @SuppressWarnings("all")
 public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
+  @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     TreeIterator<EObject> _allContents = resource.getAllContents();
     Iterator<Grammar> _filter = Iterators.<Grammar>filter(_allContents, Grammar.class);
-    final Procedure1<Grammar> _function = new Procedure1<Grammar>() {
-      public void apply(final Grammar it) {
-        SpreadsheetGrammarLanguageGenerator.this.compile(it, fsa);
-      }
+    final Procedure1<Grammar> _function = (Grammar it) -> {
+      this.compile(it, fsa);
     };
     IteratorExtensions.<Grammar>forEach(_filter, _function);
   }
@@ -126,6 +125,9 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("def parseBlock(self,columnHeaders,row,column,height):");
     _builder.newLine();
     _builder.append("\t\t");
+    _builder.append("self.debug_trace(\"parseBlock\",row,column)");
+    _builder.newLine();
+    _builder.append("\t\t");
     _builder.append("results = []");
     _builder.newLine();
     _builder.append("\t\t");
@@ -171,6 +173,12 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("(self,row,column,max_row):");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
+    _builder.append("self.debug_trace(\"parse_");
+    String _name_1 = block.getName();
+    _builder.append(_name_1, "\t");
+    _builder.append("\",row,column)");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
     _builder.append("column_offset = 0");
     _builder.newLine();
     _builder.append("\t");
@@ -184,8 +192,8 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
       for(final Column c : _columns) {
         _builder.append("\t");
         _builder.append("# Column ");
-        String _name_1 = c.getName();
-        _builder.append(_name_1, "\t");
+        String _name_2 = c.getName();
+        _builder.append(_name_2, "\t");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
         _builder.append("current_column = column+column_offset");
@@ -195,26 +203,26 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
           if (_isMultiple) {
             _builder.append("\t");
             ColumnDefinition _def = c.getDef();
-            String _name_2 = c.getName();
-            CharSequence _genParserMultiple = this.genParserMultiple(_def, _name_2);
+            String _name_3 = c.getName();
+            CharSequence _genParserMultiple = this.genParserMultiple(_def, _name_3);
             _builder.append(_genParserMultiple, "\t");
             _builder.newLineIfNotEmpty();
           } else {
             _builder.append("\t");
             ColumnDefinition _def_1 = c.getDef();
-            String _name_3 = c.getName();
-            CharSequence _genParserSingle = this.genParserSingle(_def_1, _name_3);
+            String _name_4 = c.getName();
+            CharSequence _genParserSingle = this.genParserSingle(_def_1, _name_4);
             _builder.append(_genParserSingle, "\t");
             _builder.newLineIfNotEmpty();
           }
         }
         _builder.append("\t");
         _builder.append("result_object[\"");
-        String _name_4 = c.getName();
-        _builder.append(_name_4, "\t");
-        _builder.append("\"] = value_");
         String _name_5 = c.getName();
         _builder.append(_name_5, "\t");
+        _builder.append("\"] = value_");
+        String _name_6 = c.getName();
+        _builder.append(_name_6, "\t");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
         _builder.append("column_offset += 1");
@@ -292,11 +300,15 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
   
   protected CharSequence _genParserSingleBody(final RowSpec spec) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.append("self.parse_syntax_");
+    _builder.append("self.debug_trace_2(\"parse_syntax_");
     Syntax _syntax = spec.getSyntax();
     String _generateSyntaxName = this.generateSyntaxName(_syntax);
     _builder.append(_generateSyntaxName, "");
-    _builder.append("(self.getCell(row,current_column))");
+    _builder.append("\",row,current_column,lambda:self.parse_syntax_");
+    Syntax _syntax_1 = spec.getSyntax();
+    String _generateSyntaxName_1 = this.generateSyntaxName(_syntax_1);
+    _builder.append(_generateSyntaxName_1, "");
+    _builder.append("(self.getCell(row,current_column)))");
     _builder.newLineIfNotEmpty();
     return _builder;
   }
@@ -316,12 +328,19 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("while True:");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("value_");
-    _builder.append(name, "\t");
-    _builder.append(".append(self.parse_syntax_");
+    _builder.append("self.debug_trace(\"parse_syntax_");
     Syntax _syntax = spec.getSyntax();
     String _generateSyntaxName = this.generateSyntaxName(_syntax);
     _builder.append(_generateSyntaxName, "\t");
+    _builder.append("\",row+relativeRow,current_column)");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("value_");
+    _builder.append(name, "\t");
+    _builder.append(".append(self.parse_syntax_");
+    Syntax _syntax_1 = spec.getSyntax();
+    String _generateSyntaxName_1 = this.generateSyntaxName(_syntax_1);
+    _builder.append(_generateSyntaxName_1, "\t");
     _builder.append("(self.getCell(row+relativeRow,current_column))");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -351,10 +370,17 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
     _builder.append("break");
     _builder.newLine();
     _builder.append("\t");
-    _builder.append("increment_and_object = self.parse_");
+    _builder.append("self.debug_trace(\"parse_syntax_");
     Block _kind = spec.getKind();
     String _name = _kind.getName();
     _builder.append(_name, "\t");
+    _builder.append("\",row+relativeRow,current_column)");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("increment_and_object = self.parse_");
+    Block _kind_1 = spec.getKind();
+    String _name_1 = _kind_1.getName();
+    _builder.append(_name_1, "\t");
     _builder.append("(row+relativeRow,current_column,max_row)");
     _builder.newLineIfNotEmpty();
     _builder.append("\t");
@@ -574,10 +600,8 @@ public class SpreadsheetGrammarLanguageGenerator implements IGenerator {
   
   protected void _collectHeaders(final Block block, final List<String> collector) {
     EList<Column> _columns = block.getColumns();
-    final Consumer<Column> _function = new Consumer<Column>() {
-      public void accept(final Column it) {
-        SpreadsheetGrammarLanguageGenerator.this.collectHeaders(it, collector);
-      }
+    final Consumer<Column> _function = (Column it) -> {
+      this.collectHeaders(it, collector);
     };
     _columns.forEach(_function);
   }
